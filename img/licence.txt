@@ -1,0 +1,9 @@
+ajax-loader.gif :
+	Free of Use
+	http://www.ajaxload.info/
+	
+s1_on.png, s2_on.png, s3_on.png, sm_on.png, s1_off.png, s2_off.png, s3_off.png, s1m_off.png :
+	Made with pictures from http://ballisticmystix.net
+	
+other :
+	Made with pictures from Ryzom API or http://www.ryzom.com

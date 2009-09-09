@@ -1,0 +1,6 @@
+<?php
+// Flunker URL. You need to set it for some features. ( example: http://127.0.0.1/flunker/)
+define('FLUNKER_BASE_URL','');
+// Crypt key (for the guild API Key)
+define('FLUNKER_CRYPT_KEY','');
+?>
