@@ -1,3 +1,0 @@
-[submodule "ryzom_api"]
-	path = ryzom_api
-	url = git://github.com/Aeness/ryzom_api.git
