@@ -54,6 +54,7 @@ $nb_items = $_SESSION[$room_type]['nb_items'];
 			}
 		};
 		</script>
+		<script type="text/javascript" src="js/tooltip.js"></script>
 		<script type="text/javascript" src="js/ajax.js"></script>
 		<script type="text/javascript" src="js/criteria.js"></script>
 		<?php  //echo ryzom_render_header_www(); ?>

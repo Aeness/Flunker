@@ -110,7 +110,7 @@
 	background-image: url(../inc/ryzom_api/ryzom_api/render/skin_blank.png);
 	background-repeat: repeat;
 }
-#icon_boxes {
+#icon_boxes, #flunkerTooltip{
 	font-family: Arial, sans-serif;
 	font-size: 12px;
 	list-style-type: none;

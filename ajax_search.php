@@ -294,7 +294,7 @@ require_once('./inc/flunker_api.php');
 		}
 		else {
 			foreach( $items_filtered_and_unserialize as $item) {
-				echo $item->getIconLi();
+				echo $item->getFormAndIconLi();
 			}	
 		}
 	}

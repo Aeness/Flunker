@@ -85,6 +85,7 @@ function ajaxRequest2() {
 		if( Flunker.ajax.nb_is_waiting == 1) {
 			document.getElementById('icon_boxes').innerHTML = xhr_object.responseText;
 			$("#nb_items").text($("#ajax_nb_items").text());
+			//$("#icon_boxes>li>div.icon_div>img").flunkertooltip();
 		}
 		removeWaiter();
 	   }

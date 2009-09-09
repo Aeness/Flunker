@@ -117,12 +117,18 @@ class item
 	public function getFormAndIconLi() {
 		$res = "
 			<li class='icon_box' id=\"".$this->flunkerId()."\">
-				<div class='icon_div'>".$this->_getIcon()."</div>
-				<div class='form_div' style=\"display: none;\">
+				<div class='icon_div'>".$this->_getIcon("tooltip")."</div>
+				<div class='form_div' style=\"display: none; width: 200px\">
+				<div class='form_div_ryzom-ui-tl'><div class='form_div_ryzom-ui-tr'><div class='form_div_ryzom-ui-t'></div></div></div>
+				
+				<div class='ryzom-ui-l'><div class='ryzom-ui-r'><div class='ryzom-ui-m'>
 					<ul class=\"attribut\">";
 		$res .= $this->_getFormContent();
 		$res .= "
 					</ul>
+					<br style='clear: left;' />
+				</div></div></div>
+				<div class='ryzom-ui-bl'><div class='ryzom-ui-br'><div class='ryzom-ui-b'></div></div></div>
 				</div>
 			</li>";
 		return $res;
@@ -771,7 +777,7 @@ class material extends item
 	
 	public $total_stack;
 
-	
+	/// @todo supp french comentary
 	public function __construct($guild,$slot,$icon_name,$q,$s,$id_place,$id_origin,$c,$id_name,$e)
 	{
 		$type = array(
