@@ -25,12 +25,12 @@ function parse_guild(&$xml) {
 }
 
 /**
- * For one character, parses its xml file and builds its object which are in his appartement.
+ * For one character, parses its xml file and builds its object which are in his apartment.
  * @param xml 	&lt;<b>simplexml</b>&gt;	the xml file
  */
 function parse_character(&$xml) {
 
-	return new appartement((string)$xml->cid,(string)$xml->name,(string)$xml->guild->icon);
+	return new apartment((string)$xml->cid,(string)$xml->name,(string)$xml->guild->icon);
 }
 
 /**
@@ -38,7 +38,7 @@ function parse_character(&$xml) {
  * Use global variables : items, sorter_items.
  * @param xml 		&lt;<b>simplexml</b>&gt;		the xml file
  * @param xml_path 	&lt;<b>string</b>&gt;		the xpath for finding item tag
- * @param chest 	&lt;<b>appartement</b>&gt;	the appartement or guild object where item are
+ * @param chest 	&lt;<b>apartment</b>&gt;	the apartment or guild object where item are
  */
 function parse_item(&$xml,$xml_path,$chest) {
 	global $items;				///< &lt;<b>array{item]</b>&gt;  Where items are stoked

@@ -22,7 +22,7 @@
  * <li>Display information about chest.</li>
  * </ul>
  */
-class appartement
+class apartment
 {
 	public $id;	///< &lt;<b>string</b>&gt;  Ryzom id (cid, gid, ...)
 	public $name;	///< &lt;<b>string</b>&gt;  Name
@@ -39,7 +39,7 @@ class appartement
 	 * @return the url of the Icon
 	 */
 	public function getUrl() {
-		return 'img/icon_appartement.png';
+		return 'img/icon_apartment.png';
 	}
 	
 	/**
@@ -49,11 +49,11 @@ class appartement
 	 * @return the tag img of the Icon
 	 */
 	public function getSmallIcon($px_size) {
-		return '<img src="img/icon_appartement.png" style="height:{$px_size}px; width: {$px_size}px;" alt="'.__('Icon Appart.').'"/>';
+		return '<img src="'.$this->getUrl().'" style="height:{$px_size}px; width: {$px_size}px;" alt="'.__('Icon Appart.').'"/>';
 	}
 }
 
-class guild extends appartement
+class guild extends apartment
 {
 	public $id_icon;	///< &lt;<b>string</b>&gt;  Ryzom id of the icon
 	
