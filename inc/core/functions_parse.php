@@ -69,48 +69,51 @@ function parse_an_item(&$item,$chest) {
 	global $items;				///< &lt;<b>array{item]</b>&gt;  Where items are stoked
 	global $sorter_items;		///< &lt;<b>array{item]</b>&gt;  Will use for sorting the array items
 	
-	$matches = array();
 	
 	$room = null;
 	$item_obj = null;
 	
-	if( preg_match(PATTERN_REFUGEE, $item, $matches) == 1 ) {
-		creat1($item,$chest,$matches,$item_obj,$room);
-	}
-	else if( preg_match(PATTERN_AMPLI, $item, $matches) == 1 ) {
-		creat2($item,$chest,$matches,$item_obj,$room);
-	}
-	elseif( preg_match(PATTERN_WEAPON, $item, $matches) == 1 ) {
-		creat3($item,$chest,$matches,$item_obj,$room);
-	}
-	elseif( preg_match(PATTERN_RANGE, $item, $matches) == 1 ) {
-		creat4($item,$chest,$matches,$item_obj,$room);
-	}
-	elseif( preg_match(PATTERN_ARMOR, $item, $matches) == 1 ) {
-		creat5($item,$chest,$matches,$item_obj,$room);
-	}
-	elseif( preg_match(PATTERN_ARMOR_CP, $item, $matches) == 1 ) {
-		creat6($item,$chest,$matches,$item_obj,$room);
-	}
-	elseif( preg_match(PATTERN_SHIELD, $item, $matches) == 1 ) {
-		creat7($item,$chest,$matches,$item_obj,$room);
-	}
-	elseif( preg_match(PATTERN_JEWEL, $item, $matches) == 1 ) {
-		creat8($item,$chest,$matches,$item_obj,$room);
-	}
-	elseif( preg_match(PATTERN_MATERIAL_LOOT, $item, $matches) == 1 ) {
-		creat9($item,$chest,$matches,$item_obj,$room);
-	}
-	elseif( preg_match(PATTERN_MATERIAL_HARVEST, $item, $matches) == 1 ) {
-		creat10($item,$chest,$matches,$item_obj,$room);
-	}
-	else {
-		creat11($item,$chest,$matches,$item_obj,$room);
-	}
+	$patern_list[1]=PATTERN_REFUGEE;
+	$patern_list[2]=PATTERN_AMPLI;
+	$patern_list[3]=PATTERN_WEAPON;
+	$patern_list[4]=PATTERN_RANGE;
+	$patern_list[5]=PATTERN_ARMOR;
+	$patern_list[6]=PATTERN_ARMOR_CP;
+	$patern_list[7]=PATTERN_SHIELD;
+	$patern_list[8]=PATTERN_JEWEL;
+	$patern_list[9]=PATTERN_MATERIAL_LOOT;
+	$patern_list[10]=PATTERN_MATERIAL_HARVEST;
+	$patern_list[11]='/^(.)*/';
+
+	$pfonc_list[1]="creat1";
+	$pfonc_list[2]="creat2";
+	$pfonc_list[3]="creat3";
+	$pfonc_list[4]="creat4";
+	$pfonc_list[5]="creat5";
+	$pfonc_list[6]="creat6";
+	$pfonc_list[7]="creat7";
+	$pfonc_list[8]="creat8";
+	$pfonc_list[9]="creat9";
+	$pfonc_list[10]="creat10";
+	$pfonc_list[11]="creat11";
+	
+	dynamic_pattern($patern_list,$pfonc_list,$item,$chest,$item_obj,$room);
 	
 	# creat sorters
 	build_simple_sorter($room,$item_obj);
 	$room = null;
+}
+
+function dynamic_pattern($patern_list,$pfonc_list,&$item,$chest,&$item_obj,&$room) {
+	$matches = array();
+
+	foreach($patern_list as $key => $patern) {
+		$pfonc = $pfonc_list[$key];
+		if( preg_match($patern, $item, $matches) == 1 ) {
+			$pfonc($item,$chest,$matches,$item_obj,$room);
+			break;
+		}
+	}
 }
 	
 	function creat1(&$item,$chest,$matches,&$item_obj,&$room)  {
