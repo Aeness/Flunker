@@ -15,6 +15,16 @@
  * You should have received a copy of the GNU Affero General Public License
  * along with Flunker.  If not, see <http://www.gnu.org/licenses/>.
  */
+define("PATTERN_REFUGEE",	'/^icr(.*)?\.sitem/');
+define("PATTERN_AMPLI",		'/^ic(.|(oka[rm]))m2ms([lbwe]|_[123])?\.sitem/');
+define("PATTERN_WEAPON",		'/^ic(.|(oka[rm]))m(1|2)(.{2})([lbwe]|_[123])?\.sitem/');
+define("PATTERN_RANGE",		'/^ic(.|(oka[rm]))r(1|2)(.)([lbwe]|_[123])?\.sitem/');
+define("PATTERN_ARMOR",		'/^ic(.)a([h|l|m])([bghpsv])(_[23b])?\.sitem/');
+define("PATTERN_ARMOR_CP",	'/^ic(.)a(cp)(_[23])?\.sitem/');
+define("PATTERN_SHIELD",		'/^ic(.)s[sb]([lbwe]|_[23])?\.sitem/');
+define("PATTERN_JEWEL",		'/^ic(.)j([abdepr])(_[23b])?\.sitem/');
+define("PATTERN_MATERIAL_LOOT",	'/^m([0-9]{4})c(.)(.)(.)(.)01\.sitem/');
+define("PATTERN_MATERIAL_HARVEST",	'/^m([0-9]{4})dxa(.)(.)01\.sitem/');
 /**
  * For one guild, parses its xml file and builds its object which are in its hall.
  * @param xml 	&lt;<b>simplexml</b>&gt;	the xml file
@@ -59,26 +69,55 @@ function parse_an_item(&$item,$chest) {
 	global $items;				///< &lt;<b>array{item]</b>&gt;  Where items are stoked
 	global $sorter_items;		///< &lt;<b>array{item]</b>&gt;  Will use for sorting the array items
 	
-	$pattern_refugee = '/^icr(.*)?\.sitem/';
-	$pattern_ampli = '/^ic(.|(oka[rm]))m2ms([lbwe]|_[123])?\.sitem/';
-	$pattern_weapon = '/^ic(.|(oka[rm]))m(1|2)(.{2})([lbwe]|_[123])?\.sitem/';
-	$pattern_range = '/^ic(.|(oka[rm]))r(1|2)(.)([lbwe]|_[123])?\.sitem/';
-	$pattern_armor = '/^ic(.)a([h|l|m])([bghpsv])(_[23b])?\.sitem/';
-	$pattern_armor_cp = '/^ic(.)a(cp)(_[23])?\.sitem/';
-	$pattern_shield = '/^ic(.)s[sb]([lbwe]|_[23])?\.sitem/';
-	$pattern_jewel = '/^ic(.)j([abdepr])(_[23b])?\.sitem/';
-	$pattern_material_loot = '/^m([0-9]{4})c(.)(.)(.)(.)01\.sitem/';
-	$pattern_material_harvest = '/^m([0-9]{4})dxa(.)(.)01\.sitem/';
 	$matches = array();
 	
 	$room = null;
 	$item_obj = null;
 	
-	if( preg_match($pattern_refugee, $item, $matches) == 1 ) {
+	if( preg_match(PATTERN_REFUGEE, $item, $matches) == 1 ) {
+		creat1($item,$chest,$matches,$item_obj,$room);
+	}
+	else if( preg_match(PATTERN_AMPLI, $item, $matches) == 1 ) {
+		creat2($item,$chest,$matches,$item_obj,$room);
+	}
+	elseif( preg_match(PATTERN_WEAPON, $item, $matches) == 1 ) {
+		creat3($item,$chest,$matches,$item_obj,$room);
+	}
+	elseif( preg_match(PATTERN_RANGE, $item, $matches) == 1 ) {
+		creat4($item,$chest,$matches,$item_obj,$room);
+	}
+	elseif( preg_match(PATTERN_ARMOR, $item, $matches) == 1 ) {
+		creat5($item,$chest,$matches,$item_obj,$room);
+	}
+	elseif( preg_match(PATTERN_ARMOR_CP, $item, $matches) == 1 ) {
+		creat6($item,$chest,$matches,$item_obj,$room);
+	}
+	elseif( preg_match(PATTERN_SHIELD, $item, $matches) == 1 ) {
+		creat7($item,$chest,$matches,$item_obj,$room);
+	}
+	elseif( preg_match(PATTERN_JEWEL, $item, $matches) == 1 ) {
+		creat8($item,$chest,$matches,$item_obj,$room);
+	}
+	elseif( preg_match(PATTERN_MATERIAL_LOOT, $item, $matches) == 1 ) {
+		creat9($item,$chest,$matches,$item_obj,$room);
+	}
+	elseif( preg_match(PATTERN_MATERIAL_HARVEST, $item, $matches) == 1 ) {
+		creat10($item,$chest,$matches,$item_obj,$room);
+	}
+	else {
+		creat11($item,$chest,$matches,$item_obj,$room);
+	}
+	
+	# creat sorters
+	build_simple_sorter($room,$item_obj);
+	$room = null;
+}
+	
+	function creat1(&$item,$chest,$matches,&$item_obj,&$room)  {
 		$item_obj = new item($chest,(string)$item['slot'],(string)$item,(string)$item['q'],(string)$item['s']);
 		$room = ROOM_OTHER;
 	}
-	else if( preg_match($pattern_ampli, $item, $matches) == 1 ) {
+	function creat2(&$item,$chest,$matches,&$item_obj,&$room) {
 		$nation = $matches[1];
 		$skin = $matches[3];
 		$sap = (empty($item['sap']))?-1:1;
@@ -97,7 +136,7 @@ function parse_an_item(&$item,$chest) {
 				(string)$item['w'],(string)$item['hr']
 		);
 	}
-	elseif( preg_match($pattern_weapon, $item, $matches) == 1 ) {
+	function creat3(&$item,$chest,$matches,&$item_obj,&$room)  {
 		$sap = (empty($item['sap']))?-1:1;
 		$item_id = $matches[4];
 		$nb_hand = $matches[3];
@@ -119,7 +158,7 @@ function parse_an_item(&$item,$chest) {
 				(string)$item['dm'],(string)$item['pm'],(string)$item['adm'],(string)$item['apm']
 		);
 	}
-	elseif( preg_match($pattern_range, $item, $matches) == 1 ) {
+	function creat4(&$item,$chest,$matches,&$item_obj,&$room)  {
 		$sap = (empty($item['sap']))?-1:1;
 		$item_id = $matches[4];
 		$nb_hand = $matches[3];
@@ -141,7 +180,7 @@ function parse_an_item(&$item,$chest) {
 				(string)$item['r']
 		);
 	}
-	elseif( preg_match($pattern_armor, $item, $matches) == 1 ) {
+	function creat5(&$item,$chest,$matches,&$item_obj,&$room)  {
 		$nation = $matches[1];
 		$skin = $matches[4];
 		$id_type = $matches[2];
@@ -162,7 +201,7 @@ function parse_an_item(&$item,$chest) {
 				(string)$item['dm'],(string)$item['pm']
 		);
 	}
-	elseif( preg_match($pattern_armor_cp, $item, $matches) == 1 ) {
+	function creat6(&$item,$chest,$matches,&$item_obj,&$room)  {
 		$nation = $matches[1];
 		$skin = $matches[3];
 		$id_type = "l";
@@ -183,7 +222,7 @@ function parse_an_item(&$item,$chest) {
 				(string)$item['dm'],(string)$item['pm']
 		);
 	}
-	elseif( preg_match($pattern_shield, $item, $matches) == 1 ) {
+	function creat7(&$item,$chest,$matches,&$item_obj,&$room)  {
 		$nation = $matches[1];
 		$skin = $matches[2];
 		$id_type = "h";
@@ -204,7 +243,7 @@ function parse_an_item(&$item,$chest) {
 				(string)$item['dm'],(string)$item['pm']
 		);
 	}
-	elseif( preg_match($pattern_jewel, $item, $matches) == 1 ) {
+	function creat8(&$item,$chest,$matches,&$item_obj,&$room)  {
 		$item_id = $matches[2];
 		$nation = $matches[1];
 		$skin = $matches[3];
@@ -221,7 +260,7 @@ function parse_an_item(&$item,$chest) {
 				$item_id
 		);
 	}
-	elseif( preg_match($pattern_material_loot, $item, $matches) == 1 ) {
+	function creat9(&$item,$chest,$matches,&$item_obj,&$room)  {
 		$tmp_e = $matches[5];
 		$nation = $matches[4];
 		$id_name = $matches[1];
@@ -238,7 +277,7 @@ function parse_an_item(&$item,$chest) {
 					$id_name,
 					$e);
 	}
-	elseif( preg_match($pattern_material_harvest, $item, $matches) == 1 ) {
+	function creat10(&$item,$chest,$matches,&$item_obj,&$room)  {
 		$tmp_e = $matches[3];
 		$nation = $matches[2];
 		$id_name = $matches[1];
@@ -255,13 +294,8 @@ function parse_an_item(&$item,$chest) {
 					$id_name,
 					$e);
 	}
-	else {
+	function creat11(&$item,$chest,$matches,&$item_obj,&$room)  {
 		$item_obj = new item($chest,(string)$item['slot'],(string)$item,(string)$item['q'],(string)$item['s']);
 		$room = ROOM_OTHER;
 	}
-	
-	# creat sorters
-	build_simple_sorter($room,$item_obj);
-	$room = null;
-}
 ?>
