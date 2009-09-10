@@ -4,7 +4,7 @@
  * 
  * Translate ryzom code of magic amplifier to a French Label.
  * Must be encoded in UTF-8
- * Genrerated with http://bmsite.net/temp/ryzom_translate.zip.
+ * Genrerated with ryzom_extra (http://github.com/Aeness/ryzom_extra/tree/master).
  */
 $GLOBALS['__lang']["iccm2ms"]="Amplificateur Magique";
 $GLOBALS['__lang']["icfm2ms"]="Amplificateur Magique Fyros";

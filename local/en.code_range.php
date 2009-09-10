@@ -4,7 +4,7 @@
  * 
  * Translate ryzom code of range weapon to an English Label.
  * Must be encoded in UTF-8
- * Genrerated with http://bmsite.net/temp/ryzom_translate.zip.
+ * Genrerated with ryzom_extra (http://github.com/Aeness/ryzom_extra/tree/master).
  */
 $GLOBALS['__lang']["iccr1b"]="Bowpistol";
 $GLOBALS['__lang']["iccr1p"]="Pistol";
@@ -86,12 +86,12 @@ $GLOBALS['__lang']["ictr2a_3"]="Ry-Rayler Autolauncher";
 $GLOBALS['__lang']["ictr2b_3"]="Ry-Flunker Bowrifle";
 $GLOBALS['__lang']["ictr2l_3"]="Ry-Doomer Launcher";
 $GLOBALS['__lang']["ictr2r_3"]="Ry-Boomer Rifle";
-$GLOBALS['__lang']["iczr1b_3"]="Zo'Zin-kan Bowpistol";
+$GLOBALS['__lang']["iczr1b_3"]="Zo'Zin-Kan Bowpistol";
 $GLOBALS['__lang']["iczr1p_3"]="Zo'Tchaï Pistol";
-$GLOBALS['__lang']["iczr2a_3"]="Zo'Mo-ka Autolauncher";
-$GLOBALS['__lang']["iczr2b_3"]="Zo'Ma-kam Bowrifle";
-$GLOBALS['__lang']["iczr2l_3"]="Zo'Ba-zoon Launcher";
-$GLOBALS['__lang']["iczr2r_3"]="Zo'Shoy-ton Rifle";
+$GLOBALS['__lang']["iczr2a_3"]="Zo'Mo-Ka Autolauncher";
+$GLOBALS['__lang']["iczr2b_3"]="Zo'Ma-Kam Bowrifle";
+$GLOBALS['__lang']["iczr2l_3"]="Zo'Ba-Zoon Launcher";
+$GLOBALS['__lang']["iczr2r_3"]="Zo'Shoy-Ton Rifle";
 $GLOBALS['__lang']["icbr2a"]="Fraser Autolauncher of the Night Turners";
 $GLOBALS['__lang']["icbr2a_2"]="Fraser Autolauncher of the Dune Riders";
 $GLOBALS['__lang']["icbr2a_3"]="Fraser Autolauncher of the Firebrands";

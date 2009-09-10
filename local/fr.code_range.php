@@ -4,7 +4,7 @@
  * 
  * Translate ryzom code of range weapon to a French Label.
  * Must be encoded in UTF-8
- * Genrerated with http://bmsite.net/temp/ryzom_translate.zip.
+ * Genrerated with ryzom_extra (http://github.com/Aeness/ryzom_extra/tree/master).
  */
 $GLOBALS['__lang']["iccr1b"]="Pistolet-Arbalète";
 $GLOBALS['__lang']["iccr1p"]="Pistolet";

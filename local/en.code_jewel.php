@@ -4,7 +4,7 @@
  * 
  * Translate ryzom code of jewel to an English Label.
  * Must be encoded in UTF-8
- * Genrerated with http://bmsite.net/temp/ryzom_translate.zip.
+ * Genrerated with ryzom_extra (http://github.com/Aeness/ryzom_extra/tree/master).
  */
 $GLOBALS['__lang']["icfja"]="Fyros Anklet";
 $GLOBALS['__lang']["icfjb"]="Fyros Bracelet";

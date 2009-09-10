@@ -4,7 +4,7 @@
  * 
  * Translate ryzom code of weapon to an English Label.
  * Must be encoded in UTF-8
- * Genrerated with http://bmsite.net/temp/ryzom_translate.zip.
+ * Genrerated with ryzom_extra (http://github.com/Aeness/ryzom_extra/tree/master).
  */
 $GLOBALS['__lang']["iccm1bm"]="Mace";
 $GLOBALS['__lang']["iccm1bs"]="Staff";
@@ -147,7 +147,7 @@ $GLOBALS['__lang']["iczm1sa_3"]="Zo'Chok Axe";
 $GLOBALS['__lang']["iczm1ss_3"]="Zo'Kovan Sword";
 $GLOBALS['__lang']["iczm2bm_3"]="Zo'Kanka Mace";
 $GLOBALS['__lang']["iczm2pp_3"]="Zo'Pukatoo Pike";
-$GLOBALS['__lang']["iczm2sa_3"]="Zo'Kra-cho Axe";
+$GLOBALS['__lang']["iczm2sa_3"]="Zo'Kra-Cho Axe";
 $GLOBALS['__lang']["iczm2ss_3"]="Zo'Matchata Sword";
 $GLOBALS['__lang']["icbm2sa"]="Retch Axe of the Barkers";
 $GLOBALS['__lang']["icbm2sa_2"]="Retch Axe of the Woven Bridles";
@@ -169,7 +169,7 @@ $GLOBALS['__lang']["icbm1ps"]="Palor Spear of the Hamazans";
 $GLOBALS['__lang']["icbm1ps_2"]="Palor Spear of The Arid Matis";
 $GLOBALS['__lang']["icbm1ps_3"]="Palor Spear of the Sap Slaves";
 $GLOBALS['__lang']["icbm1bm"]="Nanka Mace of the Sacred Sap";
-$GLOBALS['__lang']["icbm1bm_2"]="Nanka Mace du Black Circle";
+$GLOBALS['__lang']["icbm1bm_2"]="Nanka Mace of the Black Circle";
 $GLOBALS['__lang']["icbm1bm_3"]="Nanka Mace of the Gibads";
 $GLOBALS['__lang']["icbm1bs"]="Eternal Tree Shopan Shaft";
 $GLOBALS['__lang']["icbm1bs_2"]="Shopan Staff of the Sap Gleaners";

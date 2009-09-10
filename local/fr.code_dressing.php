@@ -4,7 +4,7 @@
  * 
  * Translate ryzom code of cloth to a French Label.
  * Must be encoded in UTF-8
- * Genrerated with http://bmsite.net/temp/ryzom_translate.zip.
+ * Genrerated with ryzom_extra (http://github.com/Aeness/ryzom_extra/tree/master).
  */
 $GLOBALS['__lang']["iccsb"]="Rondache";
 $GLOBALS['__lang']["iccss"]="Bouclier";
