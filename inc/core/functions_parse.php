@@ -74,7 +74,9 @@ $pfonc_list= array (
  */
 function parse_guild(&$xml) {
 
-	return new guild((string)$xml->gid,(string)$xml->name,(string)$xml->icon);
+	$guild = new guild((string)$xml->gid,(string)$xml->name,(string)$xml->icon);
+	$guild->money=(string)$xml->money;
+	return $guild;
 }
 
 /**
@@ -83,11 +85,14 @@ function parse_guild(&$xml) {
  */
 function parse_character(&$xml) {
 
-	return new apartment((string)$xml->cid,(string)$xml->name,(string)$xml->guild->icon);
+	$apartment = new apartment((string)$xml->cid,(string)$xml->name,(string)$xml->guild->icon);
+	$apartment->money=(string)$xml->money;
+	return $apartment;
 }
 
 /**
  * For one chest, parses its xml file and builds tab filter used by Filter and Item.
+ * And give to the chest the nb items found.
  * @param xml 		&lt;<b>simplexml</b>&gt;		the xml file
  * @param xml_path 	&lt;<b>string</b>&gt;		the xpath for finding item tag
  * @param chest 	&lt;<b>apartment</b>&gt;	the apartment or guild object where item are
@@ -103,6 +108,8 @@ function parse_item(&$xml,$xml_path,$chest) {
 	while(list(,$item)=each($result)) {
 		parse_an_item($item,$chest);
 	}
+	
+	$chest->nbItems=count($result);
 }
 
 /**

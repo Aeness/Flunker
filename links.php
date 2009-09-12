@@ -391,9 +391,9 @@ header('Content-Type:text/html; charset=UTF-8');
 						$list = "";
 						if( isset($list_guild) && is_array($list_guild) ) {
 							foreach($list_guild as $guild) {
-								$list .= ", ".$guild->getSmallIcon(23)."&nbsp;".$guild->name;
+								$list .= $guild->getHtml();
 							}
-							echo substr($list, 1).".";
+							echo $list;
 						}
 						?><br style="clear: left;" /><br />
 						<form action="">

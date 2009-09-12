@@ -25,13 +25,13 @@ if( !isset($_SESSION['list_guild']) ) {
 
 }
 
-$content = "<div id='enter_armory' class='enter_div' style=\"margin: 1px 1px 1px 68px; background: url('img/Enseigne_melee.png') repeat-y top center;text-align: center;\">".__("Enter in the Armory").'</div>';
+$content = "<div id='enter_armory' class='enter_div' style=\"margin: 1px 1px 1px 1px; background: url('img/Enseigne_melee.png') repeat-y top center;text-align: center;\">".__("Enter in the Armory").'</div>';
 $content .= "<div id='enter_ampli' class='enter_div' style=\"background: url('img/Enseigne_melee.png') repeat-y top center;text-align: center;\">".__("Enter in the Magic Amplifier Armory").'</div>';
-$content .= "<div id='enter_range' class='enter_div' style=\"margin: 1px 1px 1px 68px; background: url('img/Enseigne_range.png') repeat-y top center;text-align: center;\">".__("Enter in the Range Amory").'</div>';
-$content .= "<div id='enter_jewel' class='enter_div' style=\"background: url('img/Enseigne_jewel.png') repeat-y top center;text-align: center;\">".__("Enter in the Jeweller's").'</div>';
-$content .= "<div id='enter_dressing' class='enter_div' style=\"margin: 1px 1px 1px 68px; background: url('img/Enseigne_dressing.png') repeat-y top center;text-align: center;\">".__("Enter in the Wardrobe").'</div>';
-$content .= "<div id='enter_material' class='enter_div' style=\"background: url('img/Enseigne_material.png') repeat-y top center;text-align: center;\">".__("Enter in the Material Bazaar").'</div>';
-$content .= "<div id='enter_other' class='enter_div' style=\"margin: 1px 1px 1px 68px; background: url('img/Enseigne_other.png') repeat-y top center;text-align: center;\">".__("Enter in the Bazaar").'</div>';
+$content .= "<div id='enter_range' class='enter_div' style=\"margin: 1px 1px 1px 1px; background: url('img/Enseigne_range.png') repeat-y top center;text-align: center;\">".__("Enter in the Range Amory").'</div>';
+$content .= "<div id='enter_jewel' class='enter_div' style=\"margin: 1px 1px 1px 107px; background: url('img/Enseigne_jewel.png') repeat-y top center;text-align: center;\">".__("Enter in the Jeweller's").'</div>';
+$content .= "<div id='enter_dressing' class='enter_div' style=\"margin: 1px 1px 1px 1px; background: url('img/Enseigne_dressing.png') repeat-y top center;text-align: center;\">".__("Enter in the Wardrobe").'</div>';
+$content .= "<div id='enter_material' class='enter_div' style=\"margin: 1px 1px 1px 107px; background: url('img/Enseigne_material.png') repeat-y top center;text-align: center;\">".__("Enter in the Material Bazaar").'</div>';
+$content .= "<div id='enter_other' class='enter_div' style=\"margin: 1px 1px 1px 1px; background: url('img/Enseigne_other.png') repeat-y top center;text-align: center;\">".__("Enter in the Bazaar").'</div>';
 $content .= "<p style=\"clear: left;\"></p>";
 
 header('Content-Type:text/html; charset=UTF-8');
@@ -53,48 +53,36 @@ header('Content-Type:text/html; charset=UTF-8');
 				window.location.href = "room.php?room=armory";
 			}
 		);
-	});
-	$(function(){
 	
 		$('#enter_ampli').click(
 			function(){
 				window.location.href = "room.php?room=ampli";
 			}
 		);
-	});
-	$(function(){
 	
 		$('#enter_range').click(
 			function(){
 				window.location.href = "room.php?room=range";
 			}
 		);
-	});
-	$(function(){
 	
 		$('#enter_dressing').click(
 			function(){
 				window.location.href = "room.php?room=dressing";
 			}
 		);
-	});
-	$(function(){
 	
 		$('#enter_jewel').click(
 			function(){
 				window.location.href = "room.php?room=jewel";
 			}
 		);
-	});
-	$(function(){
 	
 		$('#enter_material').click(
 			function(){
 				window.location.href = "room.php?room=material";
 			}
 		);
-	});
-	$(function(){
 	
 		$('#enter_other').click(
 			function(){
@@ -108,7 +96,7 @@ header('Content-Type:text/html; charset=UTF-8');
 	.enter_div {
 		float: left;
 		cursor: pointer;
-		width :256px ;
+		width :214px ;
 		height: 128px;
 		margin: 1px;
 		border: 1px solid black;
@@ -146,9 +134,9 @@ header('Content-Type:text/html; charset=UTF-8');
 						echo __('Welcome to Flunker, your guild halls are:');
 						$list = "";
 						foreach($list_guild as $guild) {
-							$list .= ", ".$guild->getSmallIcon(23)."&nbsp;".$guild->name;
+							$list .= $guild->getHtml();
 						}
-						echo substr($list, 1).".";
+						echo $list;
 						?><br style="clear: left;" /><br />
 						
 						<!-- begining of content -->

@@ -19,6 +19,7 @@ $GLOBALS['__lang']['Enter in the Jeweller\'s']="Entrez dans la Bijouterie";
 $GLOBALS['__lang']['Enter in the Wardrobe']="Entrez dans la Penderie";
 $GLOBALS['__lang']['Enter in the Material Bazaar']="Entrez dans le Bazar des Matières Premières";
 $GLOBALS['__lang']['Enter in the Bazaar']="Entrez dans le Bazar";
+$GLOBALS['__lang']['Slot']="Emplacement";
 
 $GLOBALS['__lang']['XMLHttpRequest not supported by your browser.']="XMLHttpRequest ne sont pas supportées par votre navigateur.";
 

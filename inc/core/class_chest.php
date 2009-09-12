@@ -24,8 +24,10 @@
  */
 class apartment
 {
-	public $id;	///< &lt;<b>string</b>&gt;  Ryzom id (cid, gid, ...)
-	public $name;	///< &lt;<b>string</b>&gt;  Name
+	public $id;		///< &lt;<b>string</b>&gt;  Ryzom id (cid, gid, ...)
+	public $name;		///< &lt;<b>string</b>&gt;  Name
+	public $money;		///< &lt;<b>int</b>&gt;  Nb dapper
+	public $nbItems;	///< &lt;<b>int</b>&gt;  Nb item
 	
 	public function __construct($gid,$name,$id_icon)
 	{
@@ -42,6 +44,13 @@ class apartment
 		return 'img/icon_apartment.png';
 	}
 	
+	public function resumeName() {
+		if( strlen($this->name) > 25 ){
+			return substr($this->name,0,22)."...";
+		}
+		return $this->name;
+	}
+	
 	/**
 	* Give the  Guild Icon.
 	 * The result is better with a icon smaller than the 's' Ryzom size.
@@ -50,6 +59,21 @@ class apartment
 	 */
 	public function getSmallIcon($px_size) {
 		return '<img src="'.$this->getUrl().'" style="height:{$px_size}px; width: {$px_size}px;" alt="'.__('Icon Appart.').'"/>';
+	}
+	
+	public function getHtml() {
+		return "
+				<div style=\"width: 49%; float: left; border: 1px solid black; margin: 2px 0 0 2px; background-color:#64734F;\">
+					<div style=\"width: 34px; float: left;vertical-align: middle; padding: 2px 0 0 2px;\">
+						".$this->getSmallIcon(23)."
+					</div>
+					<div style=\"margin: 6px 0 0 5px;height: 34px;width: 150px; float: left;\">
+						<span style=\"vertical-align: middle;\" title=\"".$this->name."\">".$this->resumeName()."</span>
+					</div>
+					<div style=\"margin: 5px 0 0 5px;height: 34px;float: left; font-size: 11px;\">
+						<span style=\"vertical-align: middle;\">".__("Slot").__(":").round(($this->nbItems * 100) / 999,2)."%<br />".$this->money." dappers</span>
+					</div>
+				</div>";
 	}
 }
 
