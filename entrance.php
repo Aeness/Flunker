@@ -137,7 +137,8 @@ header('Content-Type:text/html; charset=UTF-8');
 							$list .= $guild->getHtml();
 						}
 						echo $list;
-						?><br style="clear: left;" /><br />
+						?>
+						<p class="invisible_break">&nbsp;</p>
 						
 						<!-- begining of content -->
 						<?php echo $content; ?>

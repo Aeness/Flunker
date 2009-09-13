@@ -395,7 +395,8 @@ header('Content-Type:text/html; charset=UTF-8');
 							}
 							echo $list;
 						}
-						?><br style="clear: left;" /><br />
+						?>
+						<p class="invisible_break">&nbsp;</p>
 						<form action="">
 							<?php echo __("Ensure that you select the right language."); ?><br/>
 							<?php echo __("For a direct access (during your next session) to your guild halls, bookmark this page or use one of the following links:"); ?><br/><br/>
