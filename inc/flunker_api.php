@@ -41,7 +41,9 @@ session_start();
 require_once(dirname(__FILE__).'/conf.php');
 
 require_once(dirname(__FILE__).'/core/functions_language.php');
+require_once(dirname(__FILE__).'/core/functions_render.php');
 init_language($_GET['language'],$_SESSION['lang']);
+init_css($_GET['style'],$_SESSION['style']);
 
 require_once(dirname(__FILE__).'/ryzom_api/ryzom_api/ryzom_api.php');
 require_once(dirname(__FILE__).'/core/constants.php');
@@ -56,5 +58,4 @@ require_once(dirname(__FILE__).'/core/functions_parse.php');
 require_once(dirname(__FILE__).'/core/functions_sorter.php');
 require_once(dirname(__FILE__).'/core/functions_session.php');
 require_once(dirname(__FILE__).'/core/functions_item_icon.php');
-require_once(dirname(__FILE__).'/core/functions_render.php');
 ?>

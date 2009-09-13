@@ -199,11 +199,11 @@ $(function(){
 	Flunker.criterias.GHcheckboxs.img.click(
 		function(){
 			var back = $(this).parent();
-			if( back.css("background-image").match("_on.png") ) {
+			if( back.css("background-image").match("_on") ) {
 				back.css("background-image",back.css("background-image").replace("_on", "_off"));
 				$(this).siblings("input").get(0).click();
 			}
-			else if( back.css("background-image").match("_off.png") ) {
+			else if( back.css("background-image").match("_off") ) {
 				back.css("background-image",back.css("background-image").replace("_off", "_on"));
 				$(this).siblings("input").get(0).click();
 			}

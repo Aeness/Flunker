@@ -42,9 +42,9 @@ header('Content-Type:text/html; charset=UTF-8');
 	<title><?php echo __("Flunker"); ?></title>
 	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 	<link type="text/css" href="inc/ryzom_api/ryzom_api/render/ryzom_ui.css" rel="stylesheet" media="all" />
+	<link type="text/css" href="css/tryker.css" rel="stylesheet" media="all" />
 	<?php  echo ryzom_render_header_www(); ?>
 	<script type="text/javascript" src="js/jquery/jquery.js"></script>
-	
 	<script type="text/javascript">
 	$(function(){
 	
@@ -91,6 +91,7 @@ header('Content-Type:text/html; charset=UTF-8');
 		);
 	});
 	</script>
+	<script type="text/javascript" src="js/background.js"></script>
 
 	<style type="text/css">
 	.enter_div {
@@ -128,7 +129,6 @@ header('Content-Type:text/html; charset=UTF-8');
 			
 				<div class="ryzom-ui-l"><div class="ryzom-ui-r"><div class="ryzom-ui-m">
 					<div class="ryzom-ui-body">
-					
 						<?php 
 						$list_guild = unserialize($_SESSION['list_guild']);
 						echo __('Welcome to Flunker, your guild halls are:');
@@ -149,6 +149,6 @@ header('Content-Type:text/html; charset=UTF-8');
 				<div class="ryzom-ui-bl"><div class="ryzom-ui-br"><div class="ryzom-ui-b"></div></div></div>
 				<p class="ryzom-ui-notice"><?php echo __('powered by') ;?> <a class="ryzom-ui-notice" href="http://dev.ryzom.com/projects/ryzom-api/wiki">ryzom-api</a></p>
 			</div>
-	
+		<p class="invisible_break">&nbsp;</p>
 		</div>
 	</body></html>
