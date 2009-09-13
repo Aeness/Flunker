@@ -25,14 +25,7 @@ if( !isset($_SESSION['list_guild']) ) {
 
 }
 
-$content = "<div id='enter_armory' class='enter_div' style=\"margin: 1px 1px 1px 1px; background: url('img/Enseigne_melee.png') repeat-y top center;text-align: center;\">".__("Enter in the Armory").'</div>';
-$content .= "<div id='enter_ampli' class='enter_div' style=\"background: url('img/Enseigne_melee.png') repeat-y top center;text-align: center;\">".__("Enter in the Magic Amplifier Armory").'</div>';
-$content .= "<div id='enter_range' class='enter_div' style=\"margin: 1px 1px 1px 1px; background: url('img/Enseigne_range.png') repeat-y top center;text-align: center;\">".__("Enter in the Range Amory").'</div>';
-$content .= "<div id='enter_jewel' class='enter_div' style=\"margin: 1px 1px 1px 107px; background: url('img/Enseigne_jewel.png') repeat-y top center;text-align: center;\">".__("Enter in the Jeweller's").'</div>';
-$content .= "<div id='enter_dressing' class='enter_div' style=\"margin: 1px 1px 1px 1px; background: url('img/Enseigne_dressing.png') repeat-y top center;text-align: center;\">".__("Enter in the Wardrobe").'</div>';
-$content .= "<div id='enter_material' class='enter_div' style=\"margin: 1px 1px 1px 107px; background: url('img/Enseigne_material.png') repeat-y top center;text-align: center;\">".__("Enter in the Material Bazaar").'</div>';
-$content .= "<div id='enter_other' class='enter_div' style=\"margin: 1px 1px 1px 1px; background: url('img/Enseigne_other.png') repeat-y top center;text-align: center;\">".__("Enter in the Bazaar").'</div>';
-$content .= "<p style=\"clear: left;\"></p>";
+$style = ($_SESSION['style']!="ryzom")?"_".$_SESSION['style']:"";
 
 header('Content-Type:text/html; charset=UTF-8');
 ?>
@@ -42,9 +35,16 @@ header('Content-Type:text/html; charset=UTF-8');
 	<title><?php echo __("Flunker"); ?></title>
 	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 	<link type="text/css" href="inc/ryzom_api/ryzom_api/render/ryzom_ui.css" rel="stylesheet" media="all" />
-	<link type="text/css" href="css/tryker.css" rel="stylesheet" media="all" />
-	<?php  echo ryzom_render_header_www(); ?>
+		<?php  echo ryzom_render_header_www(); ?>
+		<link type="text/css" href="css/flunker.css" rel="stylesheet"  media="all"/>
+		<link type="text/css" href="css/<?php echo $_SESSION['style'];?>.css" rel="stylesheet"  media="all"/>
 	<script type="text/javascript" src="js/jquery/jquery.js"></script>
+	<script type="text/javascript">
+	var Flunker={
+		nationality: "<?php echo $_SESSION['style'];?>"
+	};
+	</script>
+	<script type="text/javascript" src="js/background.js"></script>
 	<script type="text/javascript">
 	$(function(){
 	
@@ -102,6 +102,11 @@ header('Content-Type:text/html; charset=UTF-8');
 		margin: 1px;
 		border: 1px solid black;
 	}
+	.sub_enter_div {
+		width :214px ;
+		height: 128px;
+		margin: 0px;
+	}
 	</style>
 	</head>
 	
@@ -114,6 +119,8 @@ header('Content-Type:text/html; charset=UTF-8');
 			<a href="?language=en"><img hspace="5" border="0" src="http://www.ryzom.com/data/en_v6.jpg" alt="English" /></a>
 			<a href="?language=fr"><img hspace="5" border="0" src="http://www.ryzom.com/data/fr_v6.jpg" alt="Français" /></a>
 			<a href="?language=de"><img hspace="5" border="0" src="http://www.ryzom.com/data/de_v6.jpg" alt="Deutsch" /></a>
+			<a href="?style=ryzom"><img style="margin-left: 30px;" hspace="5" border="0" src="img/ryzom.png" alt="<?php echo __("Ryzom Style"); ?>" /></a>
+			<a href="?style=tryker"><img hspace="5" border="0" src="img/tryker.png" alt="<?php echo __("Tryker Style"); ?>" /></a>
 			
 			<div class="ryzom-ui ryzom-ui-header">
 				<div class="ryzom-ui-tl"><div class="ryzom-ui-tr">
@@ -127,8 +134,8 @@ header('Content-Type:text/html; charset=UTF-8');
 					</div>
 				</div></div>
 			
-				<div class="ryzom-ui-l"><div class="ryzom-ui-r"><div class="ryzom-ui-m">
-					<div class="ryzom-ui-body">
+				<div class="ryzom-ui-l"><div class="ryzom-ui-r"><div id="search_content" class="ryzom-ui-m">
+					<div id="result_content" class="ryzom-ui-body">
 						<?php 
 						$list_guild = unserialize($_SESSION['list_guild']);
 						echo __('Welcome to Flunker, your guild halls are:');
@@ -140,9 +147,43 @@ header('Content-Type:text/html; charset=UTF-8');
 						?><br style="clear: left;" /><br />
 						
 						<!-- begining of content -->
-						<?php echo $content; ?>
+						<div id='enter_armory' class='enter_div' style="background: url('img/Enseigne_back<?php echo $style; ?>.png');">
+							<div class='sub_enter_div' style="background: url('img/Enseigne_melee.png') repeat-y top center;text-align: center;">
+								<?php echo __("Enter in the Armory"); ?>
+							</div>
+						</div>
+						<div id='enter_ampli' class='enter_div' style="background: url('img/Enseigne_back<?php echo $style; ?>.png');">
+							<div class='sub_enter_div' style="background: url('img/Enseigne_melee.png') repeat-y top center;text-align: center;">
+								<?php echo __("Enter in the Magic Amplifier Armory"); ?>
+							</div>
+						</div>
+						<div id='enter_range' class='enter_div' style="background: url('img/Enseigne_back<?php echo $style; ?>.png');">
+							<div class='sub_enter_div' style='background: url("img/Enseigne_range.png") repeat-y top center;text-align: center;'>
+								<?php echo __("Enter in the Range Amory"); ?>
+							</div>
+						</div>
+						<div id='enter_dressing' class='enter_div' style="background: url('img/Enseigne_back<?php echo $style; ?>.png');margin-left: 107px;">
+							<div class='sub_enter_div' style="background: url('img/Enseigne_jewel.png') repeat-y top center;text-align: center;">
+								<?php echo __("Enter in the Jeweller's"); ?>
+							</div>
+						</div>
+						<div id='enter_jewel' class='enter_div' style="background: url('img/Enseigne_back<?php echo $style; ?>.png');">
+							<div class='sub_enter_div' style="background: url('img/Enseigne_dressing.png') repeat-y top center;text-align: center;">
+								<?php echo __("Enter in the Wardrobe"); ?>
+							</div>
+						</div>
+						<div id='enter_material' class='enter_div' style="background: url('img/Enseigne_back<?php echo $style; ?>.png'); margin-left: 107px;">
+							<div class='sub_enter_div' style="background: url('img/Enseigne_material.png') repeat-y top center;text-align: center;">
+								<?php echo __("Enter in the Material Bazaar"); ?>
+							</div>
+						</div>
+						<div id='enter_other' class='enter_div' style="background: url('img/Enseigne_back<?php echo $style; ?>.png');">
+							<div class='sub_enter_div' style="background: url('img/Enseigne_other.png') repeat-y top center;text-align: center;">
+								<?php echo __("Enter in the Bazaar"); ?>
+							</div>
+						</div>
+						<p style="clear: left">&nbsp;</p>
 						<!-- end of content -->
-
 					</div>
 				</div></div></div>
 

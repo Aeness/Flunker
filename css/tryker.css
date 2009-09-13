@@ -32,6 +32,9 @@ input.ryzom-ui-button, .ryzom-ui-button {
 	border-left: 1px solid #2A3A3D;
 	background-color: #445E63;
 }
+.ryzom-ui {
+	opacity: 0.99;
+}
 .ryzom-ui-body {
 	border-top: 1px solid #111718;
 	border-right: 1px solid #77A3AC;
@@ -54,4 +57,8 @@ input.ryzom-ui-button, .ryzom-ui-button {
 /* ***ajax waiting*** */
 #ajax_waiting {
 	background: #436168;
+}
+
+.chest_info {
+	background-color:#436168;
 }

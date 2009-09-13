@@ -212,15 +212,16 @@ li.iconright{
 .ryzom-ui {
 	font-family: Arial, sans-serif;
 	color: white;
-	opacity: 0.99;
 }
 .ryzom-ui-body {
 	/* margin: leave 5px room after bottom border */
 	padding: 5px 5px 5px 5px;
 }
-#main{
-	width:96%;
+
+.chest_info {
+	width: 49%; float: left; border: 1px solid black; margin: 2px 0 0 2px; background-color:#64734F;
 }
+
 p.invisible_break {
 	clear: left;
 	border: 0px solid red;

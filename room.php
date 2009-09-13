@@ -36,7 +36,6 @@ $filter_form = $_SESSION[$room_type]['filter_form'];
 $last_filter_line = $_SESSION[$room_type]['last_filter_line'];
 $nb_items = $_SESSION[$room_type]['nb_items'];
 
-
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<?php echo $_SESSION['lang']; ?>" lang="<?php echo $_SESSION['lang']; ?>">
@@ -60,6 +59,12 @@ $nb_items = $_SESSION[$room_type]['nb_items'];
 		<script type="text/javascript" src="js/background.js"></script>
 		<script type="text/javascript" src="js/ajax.js"></script>
 		<script type="text/javascript" src="js/criteria.js"></script>
+
+		<style type="text/css">
+			#main{
+				width:96%;
+			}
+		</style>
 	</head>
 	
 	<body>
