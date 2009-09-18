@@ -19,17 +19,17 @@ body{
 }
 /* input[type=submit] will make IE6 to ignore whole CSS rule, so cant combine this with .ryzom-ui-button below */
 input[type=submit] {
-	border-top: 1px solid #111718;
-	border-right: 1px solid #77A3AC;
-	border-bottom: 1px solid #92C8D3;
-	border-left: 1px solid #2A3A3D;
+	border-bottom: 1px solid #111718;
+	border-left: 1px solid #77A3AC;
+	border-top: 1px solid #92C8D3;
+	border-right: 1px solid #2A3A3D;
 	background-color: #445E63;
 }
 input.ryzom-ui-button, .ryzom-ui-button {
-	border-top: 1px solid #111718;
-	border-right: 1px solid #77A3AC;
-	border-bottom: 1px solid #92C8D3;
-	border-left: 1px solid #2A3A3D;
+	border-bottom: 1px solid #111718;
+	border-left: 1px solid #77A3AC;
+	border-top: 1px solid #92C8D3;
+	border-right: 1px solid #2A3A3D;
 	background-color: #445E63;
 }
 .ryzom-ui {
