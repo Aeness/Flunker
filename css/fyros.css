@@ -1,0 +1,64 @@
+body{
+	background-image:url(../img/fyros_gh.jpg);
+	background-repeat:no-repeat;
+	background-color:#131210;
+}
+#search_content.ryzom-ui-m {
+	background-image: url(../img/skin_blank_flunker.png);
+}
+
+#result_content.ryzom-ui-body {
+	background-image: url(../img/skin_blank_inner_flunker.png);
+}
+.ryzom-ui input, .ryzom-ui select {
+	border-top: 1px solid #251D12;
+	border-right: 1px solid #934F04;
+	border-bottom: 1px solid #E97E07;
+	border-left: 1px solid #58442A;
+	background-color: #6E5230;
+}
+/* input[type=submit] will make IE6 to ignore whole CSS rule, so cant combine this with .ryzom-ui-button below */
+input[type=submit] {
+	border-top: 1px solid #251D12;
+	border-right: 1px solid #934F04;
+	border-bottom: 1px solid #E97E07;
+	border-left: 1px solid #58442A;
+	background-color: #6E5230;
+}
+input.ryzom-ui-button, .ryzom-ui-button {
+	border-top: 1px solid #251D12;
+	border-right: 1px solid #934F04;
+	border-bottom: 1px solid #E97E07;
+	border-left: 1px solid #58442A;
+	background-color: #6E5230;
+}
+.ryzom-ui {
+	opacity: 0.99;
+}
+.ryzom-ui-body {
+	border-top: 1px solid #251D12;
+	border-right: 1px solid #934F04;
+	border-bottom: 1px solid #E97E07;
+	border-left: 1px solid #58442A;
+}
+
+/* ***search*** */
+/* order filter */
+#order_boxes li, #order_boxes_waited li {
+	background-color: #6E5230;
+}
+/* checkbox filter, radio filter , gh filter */
+.li_checkbox_gh_on_fyros{
+	background-image: url(../img/back_button_on_fyros.png);
+	background-repeat: no-repeat;
+	background-position: left top;
+}
+
+/* ***ajax waiting*** */
+#ajax_waiting {
+	background: #6E5230;
+}
+
+.chest_info {
+	background-color:#6E5230;
+}
