@@ -41,4 +41,19 @@ function __($str)
 {
 	return (!empty($GLOBALS['__lang'][$str])) ? $GLOBALS['__lang'][$str] : $str;
 }
+
+/**
+ * @return html code that explain the session is lost in english, french and german.
+ */
+function html_err_lost_session($with_link=false) {
+	if( $with_link ) {
+		return 'You lost the session. <a class="ryzom-ui-button" href="?">Select your API Key again</a><br /><br />
+		Vous avez perdu votre session. <a class="ryzom-ui-button" href="?language=fr">Sélectionnez une nouvelle fois votre clé.</a><br /><br />
+		You lost the session. <a class="ryzom-ui-button" href="?language=de">Ihre(n) Gildenschlüssel(n) wieder eingeben.</a><br /><br />';
+	
+	}
+	return 'You lost the session. Select your API Key again.<br />
+		Vous avez perdu votre session. Sélectionnez une nouvelle fois votre clé.<br />
+		You lost the session. Ihre(n) Gildenschlüssel(n) wieder eingeben.<br />';
+}
 ?>

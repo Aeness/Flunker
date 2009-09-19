@@ -19,9 +19,7 @@ require_once('./inc/flunker_api.php');
 $_SESSION['comeFrom'] = null;
 //ryzom_log_start('Flunker');
 if( !isset($_SESSION['list_guild']) ) {
-	$_SESSION['error'] =  'You lost the session. Select your API Key again.<br />
-		Vous avez perdu votre session. Sélectionnez une nouvelle fois votre clé.<br />
-		You lost the session. Ihre(n) Gildenschlüssel(n) wieder eingeben.<br />';
+	$_SESSION['error'] =  html_err_lost_session();
 	session_write_close();
 	header('Location: index.php?');
 }
