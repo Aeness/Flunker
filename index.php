@@ -91,6 +91,10 @@ header('Content-Type:text/html; charset=UTF-8');
 							echo '<div class="error">'.$GLOBALS['__error'].'</div>';
 							$GLOBALS['__error'] = "";
 						}
+						if( $_SESSION['error'] != "" ) {
+							echo '<div class="error">'.$_SESSION['error'].'</div>';
+							$SESSION['error'] = "";
+						}
 						?>
 					
 						<!-- begining of content -->

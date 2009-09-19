@@ -17,7 +17,9 @@
  */
 require_once('./inc/flunker_api.php');
 if( !isset($_SESSION['list_guild']) ) {
-	reinit_session();
+	$_SESSION['error'] =  'You lost the session. Select your API Key again.<br />
+		Vous avez perdu votre session. Sélectionnez une nouvelle fois votre clé.<br />
+		You lost the session. Ihre(n) Gildenschlüssel(n) wieder eingeben.<br />';
 	session_write_close();
 	header('Location: index.php?');
 

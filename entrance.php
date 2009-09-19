@@ -19,10 +19,7 @@ require_once('./inc/flunker_api.php');
 $_SESSION['comeFrom'] = null;
 //ryzom_log_start('Flunker');
 if( !isset($_SESSION['list_guild']) ) {
-	reinit_session();
-	session_write_close();
 	header('Location: index.php?');
-
 }
 
 $content = "<div id='enter_armory' class='enter_div' style=\"margin: 1px 1px 1px 1px; background: url('img/Enseigne_melee.png') repeat-y top center;text-align: center;\">".__("Enter in the Armory").'</div>';
