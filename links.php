@@ -55,17 +55,26 @@ if ((isset($_GET['ckey']) && $_GET['ckey'] != '')
 					if( ryzom_guild_valid_key($key, $gid)) {
 						$list_correct_ckey[] = $ckey;
 						$xml = ryzom_guild_simplexml($key);
+						if ($xml==null) {
+							throw new Exception(__("Connection with ryzom_api impossible."));
+						}
 						$guild = parse_guild($xml);
-						$list_guild[$guild->id] = $guild;
 						parse_item($xml,'/guild/room/*',$guild);
+						$list_guild[$guild->id] = $guild;
 					}
 					else if (ryzom_character_valid_key($key, $uid, $slot, $full)) {
 						$list_correct_ckey[] = $ckey;
 						$xml = ryzom_character_simplexml($key, 'full');
+						if ($xml==null) {
+							throw new Exception(__("Connection with ryzom_api impossible."));
+						}
 						$character = parse_character($xml);
-						$list_guild[$character->id] = $character;
 						$xml_inv = ryzom_character_simplexml($key, 'items');
+						if ($xml==null) {
+							throw new Exception(__("Connection with ryzom_api impossible."));
+						}
 						parse_item($xml_inv,'/items/room/*',$character);
+						$list_guild[$character->id] = $character;
 					}
 					else {
 						$error_msg .= __('Invalid key')."<br />";
@@ -73,7 +82,6 @@ if ((isset($_GET['ckey']) && $_GET['ckey'] != '')
 				}
 				catch  (Exception $e) {
 					$error_msg .= $e->getMessage()."<br />";
-					array_pop($list_guild);
 					array_pop($list_correct_ckey);
 				}
 			}
