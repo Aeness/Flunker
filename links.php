@@ -384,6 +384,12 @@ header('Content-Type:text/html; charset=UTF-8');
 			
 				<div class="ryzom-ui-l"><div class="ryzom-ui-r"><div class="ryzom-ui-m">
 					<div class="ryzom-ui-body">
+						<?php 
+						if( $GLOBALS['__error'] != "" ) {
+							echo '<div class="error">'.$GLOBALS['__error'].'</div>';
+							$GLOBALS['__error'] = "";
+						}
+						?>
 						<?php echo $error_msg; ?>
 						<?php 
 						$list_guild = unserialize($_SESSION['list_guild']);

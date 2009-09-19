@@ -93,6 +93,13 @@ $nb_items = $_SESSION[$room_type]['nb_items'];
 				</div></div>
 			
 				<div class="ryzom-ui-l"><div class="ryzom-ui-r"><div class="ryzom-ui-m">
+					<?php 
+					if( $GLOBALS['__error'] != "" ) {
+						echo '<div class="error">'.$GLOBALS['__error'].'</div>';
+						$GLOBALS['__error'] = "";
+					}
+					?>
+						
 					<form id="search_form" action=""  style="margin: 0px;">
 						<input type="hidden" id="room" value="<?php echo $room_type; ?>"/>
 						<?php
