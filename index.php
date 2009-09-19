@@ -93,7 +93,7 @@ header('Content-Type:text/html; charset=UTF-8');
 						}
 						if( $_SESSION['error'] != "" ) {
 							echo '<div class="error">'.$_SESSION['error'].'</div>';
-							$SESSION['error'] = "";
+							$_SESSION['error'] = "";
 						}
 						?>
 					
