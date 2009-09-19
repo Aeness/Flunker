@@ -39,6 +39,7 @@ header('Content-Type:text/html; charset=UTF-8');
 	<title><?php echo __("Flunker"); ?></title>
 	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 	<link type="text/css" href="inc/ryzom_api/ryzom_api/render/ryzom_ui.css" rel="stylesheet" media="all" />
+	<link type="text/css" href="css/flunker.css" rel="stylesheet" media="all" />
 	<?php  echo ryzom_render_header_www(); ?>
 	<script type="text/javascript" src="js/jquery/jquery.js"></script>
 	
