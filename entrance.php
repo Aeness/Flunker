@@ -121,6 +121,7 @@ header('Content-Type:text/html; charset=UTF-8');
 			<a href="?language=de"><img hspace="5" border="0" src="http://www.ryzom.com/data/de_v6.jpg" alt="Deutsch" /></a>
 			<a href="?style=ryzom"><img style="margin-left: 30px;" hspace="5" border="0" src="img/ryzom.png" alt="<?php echo __("Ryzom Style"); ?>" /></a>
 			<a href="?style=tryker"><img hspace="5" border="0" src="img/tryker.png" alt="<?php echo __("Tryker Style"); ?>" /></a>
+			<a href="?style=zorai"><img hspace="5" border="0" src="img/zorai.png" alt="<?php echo __("Zorai Style"); ?>" /></a>
 			<a href="?style=fyros"><img hspace="5" border="0" src="img/fyros.png" alt="<?php echo __("Fyros Style"); ?>" /></a>
 			
 			<div class="ryzom-ui ryzom-ui-header">
