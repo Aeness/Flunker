@@ -32,6 +32,9 @@ input.ryzom-ui-button, .ryzom-ui-button {
 	border-right: 1px solid #2A3A3D;
 	background-color: #445E63;
 }
+a.ryzom-ui-button:hover {
+	background: #597A81;
+}
 .ryzom-ui {
 	opacity: 0.99;
 }

@@ -19,18 +19,21 @@ body{
 }
 /* input[type=submit] will make IE6 to ignore whole CSS rule, so cant combine this with .ryzom-ui-button below */
 input[type=submit] {
-	border-top: 1px solid #1A131A;
-	border-right: 1px solid #E3A5E3;
-	border-bottom: 1px solid #F7B4F7;
-	border-left: 1px solid #3D2C3D;
+	border-bottom: 1px solid #1A131A;
+	border-left: 1px solid #E3A5E3;
+	border-top: 1px solid #F7B4F7;
+	border-right: 1px solid #3D2C3D;
 	background-color: #7C5A7C;
 }
 input.ryzom-ui-button, .ryzom-ui-button {
-	border-top: 1px solid #1A131A;
-	border-right: 1px solid #E3A5E3;
-	border-bottom: 1px solid #F7B4F7;
-	border-left: 1px solid #3D2C3D;
+	border-bottom: 1px solid #1A131A;
+	border-left: 1px solid #E3A5E3;
+	border-top: 1px solid #F7B4F7;
+	border-right: 1px solid #3D2C3D;
 	background-color: #7C5A7C;
+}
+a.ryzom-ui-button:hover {
+	background: #986F98;
 }
 .ryzom-ui {
 	opacity: 0.99;
