@@ -255,7 +255,7 @@ if( !isset($_SESSION['list_guild']) ) {
 	}
 	
 	$items_filtered_and_unserialize = array();
-	if ( ($room == ROOM_OTHER || isset($guild_hall))
+	if ( isset($guild_hall)
 		&& isset($items) && is_array($items)) {
 		foreach( $items as $val) {
 			$item = unserialize($val['str_object']);
@@ -269,10 +269,15 @@ if( !isset($_SESSION['list_guild']) ) {
 					|| (int)$item->q > (int)$max_quality ) {
 					$display = false;
 				}
-				if( $display == true && $room != 'other' && !in_array($item->guild->id, $guild_hall) ) {
+				if( $display == true && !in_array($item->guild->id, $guild_hall) ) {
 					$display = false;
 				}
 				if ($display == true && $boost_armilo==true && !$item->isArmiloBoost()) {
+					$display = false;
+				}
+			}
+			else {
+				if( $display == true && !in_array($item->guild->id, $guild_hall) ) {
 					$display = false;
 				}
 			}

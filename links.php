@@ -330,6 +330,7 @@ if ((isset($_GET['ckey']) && $_GET['ckey'] != '')
 		$_SESSION[ROOM_MATERIAL]['last_filter_line']["right"] = serialize(new textFormFilter());
 		
 		$_SESSION[ROOM_OTHER]['filter_form'][] = serialize(new choiceFormFilter('crystal','Crystal',$list_ordered_crystal));
+		$_SESSION[ROOM_OTHER]['filter_form'][] = serialize(new ghFormFilter($list_guild));
 		$_SESSION[ROOM_OTHER]['last_filter_line']["left"] = serialize(new textFormFilter());
 
 		## save the guild list
