@@ -341,9 +341,10 @@ if ((isset($_GET['ckey']) && $_GET['ckey'] != '')
 			}
 		}
 		$str_language = "language=".$_SESSION['lang'];
-		$str_url = htmlentities(flunker_base_url()."links.php?".$str_language.$str_list_ckey);
-		$str_href = htmlentities("<a xml:lang=\"".$_SESSION['lang']."\" lang=\"".$_SESSION['lang']."\" href=\"".htmlentities(flunker_base_url()."links.php?".$str_language.$str_list_ckey)."\">".__("Funker")."</a>");
-		$str_bb1 = htmlentities("[url=".flunker_base_url()."links.php?".$str_language.$str_list_ckey."]".__("Flunker")."[/url]");
+		$str_skin = "&style=".$_SESSION['style'];
+		$str_url = htmlentities(flunker_base_url()."links.php?".$str_language.$str_skin.$str_list_ckey);
+		$str_href = htmlentities("<a xml:lang=\"".$_SESSION['lang']."\" lang=\"".$_SESSION['lang']."\" href=\"".htmlentities(flunker_base_url()."links.php?".$str_language.$str_skin.$str_list_ckey)."\">".__("Funker")."</a>");
+		$str_bb1 = htmlentities("[url=".flunker_base_url()."links.php?".$str_language.$str_skin.$str_list_ckey."]".__("Flunker")."[/url]");
 	}
 }
 else {
@@ -409,7 +410,7 @@ header('Content-Type:text/html; charset=UTF-8');
 						}
 						?><br style="clear: left;" /><br />
 						<form action="">
-							<?php echo __("Ensure that you select the right language."); ?><br/>
+							<?php echo __("Ensure that you have selected the right language and skin."); ?><br/>
 							<?php echo __("For a direct access (during your next session) to your guild halls, bookmark this page or use one of the following links:"); ?><br/><br/>
 							
 							<?php echo __("URL").__(":"); ?><br/>

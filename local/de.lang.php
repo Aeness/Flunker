@@ -81,7 +81,7 @@ $GLOBALS['__lang']['URL'] = "URL";
 $GLOBALS['__lang']['HTML Link'] = "HTML-Link";
 $GLOBALS['__lang']['bbcode Link'] = "bbcode-Link";
 $GLOBALS['__lang']['Enter'] = "Eintreten";
-$GLOBALS['__lang']['Ensure that you select the right language.'] = "Bitte wählen Sie zunächst die Richtige Sprache aus.";
+$GLOBALS['__lang']['Ensure that you have selected the right language and skin.'] = "Bitte wählen Sie zunächst die richtige Sprache und Aussehen aus.";
 $GLOBALS['__lang']['For a direct access (during your next session) to your guild halls, bookmark this page or use one of the following links:'] = "Für einen direkten Zugriff (für nächstes mal), bookmarken Sie diese Seite oder benützen Sie eines von diesen Linken:";
 
 $GLOBALS['__lang']['Masse']='(Riesen)streitkolben';
