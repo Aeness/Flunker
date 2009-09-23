@@ -76,11 +76,11 @@ function ghButton($img_path,$name,$value,$url,$alt,$title,$class="") {
  */ 
 function style_list($str_list_arg='') {
 	return '
-			<a href="?style=ryzom'.$str_list_arg.'"><img style="margin-left: 30px;" hspace="5" border="0" src="img/ryzom.png" alt="'.__("Ryzom Style").'" /></a>
-			<a href="?style=tryker'.$str_list_arg.'"><img hspace="5" border="0" src="img/tryker.png" alt="'.__("Tryker Style").'" /></a>
-			<a href="?style=zorai'.$str_list_arg.'"><img hspace="5" border="0" src="img/zorai.png" alt="'.__("Zorai Style").'" /></a>
-			<a href="?style=matis'.$str_list_arg.'"><img hspace="5" border="0" src="img/matis.png" alt="'.__("Matis Style").'" /></a>
-			<a href="?style=fyros'.$str_list_arg.'"><img hspace="5" border="0" src="img/fyros.png" alt="'.__("Fyros Style").'" /></a>';
+			<a href="'.htmlentities('?style=ryzom'.$str_list_arg).'"><img style="margin-left: 30px;" hspace="5" border="0" src="img/ryzom.png" alt="'.__("Ryzom Style").'" /></a>
+			<a href="'.htmlentities('?style=tryker'.$str_list_arg).'"><img hspace="5" border="0" src="img/tryker.png" alt="'.__("Tryker Style").'" /></a>
+			<a href="'.htmlentities('?style=zorai'.$str_list_arg).'"><img hspace="5" border="0" src="img/zorai.png" alt="'.__("Zorai Style").'" /></a>
+			<a href="'.htmlentities('?style=matis'.$str_list_arg).'"><img hspace="5" border="0" src="img/matis.png" alt="'.__("Matis Style").'" /></a>
+			<a href="'.htmlentities('?style=fyros'.$str_list_arg).'"><img hspace="5" border="0" src="img/fyros.png" alt="'.__("Fyros Style").'" /></a>';
 
 }
 ?>
