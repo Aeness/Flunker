@@ -74,7 +74,7 @@ function ghButton($img_path,$name,$value,$url,$alt,$title,$class="") {
 /**
  * Display "flag" corresponding to the skins.
  */ 
-function style_list($str_list_arg='') {
+function skin_flags_list($str_list_arg='') {
 	return '
 			<a href="'.htmlentities('?style=ryzom'.$str_list_arg).'"><img style="margin-left: 30px;" hspace="5" border="0" src="img/ryzom.png" alt="'.__("Ryzom Style").'" /></a>
 			<a href="'.htmlentities('?style=tryker'.$str_list_arg).'"><img hspace="5" border="0" src="img/tryker.png" alt="'.__("Tryker Style").'" /></a>
@@ -82,5 +82,15 @@ function style_list($str_list_arg='') {
 			<a href="'.htmlentities('?style=matis'.$str_list_arg).'"><img hspace="5" border="0" src="img/matis.png" alt="'.__("Matis Style").'" /></a>
 			<a href="'.htmlentities('?style=fyros'.$str_list_arg).'"><img hspace="5" border="0" src="img/fyros.png" alt="'.__("Fyros Style").'" /></a>';
 
+}
+
+/**
+ * Display "flag" corresponding to the languages.
+ */ 
+function language_flags_list($str_list_arg='') {
+	return '
+			<a href="'.htmlentities("?language=en".$str_list_arg).'"><img hspace="5" border="0" src="http://www.ryzom.com/data/en_v6.jpg" alt="English" /></a>
+			<a href="'.htmlentities("?language=fr".$str_list_arg).'"><img hspace="5" border="0" src="http://www.ryzom.com/data/fr_v6.jpg" alt="Français" /></a>
+			<a href="'.htmlentities("?language=de".$str_list_arg).'"><img hspace="5" border="0" src="http://www.ryzom.com/data/de_v6.jpg" alt="Deutsch" /></a>';
 }
 ?>

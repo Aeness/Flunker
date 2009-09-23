@@ -37,7 +37,7 @@ abstract class formSorter
 	}
 
 	/**
-	 * @return the html code which display the sorter you can use directly
+	 * @return the html code which display the sorter used directly
 	 */
 	function getHtmlTag() {
 		return "
@@ -86,6 +86,9 @@ class formSorterInt extends formSorter
 		parent::__construct($id,$en_name,SORT_NUMERIC,$default_order,$values);
 	}
 	
+	/**
+	 * @return the html code which display the sorter used directly
+	 */
 	function getHtmlTag() {
 		$orientation = "up";
 		$alt = "^";
@@ -99,6 +102,9 @@ class formSorterInt extends formSorter
 		<li id=\"".$this->id."\"><span><img alt=\"{$alt}\" title=\"".__($title)."\" src=\"./img/{$orientation}_green.png\"/>&nbsp;".__($this->en_name)."</span></li>";
 	}
 	
+	/**
+	 * @return the html code which display the sorter you can add 
+	 */
 	function getWaitingHtmlTag() {
 		$orientation = "up";
 		$alt = "^";

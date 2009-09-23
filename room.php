@@ -69,13 +69,8 @@ $nb_items = $_SESSION[$room_type]['nb_items'];
 	
 	<body>
 		<div id="main">
-			<!--div style="text-align: right;">
-				<a href="http://www.ryzom.com/"><img border="0" src="http://www.ryzom.com/data/logo.gif" alt=""/></a>
-			</div-->
-			<a href="?language=en"><img hspace="5" border="0" src="http://www.ryzom.com/data/en_v6.jpg" alt="English" /></a>
-			<a href="?language=fr"><img hspace="5" border="0" src="http://www.ryzom.com/data/fr_v6.jpg" alt="Français" /></a>
-			<a href="?language=de"><img hspace="5" border="0" src="http://www.ryzom.com/data/de_v6.jpg" alt="Deutsch" /></a>
-			<?php echo style_list(); ?>
+			<?php echo language_flags_list(); ?>
+			<?php echo skin_flags_list(); ?>
 			
 			<div class="ryzom-ui ryzom-ui-header">
 				<div class="ryzom-ui-tl"><div class="ryzom-ui-tr">
