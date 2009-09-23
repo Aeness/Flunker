@@ -777,7 +777,6 @@ class material extends item
 	
 	public $total_stack;
 
-	/// @todo supp french comentary
 	public function __construct($guild,$slot,$icon_name,$q,$s,$id_place,$id_origin,$c,$id_name,$e)
 	{
 		$type = array(
@@ -821,39 +820,39 @@ class material extends item
 		);
 		$utility = array(
 			'ta'  => 'u01', // magic
-			'twn' => 'u02', // contre poids
+			'twn' => 'u02', // counterweight
 			'tp'  => 'u02',
-			'tfa' => 'u03', // explosif ??
-			'tle' => 'u04', //canon
-			'tto' => 'u05', // cartouche ?
-			'tba' => 'u06', // flèche
-			'two' => 'u04', //canon
-			'tc'  => 'u04', //canon
-			'tfi' => 'u07', // prise
-			'twi' => 'u03', // explosif
-			'tsp' => 'u08', // détente
+			'tfa' => 'u03', // explosive 
+			'tle' => 'u04', // barrel
+			'tto' => 'u05', // jacket
+			'tba' => 'u06', // shaft
+			'two' => 'u04', //barrel
+			'tc'  => 'u04', //barrel
+			'tfi' => 'u07', // grip
+			'twi' => 'u03', // explosive
+			'tsp' => 'u08', // trigger
 			'ty'  => 'u01', // magic
-			'tsh' => 'u10', // lame
-			'tma' => 'u06', // flèche
-			'tsk' => 'u07', // prise
-			'tta' => 'u09', // percuteur
-			'tro' => 'u09', // percuteur
-			'tho' => 'u02', // contre poids
-			'tse' => 'u08', // détente
-			'toi' => 'u03', // explosif
-			'tli' => 'u09', // percuteur
-			'tmo' => 'u05', // cartouche ?
-			'twh' => 'u05', // cartouche ?
-			'tn'  => 'u08', // détente
-			'tbo' => 'u06', // flèche
-			'tre' => 'u05', // cartouche ?
-			'tsc' => 'u03', // explosif
-			'tsa' => 'u09', // percuteur
-			'ttr' => 'u05',  // cartouche ?
-			'tbe' => 'u10', // lame
-			'thr' => 'u06', // flèche
-			'tsg' => 'u10', // lame
-			'tcl' => 'u10', // lame ??
+			'tsh' => 'u10', // blade
+			'tma' => 'u06', // shaft
+			'tsk' => 'u07', // grip
+			'tta' => 'u09', // piring pin
+			'tro' => 'u09', // piring pin
+			'tho' => 'u02', // counterweight
+			'tse' => 'u08', // trigger
+			'toi' => 'u03', // explosive
+			'tli' => 'u09', // piring pin
+			'tmo' => 'u05', // jacket
+			'twh' => 'u05', // jacket
+			'tn'  => 'u08', // trigger
+			'tbo' => 'u06', // shaft
+			'tre' => 'u05', // jacket
+			'tsc' => 'u03', // explosive
+			'tsa' => 'u09', // piring pin
+			'ttr' => 'u05', // jacket 
+			'tbe' => 'u10', // blade
+			'thr' => 'u06', // shaft
+			'tsg' => 'u10', // blade
+			'tcl' => 'u10', // blade
 			'tbu' => 'u01', // magic
 			'tmu' => 'u01'  // magic
 		);
