@@ -5,10 +5,11 @@
  * Translate English Label to a German Label.
  * Must be encoded in UTF-8.
  */
-$GLOBALS['__lang']['Please enter the API Key(s) (guild or character) that you can find on']="Bitte ihre(n) Gildenschlüssel(n) eingeben.";
-$GLOBALS['__lang']['your profile page']="(Auf ihre Profilseite)";
+$GLOBALS['__lang']['Please enter the API Key(s) (guild or character) that you can find on']="Bitte ihre(n) Kompletter- oder Gildenschlüssel(n) eingeben";
+$GLOBALS['__lang']['your profile page']="(auf ihre Profilseite)";
 $GLOBALS['__lang']['Select your API Key again']="Ihre(n) Gildenschlüssel(n) wieder eingeben.";
 $GLOBALS['__lang']['Invalid key']="Ungültiger Schlüssel";
+$GLOBALS['__lang']["does not have any item."]="hat keine Gegenstand.";
 $GLOBALS['__lang']['Welcome to Flunker, your guild halls are:']="Willkommen in Flunker, hier sind ihre Gildenhalle:";
 $GLOBALS['__lang']['Sign Out']="Sich abzumelden";
 $GLOBALS['__lang']['Enter in the Armory']="In das Waffenlager eintreten";
@@ -29,6 +30,7 @@ $GLOBALS['__lang']['Deselect all buttons']="Alle Buttons abwählen";
 $GLOBALS['__lang']['Ascendant sorter']="Abnehmend Ordnung";
 $GLOBALS['__lang']['Descendant sorter']="Zunehmend Ordnung";
 
+$GLOBALS['__lang']['Boost type']="Boostart";
 
 $GLOBALS['__lang']['Sort by']="Sortiert nach";
 $GLOBALS['__lang']['Possible sorters']="Sortiert";

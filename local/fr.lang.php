@@ -31,7 +31,7 @@ $GLOBALS['__lang']['Deselect all buttons']="Déselectionne tous les boutons";
 $GLOBALS['__lang']['Ascendant sorter']="Ordre croissant";
 $GLOBALS['__lang']['Descendant sorter']="Ordre décroissant";
 
-$GLOBALS['__lang']['Boost with']="Boosté à";
+$GLOBALS['__lang']['Boost type']="Type de boost";
 
 $GLOBALS['__lang']['Sort by']="Résultats triés par";
 $GLOBALS['__lang']['Possible sorters']="Tris possibles";

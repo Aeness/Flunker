@@ -280,7 +280,7 @@ if ((isset($_GET['ckey']) && $_GET['ckey'] != '')
 		);
 
 		$_SESSION[ROOM_ARMORY]['filter_form'][] = serialize(new listFormFilter('name_weapon','Weapon Name',$list_ordered_weapon,false));
-		$_SESSION[ROOM_ARMORY]['filter_form'][] = serialize(new choiceFormFilter('boost','Boost with',$list_ordered_weapon_boost));
+		$_SESSION[ROOM_ARMORY]['filter_form'][] = serialize(new choiceFormFilter('boost','Boost type',$list_ordered_weapon_boost));
 		$_SESSION[ROOM_ARMORY]['filter_form'][] = serialize(new listFormFilter('energy','Energy',$list_ordered_energy,true));
 		$_SESSION[ROOM_ARMORY]['filter_form'][] = serialize(new listFormFilter('name_nation','Nation Name',$list_ordered_nation_weapon,true));
 		$_SESSION[ROOM_ARMORY]['filter_form'][] = serialize(new ghFormFilter($list_guild));
@@ -303,7 +303,7 @@ if ((isset($_GET['ckey']) && $_GET['ckey'] != '')
 		$_SESSION[ROOM_DRESSING]['filter_form'][] = serialize(new listFormFilter('type_cloth','Clothes Type',$list_ordered_type_cloth,null));
 		$_SESSION[ROOM_DRESSING]['filter_form'][] = serialize(new listFormFilter('name_cloth','Clothes Name',$list_ordered_piece_cloth,true));
 		$_SESSION[ROOM_DRESSING]['filter_form'][] = serialize(new choiceFormFilter('max_buff','Max Buff',$list_ordered_buff));
-		$_SESSION[ROOM_DRESSING]['filter_form'][] = serialize(new choiceFormFilter('boost','Boost with',$list_ordered_jewel_cloth));
+		$_SESSION[ROOM_DRESSING]['filter_form'][] = serialize(new choiceFormFilter('boost','Boost type',$list_ordered_jewel_cloth));
 		$_SESSION[ROOM_DRESSING]['filter_form'][] = serialize(new listFormFilter(SKIN,'Skin',$list_ordered_skin_cloth,true));
 		$_SESSION[ROOM_DRESSING]['filter_form'][] = serialize(new listFormFilter(COLOR,'Color',$list_ordered_cloth_color,true));
 		$_SESSION[ROOM_DRESSING]['filter_form'][] = serialize(new listFormFilter('energy','Energy',$list_ordered_energy,true));
@@ -314,7 +314,7 @@ if ((isset($_GET['ckey']) && $_GET['ckey'] != '')
 
 		$_SESSION[ROOM_JEWEL]['filter_form'][] = serialize(new listFormFilter('name_jewel','Jewel Type',$list_ordered_jewel,true));
 		$_SESSION[ROOM_JEWEL]['filter_form'][] = serialize(new choiceFormFilter('max_buff','Max Buff',$list_ordered_buff));
-		$_SESSION[ROOM_JEWEL]['filter_form'][] = serialize(new choiceFormFilter('boost','Armilo Boost',$list_ordered_jewel_cloth));
+		$_SESSION[ROOM_JEWEL]['filter_form'][] = serialize(new choiceFormFilter('boost','Boost type',$list_ordered_jewel_cloth));
 		$_SESSION[ROOM_JEWEL]['filter_form'][] = serialize(new listFormFilter('energy','Energy',$list_ordered_energy,true));
 		$_SESSION[ROOM_JEWEL]['filter_form'][] = serialize(new listFormFilter('name_nation','Nation Name',$list_ordered_nation_jewel,true));
 		$_SESSION[ROOM_JEWEL]['filter_form'][] = serialize(new ghFormFilter($list_guild));

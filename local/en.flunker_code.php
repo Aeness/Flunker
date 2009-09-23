@@ -112,5 +112,5 @@ $GLOBALS['__lang']['c6']='White';
 $GLOBALS['__lang']['c7']='Black';
 
 $GLOBALS['__lang']['boost_armilo']='Armilo';
-$GLOBALS['__lang']['boost_rubbarn']='Rubbarn (almost)';
+$GLOBALS['__lang']['boost_rubbarn']='Rubbarn (approximate)';
 ?>
