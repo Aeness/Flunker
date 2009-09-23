@@ -39,7 +39,7 @@ function checkbox($img_path,$name,$checked,$value,$alt,$title,$class="") {
 	return "
 			<li class=\"li_checkbox {$class}\" style=\"background-image: url($img_path/{$value}.png);\">
 				<input type=\"checkbox\" name=\"$name\" id=\"{$name}_{$value}\" value=\"$value\" {$str_checked} style=\"display: none;\" />
-				<img name=\"hidden_$name\" id=\"hidden_{$name}_{$value}\" alt=\"$alt\" src=\"$img_path/botton_{$str_on_off}{$style}.png\" title=\"$title\" style=\"margin: 0px;\"/>
+				<img name=\"hidden_$name\" id=\"hidden_{$name}_{$value}\" alt=\"$alt\" src=\"$img_path/button_{$str_on_off}{$style}.png\" title=\"$title\" style=\"margin: 0px;\"/>
 			</li>";
 }
 
@@ -48,7 +48,7 @@ function radio($img_path,$name,$value,$alt,$title) {
 
 	return "
 			<input type=\"checkbox\" name=\"$name\" id=\"{$name}_{$value}\" value=\"$value\" style=\"display: none;\"/>
-			<div style=\"background-image: url($img_path/{$value}.png); background-repeat: no-repeat; background-position: left top;\"><img name=\"hidden_$name\" id=\"hidden_{$name}_{$value}\" src=\"$img_path/botton_off{$style}.png\" alt=\"$alt\" title=\"$title\"/></div>";
+			<div style=\"background-image: url($img_path/{$value}.png); background-repeat: no-repeat; background-position: left top;\"><img name=\"hidden_$name\" id=\"hidden_{$name}_{$value}\" src=\"$img_path/button_off{$style}.png\" alt=\"$alt\" title=\"$title\"/></div>";
 }
 
 function ghButton($img_path,$name,$value,$url,$alt,$title,$class="") {

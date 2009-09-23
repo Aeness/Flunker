@@ -160,7 +160,7 @@ $(function(){
 		}
 	);
 	
-	// change all botton when it is clicked
+	// change all button when it is clicked
 	Flunker.criterias.checkboxs.selectallnone.click(
 		function(){
 			
