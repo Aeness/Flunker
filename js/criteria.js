@@ -25,6 +25,7 @@ Flunker.criterias={
 	order:{
 		ol:null,
 		deleted:false,
+		color:null,
 		sorter_list:  new Array()
 	}
 };
@@ -68,7 +69,7 @@ $(function(){
 		var tipHeight = $("#flunkerTooltip").outerHeight(true);
 		if(tipX + tipWidth > $(window).scrollLeft() + $(window).width()) tipX = e.pageX - tipWidth;
 		if($(window).height()+$(window).scrollTop() < tipY + tipHeight) tipY = e.pageY - tipHeight;
-		$("#flunkerTooltip").css("left", tipX).css("top", tipY);//.fadeIn("medium");
+		$("#flunkerTooltip").css("left", tipX).css("top", tipY);
 	});
 
 	
@@ -110,12 +111,13 @@ $(function(){
 		},
 		over: function(event, ui) {
 			Flunker.criterias.order.deleted = false;
-			ui.helper.css("background-color","#64734F");
+			ui.helper.css("background-color",Flunker.criterias.order.color);
 			ui.helper.css("border", "1px solid black");
 		}, 
 		out: function(event, ui) {
 			if(ui.helper) {
 				Flunker.criterias.order.deleted = true;
+				Flunker.criterias.order.color = ui.helper.css("background-color");
 				ui.helper.css("background-color","#6D7365");
 				ui.helper.css("border", "0px solid black");
 			}
@@ -199,11 +201,11 @@ $(function(){
 	Flunker.criterias.GHcheckboxs.img.click(
 		function(){
 			var back = $(this).parent();
-			if( back.css("background-image").match("_on.png") ) {
+			if( back.css("background-image").match("_on") ) {
 				back.css("background-image",back.css("background-image").replace("_on", "_off"));
 				$(this).siblings("input").get(0).click();
 			}
-			else if( back.css("background-image").match("_off.png") ) {
+			else if( back.css("background-image").match("_off") ) {
 				back.css("background-image",back.css("background-image").replace("_off", "_on"));
 				$(this).siblings("input").get(0).click();
 			}

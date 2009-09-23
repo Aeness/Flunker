@@ -63,7 +63,7 @@ class apartment
 	
 	public function getHtml() {
 		return "
-				<div style=\"width: 49%; float: left; border: 1px solid black; margin: 2px 0 0 2px; background-color:#64734F;\">
+				<div class=\"chest_info\">
 					<div style=\"width: 34px; float: left;vertical-align: middle; padding: 2px 0 0 2px;\">
 						".$this->getSmallIcon(23)."
 					</div>

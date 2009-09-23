@@ -19,6 +19,8 @@ require_once('./inc/flunker_api.php');
 reinit_session();
 //ryzom_log_start('Flunker');
 
+$style = ($_SESSION['style']!="ryzom")?"_".$_SESSION['style']:"";
+
 if ((isset($_GET['ckey']) && $_GET['ckey'] != '')
 	|| isset($_GET['test']) ){
 	$display_link = false;
@@ -347,9 +349,10 @@ if ((isset($_GET['ckey']) && $_GET['ckey'] != '')
 			}
 		}
 		$str_language = "language=".$_SESSION['lang'];
-		$str_url = htmlentities(flunker_base_url()."links.php?".$str_language.$str_list_ckey);
-		$str_href = htmlentities("<a xml:lang=\"".$_SESSION['lang']."\" lang=\"".$_SESSION['lang']."\" href=\"".htmlentities(flunker_base_url()."links.php?".$str_language.$str_list_ckey)."\">".__("Funker")."</a>");
-		$str_bb1 = htmlentities("[url=".flunker_base_url()."links.php?".$str_language.$str_list_ckey."]".__("Flunker")."[/url]");
+		$str_skin = "&style=".$_SESSION['style'];
+		$str_url = htmlentities(flunker_base_url()."links.php?".$str_language.$str_skin.$str_list_ckey);
+		$str_href = htmlentities("<a xml:lang=\"".$_SESSION['lang']."\" lang=\"".$_SESSION['lang']."\" href=\"".htmlentities(flunker_base_url()."links.php?".$str_language.$str_skin.$str_list_ckey)."\">".__("Funker")."</a>");
+		$str_bb1 = htmlentities("[url=".flunker_base_url()."links.php?".$str_language.$str_skin.$str_list_ckey."]".__("Flunker")."[/url]");
 	}
 }
 else {
@@ -367,6 +370,15 @@ header('Content-Type:text/html; charset=UTF-8');
 	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 	<link type="text/css" href="inc/ryzom_api/ryzom_api/render/ryzom_ui.css" rel="stylesheet" media="all" />
 	<?php  echo ryzom_render_header_www(); ?>
+	<link type="text/css" href="css/flunker.css" rel="stylesheet"  media="all"/>
+	<link type="text/css" href="css/<?php echo $_SESSION['style'];?>.css" rel="stylesheet"  media="all"/>
+	<script type="text/javascript" src="js/jquery/jquery.js"></script>
+	<script type="text/javascript">
+	var Flunker={
+		nationality: "<?php echo $_SESSION['style'];?>"
+	};
+	</script>
+	<script type="text/javascript" src="js/background.js"></script>
 	</head>
 	
 	<body>
@@ -377,6 +389,7 @@ header('Content-Type:text/html; charset=UTF-8');
 			<a href="<?php echo htmlentities(flunker_base_url()."links.php?language=en".$str_list_ckey); ?>"><img hspace="5" border="0" src="http://www.ryzom.com/data/en_v6.jpg" alt="English" /></a>
 			<a href="<?php echo htmlentities(flunker_base_url()."links.php?language=fr".$str_list_ckey); ?>"><img hspace="5" border="0" src="http://www.ryzom.com/data/fr_v6.jpg" alt="Français" /></a>
 			<a href="<?php echo htmlentities(flunker_base_url()."links.php?language=de".$str_list_ckey); ?>"><img hspace="5" border="0" src="http://www.ryzom.com/data/de_v6.jpg" alt="Deutsch" /></a>
+			<?php echo style_list($str_list_ckey); ?>
 			
 			<div class="ryzom-ui ryzom-ui-header">
 				<div class="ryzom-ui-tl"><div class="ryzom-ui-tr">
@@ -389,9 +402,9 @@ header('Content-Type:text/html; charset=UTF-8');
 						</div>
 					</div>
 				</div></div>
-			
-				<div class="ryzom-ui-l"><div class="ryzom-ui-r"><div class="ryzom-ui-m">
-					<div class="ryzom-ui-body">
+
+				<div class="ryzom-ui-l"><div class="ryzom-ui-r"><div id="search_content" class="ryzom-ui-m">
+					<div id="result_content" class="ryzom-ui-body">
 						<?php 
 						if( $GLOBALS['__error'] != "" ) {
 							echo '<div class="error">'.$GLOBALS['__error'].'</div>';
@@ -412,7 +425,7 @@ header('Content-Type:text/html; charset=UTF-8');
 						?>
 						<p class="invisible_break">&nbsp;</p>
 						<form action="">
-							<?php echo __("Ensure that you select the right language."); ?><br/>
+							<?php echo __("Ensure that you have selected the right language and skin."); ?><br/>
 							<?php echo __("For a direct access (during your next session) to your guild halls, bookmark this page or use one of the following links:"); ?><br/><br/>
 							
 							<?php echo __("URL").__(":"); ?><br/>

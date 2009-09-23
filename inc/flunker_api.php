@@ -38,8 +38,11 @@
  */
 
 session_start();
-require(dirname(__FILE__).'/core/functions_language.php');
+require_once(dirname(__FILE__).'/conf.php');
+require_once(dirname(__FILE__).'/core/functions_language.php');
+require_once(dirname(__FILE__).'/core/functions_render.php');
 init_language($_GET['language'],$_SESSION['lang']);
+init_css($_GET['style'],$_SESSION['style']);
 
 if (file_exists(dirname(__FILE__).'/conf.php')) {
 	require(dirname(__FILE__).'/conf.php');
@@ -61,5 +64,4 @@ require_once(dirname(__FILE__).'/core/functions_parse.php');
 require_once(dirname(__FILE__).'/core/functions_sorter.php');
 require_once(dirname(__FILE__).'/core/functions_session.php');
 require_once(dirname(__FILE__).'/core/functions_item_icon.php');
-require_once(dirname(__FILE__).'/core/functions_render.php');
 ?>

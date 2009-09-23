@@ -20,11 +20,13 @@ function reinit_session()
 	$_lang = $_SESSION['lang'];
 	$_error = $_SESSION['error'];
 	$_come_from = $_SESSION['comeFrom'];
+	$_style = $_SESSION['style'];
 	session_destroy();
 	session_start();
 	$_SESSION['lang'] = $_lang;
 	$_SESSION['error'] = $_error;
 	$_SESSION['comeFrom'] = $_come_from;
+	$_SESSION['style'] = $_style;
 }
 
 ?>
