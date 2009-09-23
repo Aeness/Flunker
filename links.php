@@ -423,7 +423,7 @@ header('Content-Type:text/html; charset=UTF-8');
 							echo $list;
 						}
 						?>
-						<p class="invisible_break">&nbsp;</p>
+						<p class="invisible_break">&nbsp;</p><br />
 						<form action="">
 							<?php echo __("Ensure that you have selected the right language and skin."); ?><br/>
 							<?php echo __("For a direct access (during your next session) to your guild halls, bookmark this page or use one of the following links:"); ?><br/><br/>
