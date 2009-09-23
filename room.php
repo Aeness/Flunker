@@ -45,7 +45,7 @@ $nb_items = $_SESSION[$room_type]['nb_items'];
 		<link type="text/css" href="inc/ryzom_api/ryzom_api/render/ryzom_ui.css" rel="stylesheet" media="all" />
 		<?php  echo ryzom_render_header_www(); ?>
 		<link type="text/css" href="css/flunker.css" rel="stylesheet"  media="all"/>
-		<link type="text/css" href="css/<?php echo $_SESSION['style'];?>.css" rel="stylesheet"  media="all"/>
+		<link type="text/css" href="css/<?php echo $_SESSION['skin'];?>.css" rel="stylesheet"  media="all"/>
 		<script type="text/javascript" src="js/jquery/jquery.js"></script>
 		<script type="text/javascript" src="js/jquery/jquery-ui.js"></script>
 		<script type="text/javascript">
@@ -53,7 +53,7 @@ $nb_items = $_SESSION[$room_type]['nb_items'];
 			msg:{
 				err_request:"<?php echo __('XMLHttpRequest not supported by your browser.'); ?>"
 			},
-			nationality: "<?php echo $_SESSION['style'];?>"
+			nationality: "<?php echo $_SESSION['skin'];?>"
 		};
 		</script>
 		<script type="text/javascript" src="js/background.js"></script>

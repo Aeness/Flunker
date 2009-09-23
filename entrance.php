@@ -23,9 +23,7 @@ if( !isset($_SESSION['list_guild']) ) {
 	session_write_close();
 	header('Location: index.php?');
 }
-
-$style = ($_SESSION['style']!="ryzom")?"_".$_SESSION['style']:"";
-
+$skin = ($_SESSION['skin']!="ryzom")?"_".$_SESSION['skin']:"";
 header('Content-Type:text/html; charset=UTF-8');
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -37,11 +35,11 @@ header('Content-Type:text/html; charset=UTF-8');
 	<link type="text/css" href="css/flunker.css" rel="stylesheet" media="all" />
 	<?php  echo ryzom_render_header_www(); ?>
 	<link type="text/css" href="css/flunker.css" rel="stylesheet"  media="all"/>
-	<link type="text/css" href="css/<?php echo $_SESSION['style'];?>.css" rel="stylesheet"  media="all"/>
+	<link type="text/css" href="css/<?php echo $_SESSION['skin'];?>.css" rel="stylesheet"  media="all"/>
 	<script type="text/javascript" src="js/jquery/jquery.js"></script>
 	<script type="text/javascript">
 	var Flunker={
-		nationality: "<?php echo $_SESSION['style'];?>"
+		nationality: "<?php echo $_SESSION['skin'];?>"
 	};
 	</script>
 	<script type="text/javascript" src="js/background.js"></script>
@@ -151,37 +149,37 @@ header('Content-Type:text/html; charset=UTF-8');
 						?>
 						<p class="invisible_break">&nbsp;</p><br />
 
-						<div id='enter_armory' class='enter_div' style="background: url('img/Enseigne_back<?php echo $style; ?>.png');">
+						<div id='enter_armory' class='enter_div' style="background: url('img/Enseigne_back<?php echo $skin; ?>.png');">
 							<div class='sub_enter_div' style="background: url('img/Enseigne_melee.png') repeat-y top center;text-align: center;">
 								<?php echo __("Enter in the Armory"); ?>
 							</div>
 						</div>
-						<div id='enter_ampli' class='enter_div' style="background: url('img/Enseigne_back<?php echo $style; ?>.png');">
+						<div id='enter_ampli' class='enter_div' style="background: url('img/Enseigne_back<?php echo $skin; ?>.png');">
 							<div class='sub_enter_div' style="background: url('img/Enseigne_melee.png') repeat-y top center;text-align: center;">
 								<?php echo __("Enter in the Magic Amplifier Armory"); ?>
 							</div>
 						</div>
-						<div id='enter_range' class='enter_div' style="background: url('img/Enseigne_back<?php echo $style; ?>.png');">
+						<div id='enter_range' class='enter_div' style="background: url('img/Enseigne_back<?php echo $skin; ?>.png');">
 							<div class='sub_enter_div' style='background: url("img/Enseigne_range.png") repeat-y top center;text-align: center;'>
 								<?php echo __("Enter in the Range Amory"); ?>
 							</div>
 						</div>
-						<div id='enter_dressing' class='enter_div' style="background: url('img/Enseigne_back<?php echo $style; ?>.png');margin-left: 107px;">
+						<div id='enter_dressing' class='enter_div' style="background: url('img/Enseigne_back<?php echo $skin; ?>.png');margin-left: 107px;">
 							<div class='sub_enter_div' style="background: url('img/Enseigne_jewel.png') repeat-y top center;text-align: center;">
 								<?php echo __("Enter in the Jeweller's"); ?>
 							</div>
 						</div>
-						<div id='enter_jewel' class='enter_div' style="background: url('img/Enseigne_back<?php echo $style; ?>.png');">
+						<div id='enter_jewel' class='enter_div' style="background: url('img/Enseigne_back<?php echo $skin; ?>.png');">
 							<div class='sub_enter_div' style="background: url('img/Enseigne_dressing.png') repeat-y top center;text-align: center;">
 								<?php echo __("Enter in the Wardrobe"); ?>
 							</div>
 						</div>
-						<div id='enter_material' class='enter_div' style="background: url('img/Enseigne_back<?php echo $style; ?>.png'); margin-left: 107px;">
+						<div id='enter_material' class='enter_div' style="background: url('img/Enseigne_back<?php echo $skin; ?>.png'); margin-left: 107px;">
 							<div class='sub_enter_div' style="background: url('img/Enseigne_material.png') repeat-y top center;text-align: center;">
 								<?php echo __("Enter in the Material Bazaar"); ?>
 							</div>
 						</div>
-						<div id='enter_other' class='enter_div' style="background: url('img/Enseigne_back<?php echo $style; ?>.png');">
+						<div id='enter_other' class='enter_div' style="background: url('img/Enseigne_back<?php echo $skin; ?>.png');">
 							<div class='sub_enter_div' style="background: url('img/Enseigne_other.png') repeat-y top center;text-align: center;">
 								<?php echo __("Enter in the Bazaar"); ?>
 							</div>

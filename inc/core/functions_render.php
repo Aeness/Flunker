@@ -16,12 +16,12 @@
  * along with Flunker.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-function init_css(&$get_style,&$session_style) {
-	if ( !empty($get_style) ) {
-		$session_style = $get_style;
+function init_css(&$get_skin,&$session_skin) {
+	if ( !empty($get_skin) ) {
+		$session_skin = $get_skin;
 	}
-	if (empty($session_style)) {
-		$session_style = 'ryzom';
+	if (empty($session_skin)) {
+		$session_skin = 'ryzom';
 	}
 }
 
@@ -32,7 +32,7 @@ function checkbox($img_path,$name,$checked,$value,$alt,$title,$class="") {
 	$str_checked = "";
 	$str_on_off = "off";
 	
-	$style = ($_SESSION['style']!="ryzom")?"_".$_SESSION['style']:"";
+	$skin = ($_SESSION['skin']!="ryzom")?"_".$_SESSION['skin']:"";
 		
 	if ($checked==true ) {
 		$str_checked = "checked=\"checked\"";
@@ -42,7 +42,7 @@ function checkbox($img_path,$name,$checked,$value,$alt,$title,$class="") {
 	return "
 			<li class=\"li_checkbox {$class}\" style=\"background-image: url($img_path/{$value}.png);\">
 				<input type=\"checkbox\" name=\"$name\" id=\"{$name}_{$value}\" value=\"$value\" {$str_checked} style=\"display: none;\" />
-				<img name=\"hidden_$name\" id=\"hidden_{$name}_{$value}\" alt=\"$alt\" src=\"$img_path/button_{$str_on_off}{$style}.png\" title=\"$title\" style=\"margin: 0px;\"/>
+				<img name=\"hidden_$name\" id=\"hidden_{$name}_{$value}\" alt=\"$alt\" src=\"$img_path/button_{$str_on_off}{$skin}.png\" title=\"$title\" style=\"margin: 0px;\"/>
 			</li>";
 }
 
@@ -50,11 +50,11 @@ function checkbox($img_path,$name,$checked,$value,$alt,$title,$class="") {
  * Display a radio.
  */
 function radio($img_path,$name,$value,$alt,$title) {
-	$style = ($_SESSION['style']!="ryzom")?"_".$_SESSION['style']:"";
+	$skin = ($_SESSION['skin']!="ryzom")?"_".$_SESSION['skin']:"";
 
 	return "
 			<input type=\"checkbox\" name=\"$name\" id=\"{$name}_{$value}\" value=\"$value\" style=\"display: none;\"/>
-			<div style=\"background-image: url($img_path/{$value}.png); background-repeat: no-repeat; background-position: left top;\"><img name=\"hidden_$name\" id=\"hidden_{$name}_{$value}\" src=\"$img_path/button_off{$style}.png\" alt=\"$alt\" title=\"$title\"/></div>";
+			<div style=\"background-image: url($img_path/{$value}.png); background-repeat: no-repeat; background-position: left top;\"><img name=\"hidden_$name\" id=\"hidden_{$name}_{$value}\" src=\"$img_path/button_off{$skin}.png\" alt=\"$alt\" title=\"$title\"/></div>";
 }
 
 /**
@@ -62,10 +62,10 @@ function radio($img_path,$name,$value,$alt,$title) {
  */
 function ghButton($img_path,$name,$value,$url,$alt,$title,$class="") {
 
-	$style = ($_SESSION['style']!="ryzom")?"_".$_SESSION['style']:"";
+	$skin = ($_SESSION['skin']!="ryzom")?"_".$_SESSION['skin']:"";
 	
 	return "
-			<li class=\"li_checkbox_gh_on{$style} {$class}\" style=\" background-repeat: no-repeat; background-position: left top;\">
+			<li class=\"li_checkbox_gh_on{$skin} {$class}\" style=\" background-repeat: no-repeat; background-position: left top;\">
 				<input type=\"checkbox\" name=\"$name\" id=\"{$name}_{$value}\" value=\"$value\" checked=\"checked\" style=\"display: none;\" />
 				<img name=\"hidden_$name\" id=\"hidden_{$name}_{$value}\" alt=\"$alt\" src=\"{$url}\" title=\"$title\" style=\"margin: 8px 0 0 8px;\"/>
 			</li>";
@@ -76,11 +76,11 @@ function ghButton($img_path,$name,$value,$url,$alt,$title,$class="") {
  */ 
 function skin_flags_list($str_list_arg='') {
 	return '
-			<a href="'.htmlentities('?style=ryzom'.$str_list_arg).'"><img style="margin-left: 30px;" hspace="5" border="0" src="img/ryzom.png" alt="'.__("Ryzom Style").'" /></a>
-			<a href="'.htmlentities('?style=tryker'.$str_list_arg).'"><img hspace="5" border="0" src="img/tryker.png" alt="'.__("Tryker Style").'" /></a>
-			<a href="'.htmlentities('?style=zorai'.$str_list_arg).'"><img hspace="5" border="0" src="img/zorai.png" alt="'.__("Zorai Style").'" /></a>
-			<a href="'.htmlentities('?style=matis'.$str_list_arg).'"><img hspace="5" border="0" src="img/matis.png" alt="'.__("Matis Style").'" /></a>
-			<a href="'.htmlentities('?style=fyros'.$str_list_arg).'"><img hspace="5" border="0" src="img/fyros.png" alt="'.__("Fyros Style").'" /></a>';
+			<a href="'.htmlentities('?skin=ryzom'.$str_list_arg).'"><img style="margin-left: 30px;" hspace="5" border="0" src="img/ryzom.png" alt="'.__("Ryzom skin").'" /></a>
+			<a href="'.htmlentities('?skin=tryker'.$str_list_arg).'"><img hspace="5" border="0" src="img/tryker.png" alt="'.__("Tryker skin").'" /></a>
+			<a href="'.htmlentities('?skin=zorai'.$str_list_arg).'"><img hspace="5" border="0" src="img/zorai.png" alt="'.__("Zorai skin").'" /></a>
+			<a href="'.htmlentities('?skin=matis'.$str_list_arg).'"><img hspace="5" border="0" src="img/matis.png" alt="'.__("Matis skin").'" /></a>
+			<a href="'.htmlentities('?skin=fyros'.$str_list_arg).'"><img hspace="5" border="0" src="img/fyros.png" alt="'.__("Fyros skin").'" /></a>';
 
 }
 

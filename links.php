@@ -19,8 +19,6 @@ require_once('./inc/flunker_api.php');
 reinit_session();
 //ryzom_log_start('Flunker');
 
-$style = ($_SESSION['style']!="ryzom")?"_".$_SESSION['style']:"";
-
 if ((isset($_GET['ckey']) && $_GET['ckey'] != '')
 	|| isset($_GET['test']) ){
 	$display_link = false;
@@ -350,7 +348,7 @@ if ((isset($_GET['ckey']) && $_GET['ckey'] != '')
 			}
 		}
 		$str_language = "language=".$_SESSION['lang'];
-		$str_skin = "&style=".$_SESSION['style'];
+		$str_skin = "&skin=".$_SESSION['skin'];
 		$str_url = htmlentities(flunker_base_url()."links.php?".$str_language.$str_skin.$str_list_ckey);
 		$str_href = htmlentities("<a xml:lang=\"".$_SESSION['lang']."\" lang=\"".$_SESSION['lang']."\" href=\"".htmlentities(flunker_base_url()."links.php?".$str_language.$str_skin.$str_list_ckey)."\">".__("Funker")."</a>");
 		$str_bb1 = htmlentities("[url=".flunker_base_url()."links.php?".$str_language.$str_skin.$str_list_ckey."]".__("Flunker")."[/url]");
@@ -372,11 +370,11 @@ header('Content-Type:text/html; charset=UTF-8');
 	<link type="text/css" href="inc/ryzom_api/ryzom_api/render/ryzom_ui.css" rel="stylesheet" media="all" />
 	<?php  echo ryzom_render_header_www(); ?>
 	<link type="text/css" href="css/flunker.css" rel="stylesheet"  media="all"/>
-	<link type="text/css" href="css/<?php echo $_SESSION['style'];?>.css" rel="stylesheet"  media="all"/>
+	<link type="text/css" href="css/<?php echo $_SESSION['skin'];?>.css" rel="stylesheet"  media="all"/>
 	<script type="text/javascript" src="js/jquery/jquery.js"></script>
 	<script type="text/javascript">
 	var Flunker={
-		nationality: "<?php echo $_SESSION['style'];?>"
+		nationality: "<?php echo $_SESSION['skin'];?>"
 	};
 	</script>
 	<script type="text/javascript" src="js/background.js"></script>

@@ -19,7 +19,7 @@ require_once('./inc/flunker_api.php');
 //ryzom_log_start('Flunker');
 reinit_session();
 $_SESSION['comeFrom'] = null;
-$_SESSION['style'] = null;
+$_SESSION['skin'] = null;
 $content = null;
 
 #POST_CASE

@@ -42,7 +42,7 @@ require_once(dirname(__FILE__).'/conf.php');
 require_once(dirname(__FILE__).'/core/functions_language.php');
 require_once(dirname(__FILE__).'/core/functions_render.php');
 init_language($_GET['language'],$_SESSION['lang']);
-init_css($_GET['style'],$_SESSION['style']);
+init_css($_GET['skin'],$_SESSION['skin']);
 
 if (file_exists(dirname(__FILE__).'/conf.php')) {
 	require(dirname(__FILE__).'/conf.php');
