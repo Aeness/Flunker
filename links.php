@@ -99,25 +99,25 @@ if ((isset($_GET['ckey']) && $_GET['ckey'] != '')
 		
 		## form sorter : creat and choose
 		unset($possibility_and_order_of_sorters);
-		$sorter = new formSorterInt('hr',	"Hit Rate",	SORT_DESC,$sorter_items[ROOM_ARMORY]["hr"]);
+		$sorter = new formSorterInt('hr',	"Hit Rate",	SORT_DESC,$sorter_items[ROOM_ARMORY][HIT_RATE]);
 		$possibility_and_order_of_sorters[$sorter->id] = $sorter;
-		$sorter = new formSorterInt('q',	"Quality",	SORT_ASC,	$sorter_items[ROOM_ARMORY]["quality"]);
+		$sorter = new formSorterInt('q',	"Quality",	SORT_ASC,	$sorter_items[ROOM_ARMORY][QUALITY]);
 		$possibility_and_order_of_sorters[$sorter->id] = $sorter;
-		$sorter = new formSorterStr('tt', "Weapon Type",	SORT_ASC,	$sorter_items[ROOM_ARMORY]["type"]);
+		$sorter = new formSorterStr('tt', "Weapon Type",	SORT_ASC,	$sorter_items[ROOM_ARMORY][TYPE]);
 		$possibility_and_order_of_sorters[$sorter->id] = $sorter;
-		$sorter = new formSorterInt('Bd', "Duration",	SORT_DESC,$sorter_items[ROOM_ARMORY]["duration"]);
+		$sorter = new formSorterInt('Bd', "Duration",	SORT_DESC,$sorter_items[ROOM_ARMORY][DURATION]);
 		$possibility_and_order_of_sorters[$sorter->id] = $sorter;
-		$sorter = new formSorterInt('Bhp', "Hit Points",	SORT_DESC,$sorter_items[ROOM_ARMORY]["hp"]);
+		$sorter = new formSorterInt('Bhp', "Hit Points",	SORT_DESC,$sorter_items[ROOM_ARMORY][HP]);
 		$possibility_and_order_of_sorters[$sorter->id] = $sorter;
-		$sorter = new formSorterInt('w', "Weight",		SORT_ASC, $sorter_items[ROOM_ARMORY]["weight"]);
+		$sorter = new formSorterInt('w', "Weight",		SORT_ASC, $sorter_items[ROOM_ARMORY][WEIGHT]);
 		$possibility_and_order_of_sorters[$sorter->id] = $sorter;
-		$sorter = new formSorterInt('dm', "Dodge mod.",	SORT_DESC,$sorter_items[ROOM_ARMORY]["dodge_mod"]);
+		$sorter = new formSorterInt('dm', "Dodge mod.",	SORT_DESC,$sorter_items[ROOM_ARMORY][DODGE_MOD]);
 		$possibility_and_order_of_sorters[$sorter->id] = $sorter;
-		$sorter = new formSorterInt('pm', "Parry mod.",	SORT_DESC,$sorter_items[ROOM_ARMORY]["parry_mod"]);
+		$sorter = new formSorterInt('pm', "Parry mod.",	SORT_DESC,$sorter_items[ROOM_ARMORY][PARRY_MOD]);
 		$possibility_and_order_of_sorters[$sorter->id] = $sorter;
-		$sorter = new formSorterInt('adm', "Adv. Dodge mod.",SORT_ASC,$sorter_items[ROOM_ARMORY]["adv_dodge_mod"]);
+		$sorter = new formSorterInt('adm', "Adv. Dodge mod.",SORT_ASC,$sorter_items[ROOM_ARMORY][ADV_DODGE_MOD]);
 		$possibility_and_order_of_sorters[$sorter->id] = $sorter;
-		$sorter = new formSorterInt('apm', "Adv. Parry mod.",SORT_ASC,$sorter_items[ROOM_ARMORY]["adv_parry_mod"]);
+		$sorter = new formSorterInt('apm', "Adv. Parry mod.",SORT_ASC,$sorter_items[ROOM_ARMORY][ADV_PARRY_MOD]);
 		$possibility_and_order_of_sorters[$sorter->id] = $sorter;
 		$_SESSION[ROOM_ARMORY]['possibility_and_order_of_sorters'] = serialize($possibility_and_order_of_sorters);
 		$_SESSION[ROOM_ARMORY]['nb_activated_sorters'] = 2;
@@ -125,11 +125,11 @@ if ((isset($_GET['ckey']) && $_GET['ckey'] != '')
 		$_SESSION[ROOM_ARMORY]['nb_items'] = count($items[ROOM_ARMORY]);
 		
 		unset($possibility_and_order_of_sorters);
-		$sorter = new formSorterInt('q', "Quality",		SORT_ASC, $sorter_items[ROOM_AMPLI]["quality"]);
+		$sorter = new formSorterInt('q', "Quality",		SORT_ASC, $sorter_items[ROOM_AMPLI][QUALITY]);
 		$possibility_and_order_of_sorters[$sorter->id] = $sorter;
-		$sorter = new formSorterInt('Bd', "Duration",	SORT_DESC,$sorter_items[ROOM_AMPLI]["duration"]);
+		$sorter = new formSorterInt('Bd', "Duration",	SORT_DESC,$sorter_items[ROOM_AMPLI][DURATION]);
 		$possibility_and_order_of_sorters[$sorter->id] = $sorter;
-		$sorter = new formSorterInt('Bhp', "Hit Points",	SORT_DESC,$sorter_items[ROOM_AMPLI]["hp"]);
+		$sorter = new formSorterInt('Bhp', "Hit Points",	SORT_DESC,$sorter_items[ROOM_AMPLI][HP]);
 		$possibility_and_order_of_sorters[$sorter->id] = $sorter;
 		$_SESSION[ROOM_AMPLI]['possibility_and_order_of_sorters'] = serialize($possibility_and_order_of_sorters);
 		$_SESSION[ROOM_AMPLI]['nb_activated_sorters'] = 1;
@@ -137,19 +137,19 @@ if ((isset($_GET['ckey']) && $_GET['ckey'] != '')
 		$_SESSION[ROOM_AMPLI]['nb_items'] = count($items[ROOM_AMPLI]);
 
 		unset($possibility_and_order_of_sorters);
-		$sorter = new formSorterInt('hr',	"Hit Rate",	SORT_DESC,$sorter_items[ROOM_RANGE]["hr"]);
+		$sorter = new formSorterInt('hr',	"Hit Rate",	SORT_DESC,$sorter_items[ROOM_RANGE][HIT_RATE]);
 		$possibility_and_order_of_sorters[$sorter->id] = $sorter;
-		$sorter = new formSorterInt('q',	"Quality",	SORT_ASC, $sorter_items[ROOM_RANGE]["quality"]);
+		$sorter = new formSorterInt('q',	"Quality",	SORT_ASC, $sorter_items[ROOM_RANGE][QUALITY]);
 		$possibility_and_order_of_sorters[$sorter->id] = $sorter;
-		$sorter = new formSorterStr('tt', "Weapon Type",	SORT_ASC,	$sorter_items[ROOM_RANGE]["type"]);
+		$sorter = new formSorterStr('tt', "Weapon Type",	SORT_ASC,	$sorter_items[ROOM_RANGE][TYPE]);
 		$possibility_and_order_of_sorters[$sorter->id] = $sorter;
-		$sorter = new formSorterInt('Bd', "Duration"	,	SORT_DESC,$sorter_items[ROOM_RANGE]["duration"]);
+		$sorter = new formSorterInt('Bd', "Duration"	,	SORT_DESC,$sorter_items[ROOM_RANGE][DURATION]);
 		$possibility_and_order_of_sorters[$sorter->id] = $sorter;
-		$sorter = new formSorterInt('Bhp', "Hit Points"	,SORT_DESC,$sorter_items[ROOM_RANGE]["hp"]);
+		$sorter = new formSorterInt('Bhp', "Hit Points"	,SORT_DESC,$sorter_items[ROOM_RANGE][HP]);
 		$possibility_and_order_of_sorters[$sorter->id] = $sorter;
-		$sorter = new formSorterInt('w', "Weight"		,SORT_ASC, $sorter_items[ROOM_RANGE]["weight"]);
+		$sorter = new formSorterInt('w', "Weight"		,SORT_ASC, $sorter_items[ROOM_RANGE][WEIGHT]);
 		$possibility_and_order_of_sorters[$sorter->id] = $sorter;
-		$sorter = new formSorterInt('r', "Range"		,SORT_DESC,$sorter_items[ROOM_RANGE]["range"]);
+		$sorter = new formSorterInt('r', "Range"		,SORT_DESC,$sorter_items[ROOM_RANGE][RANGE]);
 		$possibility_and_order_of_sorters[$sorter->id] = $sorter;
 		$_SESSION[ROOM_RANGE]['nb_items'] = count($items[ROOM_RANGE]);
 		
@@ -217,7 +217,7 @@ if ((isset($_GET['ckey']) && $_GET['ckey'] != '')
 		$_SESSION[ROOM_MATERIAL]['nb_items'] = count($items[ROOM_MATERIAL]);
 
 		unset($possibility_and_order_of_sorters);
-		$display_order[] = new formSorterStr('tt', "Item Name",SORT_ASC,$sorter_items[ROOM_OTHER]["flunker_code"]);
+		$display_order[] = new formSorterStr('fc', "Flunker Code",SORT_ASC,$sorter_items[ROOM_OTHER][FLUNKER_CODE]);
 		$_SESSION[ROOM_OTHER]['possibility_and_order_of_sorters'] =  null;
 		sorterBy($items[ROOM_OTHER],$display_order);
 		$_SESSION[ROOM_OTHER]['items'] = $items[ROOM_OTHER];
@@ -312,13 +312,13 @@ if ((isset($_GET['ckey']) && $_GET['ckey'] != '')
 		$_SESSION[ROOM_DRESSING]['last_filter_line']["left"] = serialize(new intervalFormFilter('quality','Quality',0,250));
 		$_SESSION[ROOM_DRESSING]['last_filter_line']["right"] = serialize(new textFormFilter());
 
-		$_SESSION['jewel']['filter_form'][] = serialize(new listFormFilter('name_jewel','Jewel Type',$list_ordered_jewel,true));
-		$_SESSION['jewel']['filter_form'][] = serialize(new choiceFormFilter('max_buff','Max Buff',$list_ordered_buff));
-		$_SESSION['jewel']['filter_form'][] = serialize(new choiceFormFilter('boost','Armilo Boost',$list_ordered_jewel_cloth));
-		$_SESSION['jewel']['filter_form'][] = serialize(new listFormFilter('energy','Energy',$list_ordered_energy,true));
-		$_SESSION['jewel']['filter_form'][] = serialize(new listFormFilter('name_nation','Nation Name',$list_ordered_nation_jewel,true));
-		$_SESSION['jewel']['filter_form'][] = serialize(new ghFormFilter($list_guild));
-		$_SESSION['jewel']['last_filter_line']["left"] = serialize(new intervalFormFilter('quality','Quality',0,250));
+		$_SESSION[ROOM_JEWEL]['filter_form'][] = serialize(new listFormFilter('name_jewel','Jewel Type',$list_ordered_jewel,true));
+		$_SESSION[ROOM_JEWEL]['filter_form'][] = serialize(new choiceFormFilter('max_buff','Max Buff',$list_ordered_buff));
+		$_SESSION[ROOM_JEWEL]['filter_form'][] = serialize(new choiceFormFilter('boost','Armilo Boost',$list_ordered_jewel_cloth));
+		$_SESSION[ROOM_JEWEL]['filter_form'][] = serialize(new listFormFilter('energy','Energy',$list_ordered_energy,true));
+		$_SESSION[ROOM_JEWEL]['filter_form'][] = serialize(new listFormFilter('name_nation','Nation Name',$list_ordered_nation_jewel,true));
+		$_SESSION[ROOM_JEWEL]['filter_form'][] = serialize(new ghFormFilter($list_guild));
+		$_SESSION[ROOM_JEWEL]['last_filter_line']["left"] = serialize(new intervalFormFilter('quality','Quality',0,250));
 		$_SESSION[ROOM_JEWEL]['last_filter_line']["right"] = serialize(new textFormFilter());
 		
 		$_SESSION[ROOM_MATERIAL]['filter_form'][] = serialize(new listFormFilter('origin','Origin',$list_ordered_material_origine,true));

@@ -38,78 +38,78 @@ function build_simple_sorter($room,&$item_obj) {
 	if( $room == ROOM_AMPLI ) {	
 		$key = $item_obj->flunkerId();
 		$items[ROOM_AMPLI][$key] = array(
-			'quality' => (string)$item_obj->q,
-			'duration' => (string)$item_obj->dur,
-			'hp' => (string)$item_obj->hp,
+			QUALITY	 => (string)$item_obj->q,
+			DURATION	 => (string)$item_obj->dur,
+			HP		 => (string)$item_obj->hp,
 			'str_object'  => serialize($item_obj)
 		);
-		$sorter_items[ROOM_AMPLI]["quality"][$key]	 = (int)$item_obj->q;
-		$sorter_items[ROOM_AMPLI]["duration"][$key]	 = (int)$item_obj->dur;
-		$sorter_items[ROOM_AMPLI]["hp"][$key]	 	 = (int)$item_obj->hp;
+		$sorter_items[ROOM_AMPLI][QUALITY][$key]	 = (int)$item_obj->q;
+		$sorter_items[ROOM_AMPLI][DURATION][$key]	 = (int)$item_obj->dur;
+		$sorter_items[ROOM_AMPLI][HP][$key]	 	 = (int)$item_obj->hp;
 	}
 	else if( $room == ROOM_ARMORY ){
 		$key = $item_obj->flunkerId();
 		$items[ROOM_ARMORY][$key] = array(
-			'item_name' => (string)$item_obj->id_weapon,
-			'hite_race' => (string)$item_obj->hr,
-			'quality' => (string)$item_obj->q,
-			'duration' => (string)$item_obj->dur,
-			'hp' => (string)$item_obj->hp,
-			'weight' => (string)$item_obj->w,
-			'dodge_mod' => (string)$item_obj->dm,
-			'parry_mod' => (string)$item_obj->pm,
-			'adv_dodge_mod' => (string)$item_obj->adm,
-			'adv_parry_mod' => (string)$item_obj->apm,
-			'str_object'  => serialize($item_obj)
+			TYPE			 => (string)$item_obj->id_weapon,
+			HIT_RATE		 => (string)$item_obj->hr,
+			QUALITY		 => (string)$item_obj->q,
+			DURATION		 => (string)$item_obj->dur,
+			HP			 => (string)$item_obj->hp,
+			WEIGHT		 => (string)$item_obj->w,
+			DODGE_MOD		 => (string)$item_obj->dm,
+			PARRY_MOD		 => (string)$item_obj->pm,
+			ADV_DODGE_MOD	 => (string)$item_obj->adm,
+			ADV_PARRY_MOD	 => (string)$item_obj->apm,
+			'str_object'	 => serialize($item_obj)
 		);
-		$sorter_items[ROOM_ARMORY]["type"][$key]		 = (string)$item_obj->id_weapon;
-		$sorter_items[ROOM_ARMORY]["hr"][$key]			 = (int)$item_obj->hr;
-		$sorter_items[ROOM_ARMORY]["quality"][$key]		 = (int)$item_obj->q;
-		$sorter_items[ROOM_ARMORY]["duration"][$key]		 = (int)$item_obj->dur;
-		$sorter_items[ROOM_ARMORY]["hp"][$key]		 	 = (int)$item_obj->hp;
-		$sorter_items[ROOM_ARMORY]["weight"][$key]		 = (int)$item_obj->w;
-		$sorter_items[ROOM_ARMORY]["dodge_mod"][$key]	 = (int)$item_obj->dm;
-		$sorter_items[ROOM_ARMORY]["parry_mod"][$key]	 = (int)$item_obj->pm;
-		$sorter_items[ROOM_ARMORY]["adv_dodge_mod"][$key]	 = (int)$item_obj->adm;
-		$sorter_items[ROOM_ARMORY]["adv_parry_mod"][$key]	 = (int)$item_obj->apm;
+		$sorter_items[ROOM_ARMORY][TYPE][$key]			 = (string)$item_obj->id_weapon;
+		$sorter_items[ROOM_ARMORY][HIT_RATE][$key]		 = (int)$item_obj->hr;
+		$sorter_items[ROOM_ARMORY][QUALITY][$key]		 = (int)$item_obj->q;
+		$sorter_items[ROOM_ARMORY][DURATION][$key]		 = (int)$item_obj->dur;
+		$sorter_items[ROOM_ARMORY][HP][$key]		 	 = (int)$item_obj->hp;
+		$sorter_items[ROOM_ARMORY][WEIGHT][$key]		 = (int)$item_obj->w;
+		$sorter_items[ROOM_ARMORY][DODGE_MOD][$key]		 = (int)$item_obj->dm;
+		$sorter_items[ROOM_ARMORY][PARRY_MOD][$key]		 = (int)$item_obj->pm;
+		$sorter_items[ROOM_ARMORY][ADV_DODGE_MOD][$key]	 = (int)$item_obj->adm;
+		$sorter_items[ROOM_ARMORY][ADV_PARRY_MOD][$key]	 = (int)$item_obj->apm;
 	}
 	else if( $room == ROOM_RANGE ){
 		$key = $item_obj->flunkerId();
 		$items[ROOM_RANGE][$key] = array(
-			'item_name' => (string)$item_obj->id_weapon,
-			'hite_race' => (string)$item_obj->hr,
-			'quality' => (string)$item_obj->q,
-			'duration' => (string)$item_obj->dur,
-			'hp' => (string)$item_obj->hp,
-			'weight' => (string)$item_obj->w,
-			ROOM_RANGE => (string)$item_obj->r,
+			TYPE		 => (string)$item_obj->id_weapon,
+			HIT_RATE	 => (string)$item_obj->hr,
+			QUALITY	 => (string)$item_obj->q,
+			DURATION	 => (string)$item_obj->dur,
+			HP		 => (string)$item_obj->hp,
+			WEIGHT	 => (string)$item_obj->w,
+			RANGE	 => (string)$item_obj->r,
 			'str_object'  => serialize($item_obj)
 		);
-		$sorter_items[ROOM_RANGE]["type"][$key]		 = (string)$item_obj->id_weapon;
-		$sorter_items[ROOM_RANGE]["hr"][$key]		 = (int)$item_obj->hr;
-		$sorter_items[ROOM_RANGE]["quality"][$key]	 = (int)$item_obj->q;
-		$sorter_items[ROOM_RANGE]["duration"][$key]	 = (int)$item_obj->dur;
-		$sorter_items[ROOM_RANGE]["hp"][$key]		 = (int)$item_obj->hp;
-		$sorter_items[ROOM_RANGE]["weight"][$key]	 = (int)$item_obj->w;
-		$sorter_items[ROOM_RANGE]["range"][$key]	 = (int)$item_obj->r;
+		$sorter_items[ROOM_RANGE][TYPE][$key]		 = (string)$item_obj->id_weapon;
+		$sorter_items[ROOM_RANGE][HIT_RATE][$key]	 = (int)$item_obj->hr;
+		$sorter_items[ROOM_RANGE][QUALITY][$key]	 = (int)$item_obj->q;
+		$sorter_items[ROOM_RANGE][DURATION][$key]	 = (int)$item_obj->dur;
+		$sorter_items[ROOM_RANGE][HP][$key]		 = (int)$item_obj->hp;
+		$sorter_items[ROOM_RANGE][WEIGHT][$key]		 = (int)$item_obj->w;
+		$sorter_items[ROOM_RANGE][RANGE][$key]		 = (int)$item_obj->r;
 	}
 	else if( $room == ROOM_DRESSING ) {
 		
 		$key = $item_obj->flunkerId();
 		$items['dressing'][$key] = array(
-			QUALITY	=> (string)$item_obj->q,
-			TYPE		=> (string)$item_obj->id_type,
-			PIECE	=> (string)$item_obj->id_piece,
-			ORIGIN	=> (string)$item_obj->id_peuple,
-			PROTECTION => (string)$item_obj->pf,
-			MAX_SLASHING 	=> (string)$item_obj->msp,
-			MAX_BLUNT 	=> (string)$item_obj->mbp,
-			MAX_PIERCING 	=> (string)$item_obj->mpp,
-			DODGE_MOD => (string)$item_obj->dm,
-			PARRY_MOD => (string)$item_obj->pm,
-			ENERGY	=> (string)$item_obj->e,
-			COLOR	=> (string)$item_obj->c,
-			'str_object'  => serialize($item_obj)
+			QUALITY		=> (string)$item_obj->q,
+			TYPE			=> (string)$item_obj->id_type,
+			PIECE		=> (string)$item_obj->id_piece,
+			ORIGIN		=> (string)$item_obj->id_peuple,
+			PROTECTION	=> (string)$item_obj->pf,
+			MAX_SLASHING	=> (string)$item_obj->msp,
+			MAX_BLUNT		=> (string)$item_obj->mbp,
+			MAX_PIERCING	=> (string)$item_obj->mpp,
+			DODGE_MOD		=> (string)$item_obj->dm,
+			PARRY_MOD		=> (string)$item_obj->pm,
+			ENERGY		=> (string)$item_obj->e,
+			COLOR		=> (string)$item_obj->c,
+			'str_object'	=> serialize($item_obj)
 		);
 		$sorter_items[ROOM_DRESSING][QUALITY][$key]		 = (int)$item_obj->q;
 		$sorter_items[ROOM_DRESSING][TYPE][$key]		 = (string)$item_obj->id_type;
@@ -148,10 +148,10 @@ function build_simple_sorter($room,&$item_obj) {
 	else if( $room == ROOM_OTHER ) {
 		$key = $item_obj->flunkerId();
 		$items[ROOM_OTHER][$key] = array(
-			'flunker_code' => (string)$item_obj->flunker_code,
-			'str_object'  => serialize($item_obj)
+			FLUNKER_CODE	 => (string)$item_obj->flunker_code,
+			'str_object'	 => serialize($item_obj)
 		);
-		$sorter_items[ROOM_OTHER]["flunker_code"][$key] = (string)$item_obj->flunker_code;
+		$sorter_items[ROOM_OTHER][FLUNKER_CODE][$key] = (string)$item_obj->flunker_code;
 	}
 }
 /**
@@ -170,16 +170,16 @@ function build_complexe_sorter() {
 			$key = $material->flunkerId();
 			$material->total_stack = (string)$total_stack[$code];
 			$items[ROOM_MATERIAL][$key] = array(
-				QUALITY	=> (string)$material->q,
-				UTILITY	=> (string)$material->id_utility,
-				TOTAL_STACK => (string)$material->total_stack,
-				STACK => (string)$material->s,
-				'str_object'  => null
+				QUALITY		=> (string)$material->q,
+				UTILITY		=> (string)$material->id_utility,
+				TOTAL_STACK	=> (string)$material->total_stack,
+				STACK		=> (string)$material->s,
+				'str_object' 	=> null
 			);
-			$sorter_items[ROOM_MATERIAL][QUALITY][$key]	 = (int)$material->q;
-			$sorter_items[ROOM_MATERIAL][UTILITY][$key]	 = (string)$material->id_utility;
-			$sorter_items[ROOM_MATERIAL][TOTAL_STACK][$key] = (int)$material->total_stack;
-			$sorter_items[ROOM_MATERIAL][STACK][$key]	 = (int)$material->s;
+			$sorter_items[ROOM_MATERIAL][QUALITY][$key]		 = (int)$material->q;
+			$sorter_items[ROOM_MATERIAL][UTILITY][$key]		 = (string)$material->id_utility;
+			$sorter_items[ROOM_MATERIAL][TOTAL_STACK][$key]	 = (int)$material->total_stack;
+			$sorter_items[ROOM_MATERIAL][STACK][$key]		 = (int)$material->s;
 
 			$items[ROOM_MATERIAL][$key]['str_object'] = serialize($material);
 		}

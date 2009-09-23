@@ -15,6 +15,7 @@
  * You should have received a copy of the GNU Affero General Public License
  * along with Flunker.  If not, see <http://www.gnu.org/licenses/>.
  */
+ /* All the rooms possible */
 define ("ROOM_ARMORY", 'armory');
 define ("ROOM_AMPLI", 'ampli');
 define ("ROOM_RANGE", 'range');
@@ -23,21 +24,30 @@ define ("ROOM_JEWEL", 'jewel');
 define ("ROOM_MATERIAL", 'material');
 define ("ROOM_OTHER", 'other');
 
-define ("ORIGIN", 'origin');
-define ("QUALITY", 'quality');
-define ("TYPE", 'type');
-define ("PIECE", 'piece');
-define ("SKIN", 'skin');
-define ("UTILITY", 'utility');
-define ("DODGE_MOD", 'dodge_mod');
-define ("PARRY_MOD", 'parry_mod');
-define ("PROTECTION", 'protection_factor');
-define ("MAX_SLASHING", 'max_protection_slashing');
-define ("MAX_BLUNT", 'max_protection_blunt');
-define ("MAX_PIERCING", 'max_protection_piercing');
-define ("TOTAL_STACK", 'total_stack');
-define ("STACK", 'stack');
-define ("COLOR", 'color');
-define ("ENERGY", 'energy');
+/*  All the sorters possible */
+define ("ORIGIN",	'origin');
+define ("QUALITY",	'quality');
+define ("HP",		'hp');
+define ("DURATION", 'duration');
+define ("TYPE",	'type');
+define ("PIECE",	'piece');
+define ("SKIN",	'skin');
+define ("UTILITY",	'utility');
+define ("RANGE",	'range');
+define ("HIT_RATE",	'hr');
+define ("WEIGHT",	'weight');
+define ("DODGE_MOD",	'dodge_mod');
+define ("PARRY_MOD",	'parry_mod');
+define ("ADV_DODGE_MOD",	'adv_dodge_mod');
+define ("ADV_PARRY_MOD",	'adv_parry_mod');
+define ("PROTECTION",	'protection_factor');
+define ("MAX_SLASHING",	'max_protection_slashing');
+define ("MAX_BLUNT",	'max_protection_blunt');
+define ("MAX_PIERCING",	'max_protection_piercing');
+define ("TOTAL_STACK",	'total_stack');
+define ("STACK",	'stack');
+define ("COLOR",	'color');
+define ("ENERGY",	'energy');
+define ("FLUNKER_CODE",	'flunker_code');
 
 ?>
