@@ -16,10 +16,16 @@
  * along with Flunker.  If not, see <http://www.gnu.org/licenses/>.
  */
 
+/**
+ * Display the html item icon with alt and title information (w3c).
+ */
 function flunker_item_icon_image($sheetid, $c=-1, $q=-1, $s=-1, $sap=-1, $title, $destroyed=false) {
 	return '<img src="'.flunker_item_icon_url($sheetid, $c, $q, $s, $sap, $destroyed).'" title="'.$title.'" alt="'.__("Item").'"/>';
 }
 
+/**
+ * Display the url item icon with a htmlentities treatement (w3c).
+ */
 function flunker_item_icon_url($sheetid, $c=-1, $q=-1, $s=-1, $sap=-1, $destroyed=false) {
 	return ryzom_api_base_url()."item_icon.php?".htmlentities("sheetid=$sheetid&c=$c&q=$q&s=$s&sap=$sap".($destroyed?'&destroyed=1':''));
 }

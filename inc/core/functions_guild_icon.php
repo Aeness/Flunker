@@ -27,7 +27,7 @@ function flunker_guild_icon_image($icon, $px_size) {
 }
 
 /**
- * Give the  Guild Icon URL ( validated by w3c).
+ * Give the  Guild Icon URL with htmlentities treatments ( validated by w3c).
  * @param icon	&lt;<b>string</b>&gt;	Ryzom Id of the icon
  * @param size 	&lt;<b>string</b>&gt;	Ryzom Size
  * @return the url of the Guild Icon

@@ -27,7 +27,7 @@ define("PATTERN_MATERIAL_LOOT",	9);
 define("PATTERN_MATERIAL_HARVEST",	10);
 define("PATTERN_ELSE",			11);
 
-# we use variables for reusing them in tool like 'generate_local_files.php'
+# we use variables for re-using them in tool as 'generate_local_files.php'
 $pattern_list = array (
 	PATTERN_REFUGEE		=>	'/^icr(.*)?\.sitem/',
 	PATTERN_AMPLI			=>	'/^ic(.|(oka[rm]))m2ms([lbwe]|_[123])?\.sitem/',

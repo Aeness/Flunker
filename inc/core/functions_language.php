@@ -16,8 +16,9 @@
  * along with Flunker.  If not, see <http://www.gnu.org/licenses/>.
  */
 /**
- @param get_language	$_GET['language']
- @param session_lang	$_SESSION['lang']
+ * Include translating files. 
+ * @param get_language	$_GET['language']
+ * @param session_lang	$_SESSION['lang']
  */
 function init_language(&$get_language,&$session_lang) {
 	if ( !empty($get_language) ) {
@@ -36,7 +37,9 @@ function init_language(&$get_language,&$session_lang) {
 
 /**
  * Translate in the curent language.
-  */
+ * @param str &lt;<b>string</b>&gt; English sentence translated in French or German.
+ * @see init_language()
+ */
 function __($str)
 {
 	return (!empty($GLOBALS['__lang'][$str])) ? $GLOBALS['__lang'][$str] : $str;

@@ -15,6 +15,10 @@
  * You should have received a copy of the GNU Affero General Public License
  * along with Flunker.  If not, see <http://www.gnu.org/licenses/>.
  */
+ 
+/**
+ * Delet all session information except language, error message, 'comeFrom' and skin.
+ */
 function reinit_session()
 {
 	$_lang = $_SESSION['lang'];

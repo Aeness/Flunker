@@ -251,7 +251,7 @@ if( !isset($_SESSION['list_guild']) ) {
 	
 	# text search
 	if ( !empty($_POST['text_search']) ) {
-		$text_search = explode(' ',withoutAccent(trim($_POST['text_search'])));
+		$text_search = explode(' ',without_accent(trim($_POST['text_search'])));
 	}
 	
 	$items_filtered_and_unserialize = array();

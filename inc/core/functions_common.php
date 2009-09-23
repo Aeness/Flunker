@@ -14,30 +14,20 @@
  *
  * You should have received a copy of the GNU Affero General Public License
  * along with Flunker.  If not, see <http://www.gnu.org/licenses/>.
- */ 
+ */
+/**
+ * Give the flunker url configurated in conf.php
+ */
 function flunker_base_url() {
 	return FLUNKER_BASE_URL;
 }
 
-function load_test_xml($filename) {
-	$output = "";
-	if (file_exists($filename)) {
-		$fp = fopen($filename,"r");
-		if(isset($fp)) {
-			while(!feof($fp)) {
-				# On récupère une ligne
-				$ligne = fgets($fp,255000);
-				if (trim($ligne,"\r\n")!="") {
-					$output .= trim($ligne,"\r\n");
-				}
-			}
-		}
-		fclose($fp); # On ferme le fichier
-	}
-	return simplexml_load_string($output);
-}
-
-function withoutAccent($str) {
+/**
+ * Erase all accent in a string
+ * @param str &lt;<b>String</b>&gt; String treated
+ * @return &lt;<b>String</b>&gt; A String  without accent.
+ */
+function without_accent($str) {
 
 		$search  = utf8_decode('çñÄÂÀÁäâàáËÊÈÉéèëêÏÎÌÍïîìíÖÔÒÓöôòóÜÛÙÚüûùúµ');
 		$replace = utf8_decode('cnaaaaaaaeeeeeeeeeiiiiiiiioooooooouuuuuuuuu');

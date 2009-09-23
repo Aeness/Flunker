@@ -98,7 +98,7 @@ class item
 	 * @return &lt;<b>string</b>&gt;a set of word, not a text
 	 */
 	public function description() {
-		return withoutAccent($this->_description()." ".$this->getTitle());
+		return without_accent($this->_description()." ".$this->getTitle());
 	}
 
 	/**

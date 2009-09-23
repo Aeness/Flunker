@@ -25,6 +25,9 @@ function init_css(&$get_style,&$session_style) {
 	}
 }
 
+/**
+ * Display a checkbox.
+ */
 function checkbox($img_path,$name,$checked,$value,$alt,$title,$class="") {
 	$str_checked = "";
 	$str_on_off = "off";
@@ -43,6 +46,9 @@ function checkbox($img_path,$name,$checked,$value,$alt,$title,$class="") {
 			</li>";
 }
 
+/**
+ * Display a radio.
+ */
 function radio($img_path,$name,$value,$alt,$title) {
 	$style = ($_SESSION['style']!="ryzom")?"_".$_SESSION['style']:"";
 
@@ -51,6 +57,9 @@ function radio($img_path,$name,$value,$alt,$title) {
 			<div style=\"background-image: url($img_path/{$value}.png); background-repeat: no-repeat; background-position: left top;\"><img name=\"hidden_$name\" id=\"hidden_{$name}_{$value}\" src=\"$img_path/button_off{$style}.png\" alt=\"$alt\" title=\"$title\"/></div>";
 }
 
+/**
+ * Display a checkbox for the guild hall choice.
+ */
 function ghButton($img_path,$name,$value,$url,$alt,$title,$class="") {
 
 	$style = ($_SESSION['style']!="ryzom")?"_".$_SESSION['style']:"";
@@ -62,6 +71,9 @@ function ghButton($img_path,$name,$value,$url,$alt,$title,$class="") {
 			</li>";
 }
 
+/**
+ * Display "flag" corresponding to the skins.
+ */ 
 function style_list($str_list_arg='') {
 	return '
 			<a href="?style=ryzom'.$str_list_arg.'"><img style="margin-left: 30px;" hspace="5" border="0" src="img/ryzom.png" alt="'.__("Ryzom Style").'" /></a>

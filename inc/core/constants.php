@@ -15,7 +15,10 @@
  * You should have received a copy of the GNU Affero General Public License
  * along with Flunker.  If not, see <http://www.gnu.org/licenses/>.
  */
- /* All the rooms possible */
+/** \file
+ * Contains all the possible rooms and all possible sorter tyoes.
+ */
+ /* All the possible rooms */
 define ("ROOM_ARMORY", 'armory');
 define ("ROOM_AMPLI", 'ampli');
 define ("ROOM_RANGE", 'range');
@@ -24,7 +27,7 @@ define ("ROOM_JEWEL", 'jewel');
 define ("ROOM_MATERIAL", 'material');
 define ("ROOM_OTHER", 'other');
 
-/*  All the sorters possible */
+/*  All the possible sorters */
 define ("ORIGIN",	'origin');
 define ("QUALITY",	'quality');
 define ("HP",		'hp');
