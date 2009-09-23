@@ -45,8 +45,8 @@ class apartment
 	}
 	
 	public function resumeName() {
-		if( strlen($this->name) > 25 ){
-			return substr($this->name,0,22)."...";
+		if( strlen($this->name) > 19 ){
+			return substr($this->name,0,16)."...";
 		}
 		return $this->name;
 	}
