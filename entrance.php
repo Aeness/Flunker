@@ -35,9 +35,9 @@ header('Content-Type:text/html; charset=UTF-8');
 	<title><?php echo __("Flunker"); ?></title>
 	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 	<link type="text/css" href="inc/ryzom_api/ryzom_api/render/ryzom_ui.css" rel="stylesheet" media="all" />
-		<?php  echo ryzom_render_header_www(); ?>
-		<link type="text/css" href="css/flunker.css" rel="stylesheet"  media="all"/>
-		<link type="text/css" href="css/<?php echo $_SESSION['style'];?>.css" rel="stylesheet"  media="all"/>
+	<?php  echo ryzom_render_header_www(); ?>
+	<link type="text/css" href="css/flunker.css" rel="stylesheet"  media="all"/>
+	<link type="text/css" href="css/<?php echo $_SESSION['style'];?>.css" rel="stylesheet"  media="all"/>
 	<script type="text/javascript" src="js/jquery/jquery.js"></script>
 	<script type="text/javascript">
 	var Flunker={
@@ -91,7 +91,6 @@ header('Content-Type:text/html; charset=UTF-8');
 		);
 	});
 	</script>
-	<script type="text/javascript" src="js/background.js"></script>
 
 	<style type="text/css">
 	.enter_div {
@@ -119,11 +118,7 @@ header('Content-Type:text/html; charset=UTF-8');
 			<a href="?language=en"><img hspace="5" border="0" src="http://www.ryzom.com/data/en_v6.jpg" alt="English" /></a>
 			<a href="?language=fr"><img hspace="5" border="0" src="http://www.ryzom.com/data/fr_v6.jpg" alt="Français" /></a>
 			<a href="?language=de"><img hspace="5" border="0" src="http://www.ryzom.com/data/de_v6.jpg" alt="Deutsch" /></a>
-			<a href="?style=ryzom"><img style="margin-left: 30px;" hspace="5" border="0" src="img/ryzom.png" alt="<?php echo __("Ryzom Style"); ?>" /></a>
-			<a href="?style=tryker"><img hspace="5" border="0" src="img/tryker.png" alt="<?php echo __("Tryker Style"); ?>" /></a>
-			<a href="?style=matis"><img hspace="5" border="0" src="img/matis.png" alt="<?php echo __("Matis Style"); ?>" /></a>
-			<a href="?style=zorai"><img hspace="5" border="0" src="img/zorai.png" alt="<?php echo __("Zorai Style"); ?>" /></a>
-			<a href="?style=fyros"><img hspace="5" border="0" src="img/fyros.png" alt="<?php echo __("Fyros Style"); ?>" /></a>
+			<?php echo style_list(); ?>
 			
 			<div class="ryzom-ui ryzom-ui-header">
 				<div class="ryzom-ui-tl"><div class="ryzom-ui-tr">

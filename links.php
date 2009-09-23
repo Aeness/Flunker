@@ -19,6 +19,8 @@ require_once('./inc/flunker_api.php');
 reinit_session();
 //ryzom_log_start('Flunker');
 
+$style = ($_SESSION['style']!="ryzom")?"_".$_SESSION['style']:"";
+
 if ((isset($_GET['ckey']) && $_GET['ckey'] != '')
 	|| isset($_GET['test']) ){
 	$display_link = false;
@@ -359,6 +361,15 @@ header('Content-Type:text/html; charset=UTF-8');
 	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 	<link type="text/css" href="inc/ryzom_api/ryzom_api/render/ryzom_ui.css" rel="stylesheet" media="all" />
 	<?php  echo ryzom_render_header_www(); ?>
+	<link type="text/css" href="css/flunker.css" rel="stylesheet"  media="all"/>
+	<link type="text/css" href="css/<?php echo $_SESSION['style'];?>.css" rel="stylesheet"  media="all"/>
+	<script type="text/javascript" src="js/jquery/jquery.js"></script>
+	<script type="text/javascript">
+	var Flunker={
+		nationality: "<?php echo $_SESSION['style'];?>"
+	};
+	</script>
+	<script type="text/javascript" src="js/background.js"></script>
 	</head>
 	
 	<body>
@@ -369,6 +380,7 @@ header('Content-Type:text/html; charset=UTF-8');
 			<a href="<?php echo htmlentities(flunker_base_url()."links.php?language=en".$str_list_ckey); ?>"><img hspace="5" border="0" src="http://www.ryzom.com/data/en_v6.jpg" alt="English" /></a>
 			<a href="<?php echo htmlentities(flunker_base_url()."links.php?language=fr".$str_list_ckey); ?>"><img hspace="5" border="0" src="http://www.ryzom.com/data/fr_v6.jpg" alt="Français" /></a>
 			<a href="<?php echo htmlentities(flunker_base_url()."links.php?language=de".$str_list_ckey); ?>"><img hspace="5" border="0" src="http://www.ryzom.com/data/de_v6.jpg" alt="Deutsch" /></a>
+			<?php echo style_list($str_list_ckey); ?>
 			
 			<div class="ryzom-ui ryzom-ui-header">
 				<div class="ryzom-ui-tl"><div class="ryzom-ui-tr">
@@ -382,8 +394,8 @@ header('Content-Type:text/html; charset=UTF-8');
 					</div>
 				</div></div>
 			
-				<div class="ryzom-ui-l"><div class="ryzom-ui-r"><div class="ryzom-ui-m">
-					<div class="ryzom-ui-body">
+				<div class="ryzom-ui-l"><div class="ryzom-ui-r"><div id="search_content" class="ryzom-ui-m">
+					<div  id="result_content" class="ryzom-ui-body">
 						<?php echo $error_msg; ?>
 						<?php 
 						$list_guild = unserialize($_SESSION['list_guild']);

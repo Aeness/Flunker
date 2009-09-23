@@ -19,10 +19,12 @@ function reinit_session()
 {
 	$_lang = $_SESSION['lang'];
 	$_come_from = $_SESSION['comeFrom'];
+	$_style = $_SESSION['style'];
 	session_destroy();
 	session_start();
 	$_SESSION['lang'] = $_lang;
 	$_SESSION['comeFrom'] = $_come_from;
+	$_SESSION['style'] = $_style;
 }
 
 ?>
