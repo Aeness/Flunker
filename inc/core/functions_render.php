@@ -93,4 +93,24 @@ function language_flags_list($str_list_arg='') {
 			<a href="'.htmlentities("?language=fr".$str_list_arg).'"><img hspace="5" border="0" src="http://www.ryzom.com/data/fr_v6.jpg" alt="Français" /></a>
 			<a href="'.htmlentities("?language=de".$str_list_arg).'"><img hspace="5" border="0" src="http://www.ryzom.com/data/de_v6.jpg" alt="Deutsch" /></a>';
 }
+
+
+function flunker_render_header() {
+	return '
+		<link type="text/css" href="inc/ryzom_api/ryzom_api/render/ryzom_ui.css" rel="stylesheet" media="all" />
+		'.ryzom_render_header_www().'
+		<link type="text/css" href="css/flunker.css" rel="stylesheet"  media="all"/>
+		<link type="text/css" href="css/'.$_SESSION['skin'].'.css" rel="stylesheet"  media="all"/>
+		<script type="text/javascript" src="js/jquery/jquery.js"></script>
+		<script type="text/javascript" src="js/jquery/jquery-ui.js"></script>
+		<script type="text/javascript">
+		var Flunker={
+			msg:{
+				err_request:"'.__('XMLHttpRequest not supported by your browser.').'"
+			},
+			nationality: "'.$_SESSION['skin'].'"
+		};
+		</script>
+		<script type="text/javascript" src="js/background.js"></script>';
+}
 ?>
