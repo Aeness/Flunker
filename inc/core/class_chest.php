@@ -65,7 +65,7 @@ class apartment
 		return "
 				<div class=\"chest_info\">
 					<div style=\"width: 34px; float: left;vertical-align: middle; padding: 2px 0 0 2px;\">
-						".$this->getSmallIcon(23)."
+						".$this->getSmallIcon(32)."
 					</div>
 					<div style=\"margin: 6px 0 0 5px;height: 34px;width: 150px; float: left;\">
 						<span style=\"vertical-align: middle;\" title=\"".$this->name."\">".$this->resumeName()."</span>
