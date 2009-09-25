@@ -23,7 +23,7 @@
  * @return the tag img of the Guild Icon
  */
 function flunker_guild_icon_image($icon, $px_size) {
-	return '<img src="'.flunker_guild_icon_url($icon, 's').'" style="height:{$px_size}px; width: {$px_size}px;" alt="'.__('Icon Guild').'"/>';
+	return '<img src="'.flunker_guild_icon_url($icon, 's').'" style="height:'.$px_size.'px; width: '.$px_size.'px;" alt="'.__('Icon Guild').'"/>';
 }
 
 /**

@@ -58,7 +58,7 @@ class apartment
 	 * @return the tag img of the Icon
 	 */
 	public function getSmallIcon($px_size) {
-		return '<img src="'.$this->getUrl().'" style="height:{$px_size}px; width: {$px_size}px;" alt="'.__('Icon Appart.').'"/>';
+		return '<img src="'.$this->getUrl().'" style="height:'.$px_size.'px; width: '.$px_size.'px;" alt="'.__('Icon Appart.').'"/>';
 	}
 	
 	public function getHtml() {
