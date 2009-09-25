@@ -70,7 +70,7 @@ class apartment
 					<div style=\"margin: 6px 0 0 5px;height: 34px;width: 150px; float: left;\">
 						<span style=\"vertical-align: middle;\" title=\"".$this->name."\">".$this->resumeName()."</span>
 					</div>
-					<div style=\"margin: 5px 0 0 5px;height: 34px;float: left; font-size: 11px;\">
+					<div style=\"margin: 5px 0 0 5px;height: 34px;width: 110px;float: left; font-size: 11px;\">
 						<span style=\"vertical-align: middle;\">".__("Slot").__(":").round(($this->nbItems * 100) / 999,2)."%<br />".$this->money." dappers</span>
 					</div>
 				</div>";
