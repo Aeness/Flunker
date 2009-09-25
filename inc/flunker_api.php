@@ -38,7 +38,6 @@
  */
 
 session_start();
-require_once(dirname(__FILE__).'/conf.php');
 require_once(dirname(__FILE__).'/core/functions_language.php');
 require_once(dirname(__FILE__).'/core/functions_render.php');
 init_language($_GET['language'],$_SESSION['lang']);
