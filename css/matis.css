@@ -11,7 +11,7 @@ body{
 }
 /* ***search*** */
 /* checkbox filter, radio filter , gh filter */
-.li_checkbox_gh_on_matis{
+.li_checkbox_gh_on{
 	background-image: url(../img/back_button_on_matis.png);
 	background-repeat: no-repeat;
 	background-position: left top;

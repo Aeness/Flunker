@@ -51,7 +51,7 @@ a.ryzom-ui-button:hover {
 	background-color: #7C5A7C;
 }
 /* checkbox filter, radio filter , gh filter */
-.li_checkbox_gh_on_zorai{
+.li_checkbox_gh_on{
 	background-image: url(../img/back_button_on_zorai.png);
 	background-repeat: no-repeat;
 	background-position: left top;

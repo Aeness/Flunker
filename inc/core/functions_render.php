@@ -61,11 +61,9 @@ function radio($img_path,$name,$value,$alt,$title) {
  * Display a checkbox for the guild hall choice.
  */
 function ghButton($img_path,$name,$value,$url,$alt,$title,$class="") {
-
-	$skin = ($_SESSION['skin']!="ryzom")?"_".$_SESSION['skin']:"";
 	
 	return "
-			<li class=\"li_checkbox_gh_on{$skin} {$class}\" style=\" background-repeat: no-repeat; background-position: left top;\">
+			<li class=\"li_checkbox_gh_on {$class}\" style=\" background-repeat: no-repeat; background-position: left top;\">
 				<input type=\"checkbox\" name=\"$name\" id=\"{$name}_{$value}\" value=\"$value\" checked=\"checked\" style=\"display: none;\" />
 				<img name=\"hidden_$name\" id=\"hidden_{$name}_{$value}\" alt=\"$alt\" src=\"{$url}\" title=\"$title\" style=\"margin: 8px 0 0 8px;\"/>
 			</li>";

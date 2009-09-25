@@ -51,7 +51,7 @@ a.ryzom-ui-button:hover {
 	background-color: #436168;
 }
 /* checkbox filter, radio filter , gh filter */
-.li_checkbox_gh_on_tryker{
+.li_checkbox_gh_on{
 	background-image: url(../img/back_button_on_tryker.png);
 	background-repeat: no-repeat;
 	background-position: left top;
