@@ -153,12 +153,12 @@ header('Content-Type:text/html; charset=UTF-8');
 								<?php echo __("Enter in the Range Amory"); ?>
 							</div>
 						</div>
-						<div id='enter_dressing' class='enter_div' style="background: url('img/Enseigne_back<?php echo $skin; ?>.png');margin-left: 107px;">
+						<div id='enter_jewel' class='enter_div' style="background: url('img/Enseigne_back<?php echo $skin; ?>.png');margin-left: 107px;">
 							<div class='sub_enter_div' style="background: url('img/Enseigne_jewel.png') repeat-y top center;text-align: center;">
 								<?php echo __("Enter in the Jeweller's"); ?>
 							</div>
 						</div>
-						<div id='enter_jewel' class='enter_div' style="background: url('img/Enseigne_back<?php echo $skin; ?>.png');">
+						<div id='enter_dressing' class='enter_div' style="background: url('img/Enseigne_back<?php echo $skin; ?>.png');">
 							<div class='sub_enter_div' style="background: url('img/Enseigne_dressing.png') repeat-y top center;text-align: center;">
 								<?php echo __("Enter in the Wardrobe"); ?>
 							</div>
