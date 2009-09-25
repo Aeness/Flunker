@@ -401,7 +401,7 @@ header('Content-Type:text/html; charset=UTF-8');
 						<?php echo $error_msg; ?>
 						<?php 
 						$list_guild = unserialize($_SESSION['list_guild']);
-						echo __('Welcome to Flunker, your guild halls are:');
+						echo __('Welcome to Flunker, your guild halls are:')."<br />";
 						$list = "";
 						if( isset($list_guild) && is_array($list_guild) ) {
 							foreach($list_guild as $guild) {
@@ -410,10 +410,9 @@ header('Content-Type:text/html; charset=UTF-8');
 							echo $list;
 						}
 						?>
-						<p class="invisible_break">&nbsp;</p><br />
-						<form action="">
+						<form action=""><p style="clear: left;">
 							<?php echo __("Ensure that you have selected the right language and skin."); ?><br/>
-							<?php echo __("For a direct access (during your next session) to your guild halls, bookmark this page or use one of the following links:"); ?><br/><br/>
+							<?php echo __("For a direct access (during your next session) to your guild halls, bookmark this page or use one of the following links:"); ?><p/><br/>
 							
 							<?php echo __("URL").__(":"); ?><br/>
 							<input type="text" onclick="javascript:this.form.i1.focus();this.form.i1.select();" size="100" value="<?php echo $str_url; ?>" id="i1" readonly="readonly"/><br/><br/>

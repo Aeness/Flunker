@@ -22,6 +22,9 @@ $GLOBALS['__lang']['Enter in the Bazaar']="Entrez dans le Bazar";
 $GLOBALS['__lang']['Slot']="Emplacement";
 
 $GLOBALS['__lang']['XMLHttpRequest not supported by your browser.']="XMLHttpRequest ne sont pas supportées par votre navigateur.";
+$GLOBALS['__lang']['Unable to find conf.php. Ensure you have created it (look at ']="Impossible de trouver conf.php. Assurez-vous de l'avoir créé (regardez ";
+$GLOBALS['__lang'][" for example)."]=").";
+$GLOBALS['__lang']["Connection with ryzom_api impossible."]="Impossible de se connecter à ryzom_api.";
 
 $GLOBALS['__lang'][':']='&nbsp;:';
 
@@ -90,4 +93,10 @@ $GLOBALS['__lang']['For a direct access (during your next session) to your guild
 $GLOBALS['__lang']['Masse']='Massue';
 $GLOBALS['__lang']['Sword']='Epée';
 $GLOBALS['__lang']['Axe']='Hache';
+
+$GLOBALS['__lang']['Ryzom skin']='Apparence Ryzom';
+$GLOBALS['__lang']['Tryker skin']='Apparence Tryker';
+$GLOBALS['__lang']['Fyros skin']='Apparence Fyros';
+$GLOBALS['__lang']['Matis skin']='Apparence Matis';
+$GLOBALS['__lang']['Zorai skin']='Apparence Zorai';
 ?>

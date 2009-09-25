@@ -136,7 +136,7 @@ header('Content-Type:text/html; charset=UTF-8');
 						}
 						echo $list;
 						?>
-						<p class="invisible_break">&nbsp;</p><br />
+						<p style="invisible_break">&nbsp;</p><br />
 
 						<div id='enter_armory' class='enter_div' style="background: url('img/Enseigne_back<?php echo $skin; ?>.png');">
 							<div class='sub_enter_div' style="background: url('img/Enseigne_melee.png') repeat-y top center;text-align: center;">

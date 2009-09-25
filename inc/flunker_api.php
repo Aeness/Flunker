@@ -47,7 +47,7 @@ if (file_exists(dirname(__FILE__).'/conf.php')) {
 	require(dirname(__FILE__).'/conf.php');
 }
 else {
-	$GLOBALS['__error'] = __('Unable to find conf.php. Ensure you have created it (use ').dirname(__FILE__).'/conf.php.in'.__(").");
+	$GLOBALS['__error'] = __('Unable to find conf.php. Ensure you have created it (look at ').dirname(__FILE__).'/conf.php.in'.__(" for example).");
 }
 
 require_once(dirname(__FILE__).'/ryzom_api/ryzom_api/ryzom_api.php');

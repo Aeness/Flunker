@@ -22,6 +22,10 @@ $GLOBALS['__lang']['Enter in the Bazaar']="In der Basar eintreten";
 
 $GLOBALS['__lang']['XMLHttpRequest not supported by your browser.']="Ihre Browser unterstützt nicht XMLHttpRequest.";
 
+$GLOBALS['__lang']['Unable to find conf.php. Ensure you have created it (look at ']="Konnte nich conf.php finden. Bitte überprüfen Sie, daß Sie die Datei angelegt haben (schauen Sie in ";
+$GLOBALS['__lang'][" for example)."]=" an).";
+$GLOBALS['__lang']["Connection with ryzom_api impossible."]="Konnte nicht in ryzom_api einloggen.";
+
 $GLOBALS['__lang'][':']=':';
 
 $GLOBALS['__lang']['Expand/Collapse']="Vergrößern/Reduzieren";
@@ -78,7 +82,7 @@ $GLOBALS['__lang']['Common']='Gewöhnlich';
 $GLOBALS['__lang']['powered by']="powered by";
 
 $GLOBALS['__lang']['Item'] = "Gegenstand";
-$GLOBALS['__lang']['items'] = "gegenstände";
+$GLOBALS['__lang']['items'] = "Gegenstände";
 $GLOBALS['__lang']['URL'] = "URL";
 $GLOBALS['__lang']['HTML Link'] = "HTML-Link";
 $GLOBALS['__lang']['bbcode Link'] = "bbcode-Link";
@@ -86,7 +90,13 @@ $GLOBALS['__lang']['Enter'] = "Eintreten";
 $GLOBALS['__lang']['Ensure that you have selected the right language and skin.'] = "Bitte wählen Sie zunächst die richtige Sprache und Aussehen aus.";
 $GLOBALS['__lang']['For a direct access (during your next session) to your guild halls, bookmark this page or use one of the following links:'] = "Für einen direkten Zugriff (für nächstes mal), bookmarken Sie diese Seite oder benützen Sie eines von diesen Linken:";
 
-$GLOBALS['__lang']['Masse']='(Riesen)streitkolben';
-$GLOBALS['__lang']['Sword']='(Lang)schwert';
-$GLOBALS['__lang']['Axe']='(Lang)axt';
+$GLOBALS['__lang']['Masse']='(Riesen-)Streitkolben';
+$GLOBALS['__lang']['Sword']='(Lang-)Schwert';
+$GLOBALS['__lang']['Axe']='(Lang-)Axt';
+
+$GLOBALS['__lang']['Ryzom skin']='Ryzom Aussehen';
+$GLOBALS['__lang']['Tryker skin']='Tryker Aussehen';
+$GLOBALS['__lang']['Fyros skin']='Fyros Aussehen';
+$GLOBALS['__lang']['Matis skin']='Matis Aussehen';
+$GLOBALS['__lang']['Zorai skin']='Zorai Aussehen';
 ?>
