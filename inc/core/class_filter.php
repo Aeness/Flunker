@@ -59,7 +59,7 @@ class listFormFilter extends formFilter
 	function getHtmlTag($class="") {
 	
 		$html = "
-					<ul class=\"checkboxes_search {$class}\" style=\"width: ".((count($this->list_code)*51)+10+14)."px;\">
+					<ul class=\"checkboxes_group {$class}\" style=\"width: ".((count($this->list_code)*51)+10+14)."px;\">
 						<li class=\"select_all_none\">
 							<img style=\"width: 10px;\" src=\"img/all.png\" alt=\"".__("Select all buttons")."\" title=\"".__("Select all buttons")."\"/>
 							<img style=\"width: 10px;\" src=\"img/none.png\" alt=\"".__("Deselect all buttons")."\" title=\"".__("Deselect all buttons")."\"/>
@@ -93,7 +93,7 @@ class choiceFormFilter extends formFilter
 	
 	function getHtmlTag($class="") {
 		$html = "
-					<ul class=\"radios_search {$class}\" style=\"width: ".((count($this->list_code)*51)+10+14)."px;\">
+					<ul class=\"radios_group {$class}\" style=\"width: ".((count($this->list_code)*51)+10+14)."px;\">
 						<li style=\"width: 10px;\" class=\"select_all_none\"></li>";
 		foreach ($this->list_code as $code) {
 		
@@ -157,7 +157,7 @@ class ghFormFilter extends formFilter
 	
 	function getHtmlTag($class = "") {
 		$html = "
-					<ul class=\"checkboxes_search {$class}\" style=\"width: ".((count($this->list_guild)*51)+10+14)."px;\">
+					<ul class=\"checkboxes_group {$class}\" style=\"width: ".((count($this->list_guild)*51)+10+14)."px;\">
 						<li class=\"select_all_none\">
 							<img style=\"width: 10px;\" src=\"img/all.png\" alt=\"".__("Select all buttons")."\" title=\"".__("Select all buttons")."\"/>
 							<img style=\"width: 10px;\" src=\"img/none.png\" alt=\"".__("Deselect all buttons")."\" title=\"".__("Deselect all buttons")."\"/>
@@ -165,7 +165,7 @@ class ghFormFilter extends formFilter
 		
 		foreach ($this->list_guild as $guild) {
 			$html .= "
-						<li style=\"background-color: #68665F;\"  class='li_checkbox'>
+						<li class='li_checkbox'>
 								".gh_checkbox($this->id,$guild->id,$guild->getUrl(),__('Icon Guild'),$guild->name)."
 						</li>";
 			$i++;

@@ -52,11 +52,11 @@ a.ryzom-ui-button:hover {
 #order_boxes li, #order_boxes_waited li {
 	background-color: #6E5230;
 }
-/* checkbox filter, radio filter , gh filter */
-.span_checkbox_on {  background-image: url('../img/button_on_fyros.png'); }
-.span_checkbox_off { background-image: url('../img/button_off_fyros.png'); }
-.span_radio_on {  background-image: url('../img/button_on_fyros.png'); }
-.span_radio_off { background-image: url('../img/button_off_fyros.png'); }
+/* checkbox and radio filter */
+.border_checkbox_on	{ background-image: url('../img/button_on_fyros.png'); }
+.border_checkbox_off{ background-image: url('../img/button_off_fyros.png'); }
+.border_radio_on	{ background-image: url('../img/button_on_fyros.png'); }
+.border_radio_off	{ background-image: url('../img/button_off_fyros.png'); }
 
 /* ***ajax waiting*** */
 #ajax_waiting {

@@ -25,11 +25,11 @@ Flunker.criterias={
 
 $(function(){
 	//// Init Flunker
-	var checkboxs_li						= $('#search_form>ul.checkboxes_search>li.li_checkbox');
+	var checkboxs_li						= $('#search_form>ul.checkboxes_group>li.li_checkbox');
 	Flunker.criterias.checkboxs.input			= $(">input",checkboxs_li);
-	Flunker.criterias.checkboxs.changedimg		= $(">div>div",checkboxs_li); //move
-	Flunker.criterias.checkboxs.selectallnone	= $('#search_form>ul.checkboxes_search>li.select_all_none>img');
-	var gh_radio_li						= $('#search_form>ul.radios_search>li');
+	Flunker.criterias.checkboxs.changedimg		= $(">div>div",checkboxs_li);
+	Flunker.criterias.checkboxs.selectallnone	= $('#search_form>ul.checkboxes_group>li.select_all_none>img');
+	var gh_radio_li						= $('#search_form>ul.radios_group>li');
 	Flunker.criterias.radio.input				= $(">input",gh_radio_li);
 	Flunker.criterias.radio.changedimg			= $(">div>div",gh_radio_li);
 	Flunker.criterias.quality.inputs		= $('#quality>span>input');

@@ -56,7 +56,7 @@ function _checkbox($name,$str_checked,$str_on_off,$value,$url,$alt,$title,$class
 	return "
 			<input type=\"checkbox\" name=\"$name\" id=\"{$name}_{$value}\" value=\"$value\" {$str_checked} style=\"display: none;\" />
 			<div class=\"button_checkbox {$class}\" style=\"background-image: url({$url});\">
-				<div title=\"$title\" id=\"hidden_{$name}_{$value}\" class=\"span_checkbox_{$str_on_off}\"></div>
+				<div title=\"$title\" id=\"hidden_{$name}_{$value}\" class=\"border_checkbox_{$str_on_off}\"></div>
 			</div>";
 }
 
@@ -67,7 +67,7 @@ function radio($img_path,$name,$value,$alt,$title) {
 	return "
 			<input type=\"checkbox\" name=\"$name\" id=\"{$name}_{$value}\" value=\"$value\" style=\"display: none;\"/>
 			<div style=\"width: 47px; height: 47px; background-image: url($img_path/{$value}.png); background-repeat: no-repeat; background-position: left top;\">
-				<div title=\"$title\" id=\"hidden_{$name}_{$value}\" class=\"span_radio_off\"></div>
+				<div title=\"$title\" id=\"hidden_{$name}_{$value}\" class=\"border_radio_off\"></div>
 			</div>";
 }
 

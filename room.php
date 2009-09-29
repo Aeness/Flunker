@@ -87,7 +87,7 @@ $nb_items = $_SESSION[$room_type]['nb_items'];
 							if (!empty($filter_form)) {
 								foreach( $filter_form as $str_filter ) {
 									$filter = unserialize($str_filter);
-									echo $filter->getHtmlTag("filter_quart");
+									echo $filter->getHtmlTag();
 								}
 						?>
 						<hr style="clear: left;"/>
