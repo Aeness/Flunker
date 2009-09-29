@@ -1,12 +1,9 @@
 body{
 	background-image:url(../img/fyros_gh.jpg);
-	background-repeat:no-repeat;
-	background-color:#000;
 }
 #search_content.ryzom-ui-m {
 	background-image: url(../img/skin_blank_flunker.png);
 }
-
 #result_content.ryzom-ui-body {
 	background-image: url(../img/skin_blank_inner_flunker.png);
 }
@@ -58,8 +55,6 @@ a.ryzom-ui-button:hover {
 /* checkbox filter, radio filter , gh filter */
 .li_checkbox_gh_on{
 	background-image: url(../img/back_button_on_fyros.png);
-	background-repeat: no-repeat;
-	background-position: left top;
 }
 .span_checkbox_on {  background-image: url('../img/button_on_fyros.png'); }
 .span_checkbox_off { background-image: url('../img/button_off_fyros.png'); }
