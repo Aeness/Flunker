@@ -45,6 +45,11 @@ a.ryzom-ui-button:hover {
 	border-left: 1px solid #58442A;
 }
 
+/* *** entrance *** */
+.enter_div {
+	background-image: url(../img/Enseigne_back_fyros.png);
+}
+
 /* ***search*** */
 /* order filter */
 #order_boxes li, #order_boxes_waited li {
@@ -56,6 +61,10 @@ a.ryzom-ui-button:hover {
 	background-repeat: no-repeat;
 	background-position: left top;
 }
+.span_checkbox_on {  background-image: url('../img/button_on_fyros.png'); }
+.span_checkbox_off { background-image: url('../img/button_off_fyros.png'); }
+.span_radio_on {  background-image: url('../img/button_on_fyros.png'); }
+.span_radio_off { background-image: url('../img/button_off_fyros.png'); }
 
 /* ***ajax waiting*** */
 #ajax_waiting {

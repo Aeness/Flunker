@@ -65,7 +65,8 @@ class listFormFilter extends formFilter
 							<img style=\"width: 10px;\" src=\"img/none.png\" alt=\"".__("Deselect all buttons")."\" title=\"".__("Deselect all buttons")."\"/>
 						</li>";
 		foreach ($this->list_code as $code) {
-			$html .=  checkbox("img",$this->id,$this->checked,$code,__($code),__($code),$class="");
+			$html .=  "
+							<li class='li_checkbox'>".checkbox("img",$this->id,$this->checked,$code,__($code),__($code),"")."</li>";
 		}
 		$html .= "
 					</ul>";

@@ -1,3 +1,8 @@
+/* *** entrance *** */
+.enter_div {
+	background-image: url(../img/Enseigne_back.png);
+}
+
 /* ***search*** */
 /* order filter */
 #order_boxes, #order_boxes_waited {
@@ -65,6 +70,10 @@
 	background-repeat: no-repeat;
 	background-position: left top;
 }
+.span_checkbox_on { width: 47px; height: 47px; background-image: url('../img/button_on.png'); }
+.span_checkbox_off { width: 47px; height: 47px; background-image: url('../img/button_off.png'); }
+.span_radio_on { width: 47px; height: 47px; background-image: url('../img/button_on.png'); }
+.span_radio_off { width: 47px; height: 47px; background-image: url('../img/button_off.png'); }
 /* last line */
 #reduce_div {
 	float: left;

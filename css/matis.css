@@ -9,10 +9,3 @@ body{
 #result_content.ryzom-ui-body {
 	background-image: url(../img/skin_blank_inner_flunker.png);
 }
-/* ***search*** */
-/* checkbox filter, radio filter , gh filter */
-.li_checkbox_gh_on{
-	background-image: url(../img/back_button_on_matis.png);
-	background-repeat: no-repeat;
-	background-position: left top;
-}

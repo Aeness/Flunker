@@ -31,30 +31,28 @@ function init_css(&$get_skin,&$session_skin) {
 function checkbox($img_path,$name,$checked,$value,$alt,$title,$class="") {
 	$str_checked = "";
 	$str_on_off = "off";
-	
-	$skin = ($_SESSION['skin']!="ryzom")?"_".$_SESSION['skin']:"";
 		
 	if ($checked==true ) {
 		$str_checked = "checked=\"checked\"";
 		$str_on_off = "on";
 	}
-
+	
 	return "
-			<li class=\"li_checkbox {$class}\" style=\"background-image: url($img_path/{$value}.png);\">
-				<input type=\"checkbox\" name=\"$name\" id=\"{$name}_{$value}\" value=\"$value\" {$str_checked} style=\"display: none;\" />
-				<img name=\"hidden_$name\" id=\"hidden_{$name}_{$value}\" alt=\"$alt\" src=\"$img_path/button_{$str_on_off}{$skin}.png\" title=\"$title\" style=\"margin: 0px;\"/>
-			</li>";
+			<input type=\"checkbox\" name=\"$name\" id=\"{$name}_{$value}\" value=\"$value\" {$str_checked} style=\"display: none;\" />
+			<div style=\"width: 47px; height: 47px; background-image: url($img_path/{$value}.png); background-repeat: no-repeat; background-position: left top;\">
+				<div title=\"$title\" name=\"hidden_{$name}\" id=\"hidden_{$name}_{$value}\" class=\"span_checkbox_{$str_on_off}\"></div>
+			</div>";
 }
 
 /**
  * Display a radio.
  */
 function radio($img_path,$name,$value,$alt,$title) {
-	$skin = ($_SESSION['skin']!="ryzom")?"_".$_SESSION['skin']:"";
-
 	return "
 			<input type=\"checkbox\" name=\"$name\" id=\"{$name}_{$value}\" value=\"$value\" style=\"display: none;\"/>
-			<div style=\"background-image: url($img_path/{$value}.png); background-repeat: no-repeat; background-position: left top;\"><img name=\"hidden_$name\" id=\"hidden_{$name}_{$value}\" src=\"$img_path/button_off{$skin}.png\" alt=\"$alt\" title=\"$title\"/></div>";
+			<div style=\"width: 47px; height: 47px; background-image: url($img_path/{$value}.png); background-repeat: no-repeat; background-position: left top;\">
+				<div title=\"$title\" id=\"hidden_{$name}_{$value}\" class=\"span_radio_off\"></div>
+			</div>";
 }
 
 /**

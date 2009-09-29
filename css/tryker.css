@@ -45,6 +45,11 @@ a.ryzom-ui-button:hover {
 	border-left: 1px solid #2A3A3D;
 }
 
+/* *** entrance *** */
+.enter_div {
+	background-image: url(../img/Enseigne_back_tryker.png);
+}
+
 /* ***search*** */
 /* order filter */
 #order_boxes li, #order_boxes_waited li {
@@ -56,6 +61,10 @@ a.ryzom-ui-button:hover {
 	background-repeat: no-repeat;
 	background-position: left top;
 }
+.span_checkbox_on {  background-image: url('../img/button_on_tryker.png'); }
+.span_checkbox_off { background-image: url('../img/button_off_tryker.png'); }
+.span_radio_on {  background-image: url('../img/button_on_tryker.png'); }
+.span_radio_off { background-image: url('../img/button_off_tryker.png'); }
 
 /* ***ajax waiting*** */
 #ajax_waiting {
