@@ -45,6 +45,7 @@ $nb_items = $_SESSION[$room_type]['nb_items'];
 		<?php echo flunker_render_header(); ?>
 		<script type="text/javascript" src="js/ajax.js"></script>
 		<script type="text/javascript" src="js/criteria.js"></script>
+		<script type="text/javascript" src="js/tooltip.js"></script>
 
 		<style type="text/css">
 			#main{

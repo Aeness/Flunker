@@ -75,12 +75,9 @@ function ajaxRequest2() {
 
 	xhr_object.onreadystatechange = function() {
 	   if(xhr_object.readyState == 4) {
-		//alert(xhr_object.status);
-		//alert(xhr_object.responseText);
 		if( Flunker.ajax.nb_is_waiting == 1) {
 			document.getElementById('icon_boxes').innerHTML = xhr_object.responseText;
 			$("#nb_items").text($("#ajax_nb_items").text());
-			//$("#icon_boxes>li>div.icon_div>img").flunkertooltip();
 		}
 		removeWaiter();
 	   }

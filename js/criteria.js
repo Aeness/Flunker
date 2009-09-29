@@ -25,43 +25,16 @@ Flunker.criterias={
 
 $(function(){
 	//// Init Flunker
-	var checkboxs_li						= $('#search_form>ul.checkboxes_group>li.li_checkbox');
-	Flunker.criterias.checkboxs.input			= $(">input",checkboxs_li);
-	Flunker.criterias.checkboxs.changedimg		= $(">div>div",checkboxs_li);
+	var checkboxes_li						= $('#search_form>ul.checkboxes_group>li.li_checkbox');
+	Flunker.criterias.checkboxs.input			= $(">input",checkboxes_li);
+	Flunker.criterias.checkboxs.changedimg		= $(">div>div",checkboxes_li);
 	Flunker.criterias.checkboxs.selectallnone	= $('#search_form>ul.checkboxes_group>li.select_all_none>img');
-	var gh_radio_li						= $('#search_form>ul.radios_group>li');
-	Flunker.criterias.radio.input				= $(">input",gh_radio_li);
-	Flunker.criterias.radio.changedimg			= $(">div>div",gh_radio_li);
+	var radios_li							= $('#search_form>ul.radios_group>li');
+	Flunker.criterias.radio.input				= $(">input",radios_li);
+	Flunker.criterias.radio.changedimg			= $(">div>div",radios_li);
 	Flunker.criterias.quality.inputs		= $('#quality>span>input');
 	Flunker.criterias.textsearch.input		= $('#text_search');
 	Flunker.criterias.order.ol			= $("#order_boxes");
-
-	//// put tooltip
-	var result = $("#icon_boxes>li>div.icon_div>img");
-	result.live("mouseover", function(e){
-		$(this).attr("title", ""); 
-		var tipX = e.pageX + 12;
-		var tipY = e.pageY + 12;
-		$("body").append("<div id='flunkerTooltip' class='icon_box form_div ryzom-ui ryzom-ui-header' style='position: absolute; z-index: 100; display: none; width: 216px;'>" + $(this).parent().parent().find("div.form_div").html() + "</div>");
-		if($.browser.msie) var tipWidth = $("#flunkerTooltip").outerWidth(true)
-		else var tipWidth = $("#flunkerTooltip").width()
-		$("#flunkerTooltip").width(tipWidth);
-		$("#flunkerTooltip").css("left", tipX).css("top", tipY).fadeIn("medium");
-	});
-			
-	result.live("mouseout", function(){
-		$("#flunkerTooltip").remove();
-    });
-			
-	result.live("mousemove", function(e){
-		var tipX = e.pageX + 12;
-		var tipY = e.pageY + 12;
-		var tipWidth = $("#flunkerTooltip").outerWidth(true);
-		var tipHeight = $("#flunkerTooltip").outerHeight(true);
-		if(tipX + tipWidth > $(window).scrollLeft() + $(window).width()) tipX = e.pageX - tipWidth;
-		if($(window).height()+$(window).scrollTop() < tipY + tipHeight) tipY = e.pageY - tipHeight;
-		$("#flunkerTooltip").css("left", tipX).css("top", tipY);
-	});
 
 	//// Init asc/desc order
 	var sorters = $(">li",Flunker.criterias.order.ol);
@@ -126,7 +99,7 @@ $(function(){
 
 	//// Load data and Diplay the page
 	ajaxRequest2();
-	//displayButton();
+	displayButton();
 	
 	//// Event
 	$('form').submit(
@@ -239,20 +212,19 @@ function dropSorter(event, ui) {
 	ajaxRequest2();
 };
 
-// display boton corectly
-/*
+// display button corectly (usefull with some F5)
 function displayButton(){
 	for (var i=0, n=Flunker.criterias.checkboxs.input.length; i<n; i++) {
 		if( Flunker.criterias.checkboxs.input[i].checked == true) {
 			var monImg = $(Flunker.criterias.checkboxs.changedimg[i]);
-			monImg.attr("src",monImg.attr("src").replace("_off", "_on"));
+			monImg.css("background-image",monImg.css("background-image").replace("_off", "_on"));
 		}
 		else {
 			var monImg = $(Flunker.criterias.checkboxs.changedimg[i]);
-			monImg.attr("src",monImg.attr("src").replace("_on", "_off"));
+			monImg.css("background-image",monImg.css("background-image").replace("_on", "_off"));
 		}
 	}
-}*/
+}
 
 function changeOrder(eventObject) {
 	// change the image
