@@ -61,19 +61,12 @@
 .search_boxes li.select_all_none {
 	width: 10px;
 }
-.li_checkbox {
-	background-repeat: no-repeat;
-	background-position: left top;
-}
-.li_checkbox_gh_on {
-	background-image: url(../img/back_button_on.png);
-	background-repeat: no-repeat;
-	background-position: left top;
-}
-.span_checkbox_on { width: 47px; height: 47px; background-image: url('../img/button_on.png'); }
-.span_checkbox_off { width: 47px; height: 47px; background-image: url('../img/button_off.png'); }
-.span_radio_on { width: 47px; height: 47px; background-image: url('../img/button_on.png'); }
-.span_radio_off { width: 47px; height: 47px; background-image: url('../img/button_off.png'); }
+.button_checkbox	{ width: 47px; height: 47px; background-repeat: no-repeat; background-position: left top;}
+.button_checkbox.gh	{ background-position: center 8px; }
+.span_checkbox_on 	{ width: 47px; height: 47px; background-image: url('../img/button_on.png'); }
+.span_checkbox_off 	{ width: 47px; height: 47px; background-image: url('../img/button_off.png'); }
+.span_radio_on 		{ width: 47px; height: 47px; background-image: url('../img/button_on.png'); }
+.span_radio_off 	{ width: 47px; height: 47px; background-image: url('../img/button_off.png'); }
 /* last line */
 #reduce_div {
 	float: left;

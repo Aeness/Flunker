@@ -4,10 +4,6 @@ Flunker.criterias={
 		input:null,
 		changedimg:null
 	},
-	GHcheckboxs:{
-		input:null,
-		changedimg:null
-	},
 	radio:{
 		input:null,
 		changedimg:null,
@@ -36,9 +32,6 @@ $(function(){
 	var gh_radio_li						= $('#search_form>ul.search_boxes2>li');
 	Flunker.criterias.radio.input				= $(">input",gh_radio_li);
 	Flunker.criterias.radio.changedimg			= $(">div>div",gh_radio_li);
-	var gh_checkboxs_li						= $('#search_form>ul.search_boxes3>li');
-	Flunker.criterias.GHcheckboxs.input		= $(">input",gh_checkboxs_li);
-	Flunker.criterias.GHcheckboxs.changedimg	= $(">img",gh_checkboxs_li);
 	Flunker.criterias.quality.inputs		= $('#quality>span>input');
 	Flunker.criterias.textsearch.input		= $('#text_search');
 	Flunker.criterias.order.ol			= $("#order_boxes");
@@ -192,21 +185,6 @@ $(function(){
 				}
 				Flunker.criterias.radio.lastclick[name] = $(this);
 				Flunker.criterias.radio.lastclick[name].parent().siblings("input").get(0).click(); 
-			}
-			ajaxRequest2();
-		}
-	);
-	// change boton when it is clicked
-	Flunker.criterias.GHcheckboxs.changedimg.click(
-		function(){
-			var back = $(this).parent();
-			if( back.css("background-image").match("_on") ) {
-				back.css("background-image",back.css("background-image").replace("_on", "_off"));
-				$(this).siblings("input").get(0).click();
-			}
-			else if( back.css("background-image").match("_off") ) {
-				back.css("background-image",back.css("background-image").replace("_off", "_on"));
-				$(this).siblings("input").get(0).click();
 			}
 			ajaxRequest2();
 		}

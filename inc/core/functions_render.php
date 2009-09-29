@@ -37,10 +37,21 @@ function checkbox($img_path,$name,$checked,$value,$alt,$title,$class="") {
 		$str_on_off = "on";
 	}
 	
+	return _checkbox($name,$str_checked,$str_on_off,$value,"{$img_path}/{$value}.png",$alt,$title,"");
+}
+
+/**
+ * Display a checkbox for the guild hall choice.
+ */
+function gh_checkbox($name,$value,$url,$alt,$title) {
+	return _checkbox($name,"checked=\"checked\"","on",$value,$url,$alt,$title,"gh");
+}
+
+function _checkbox($name,$str_checked,$str_on_off,$value,$url,$alt,$title,$class) {
 	return "
 			<input type=\"checkbox\" name=\"$name\" id=\"{$name}_{$value}\" value=\"$value\" {$str_checked} style=\"display: none;\" />
-			<div style=\"width: 47px; height: 47px; background-image: url($img_path/{$value}.png); background-repeat: no-repeat; background-position: left top;\">
-				<div title=\"$title\" name=\"hidden_{$name}\" id=\"hidden_{$name}_{$value}\" class=\"span_checkbox_{$str_on_off}\"></div>
+			<div class=\"button_checkbox {$class}\" style=\"background-image: url({$url});\">
+				<div title=\"$title\" id=\"hidden_{$name}_{$value}\" class=\"span_checkbox_{$str_on_off}\"></div>
 			</div>";
 }
 
@@ -53,18 +64,6 @@ function radio($img_path,$name,$value,$alt,$title) {
 			<div style=\"width: 47px; height: 47px; background-image: url($img_path/{$value}.png); background-repeat: no-repeat; background-position: left top;\">
 				<div title=\"$title\" id=\"hidden_{$name}_{$value}\" class=\"span_radio_off\"></div>
 			</div>";
-}
-
-/**
- * Display a checkbox for the guild hall choice.
- */
-function ghButton($img_path,$name,$value,$url,$alt,$title,$class="") {
-	
-	return "
-			<li class=\"li_checkbox_gh_on {$class}\" style=\" background-repeat: no-repeat; background-position: left top;\">
-				<input type=\"checkbox\" name=\"$name\" id=\"{$name}_{$value}\" value=\"$value\" checked=\"checked\" style=\"display: none;\" />
-				<img name=\"hidden_$name\" id=\"hidden_{$name}_{$value}\" alt=\"$alt\" src=\"{$url}\" title=\"$title\" style=\"margin: 8px 0 0 8px;\"/>
-			</li>";
 }
 
 /**

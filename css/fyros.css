@@ -53,9 +53,6 @@ a.ryzom-ui-button:hover {
 	background-color: #6E5230;
 }
 /* checkbox filter, radio filter , gh filter */
-.li_checkbox_gh_on{
-	background-image: url(../img/back_button_on_fyros.png);
-}
 .span_checkbox_on {  background-image: url('../img/button_on_fyros.png'); }
 .span_checkbox_off { background-image: url('../img/button_off_fyros.png'); }
 .span_radio_on {  background-image: url('../img/button_on_fyros.png'); }

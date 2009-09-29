@@ -46,10 +46,6 @@ a.ryzom-ui-button:hover {
 .enter_div {
 	background-image: url(../img/Enseigne_back_zorai.png);
 }
-.span_checkbox_on {  background-image: url('../img/button_on_zorai.png'); }
-.span_checkbox_off { background-image: url('../img/button_off_zorai.png'); }
-.span_radio_on {  background-image: url('../img/button_on_zorai.png'); }
-.span_radio_off { background-image: url('../img/button_off_zorai.png'); }
 
 /* ***search*** */
 /* order filter */
@@ -57,9 +53,10 @@ a.ryzom-ui-button:hover {
 	background-color: #7C5A7C;
 }
 /* checkbox filter, radio filter , gh filter */
-.li_checkbox_gh_on{
-	background-image: url(../img/back_button_on_zorai.png);
-}
+.span_checkbox_on {  background-image: url('../img/button_on_zorai.png'); }
+.span_checkbox_off { background-image: url('../img/button_off_zorai.png'); }
+.span_radio_on {  background-image: url('../img/button_on_zorai.png'); }
+.span_radio_off { background-image: url('../img/button_off_zorai.png'); }
 
 /* ***ajax waiting*** */
 #ajax_waiting {

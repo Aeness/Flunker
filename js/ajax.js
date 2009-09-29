@@ -39,11 +39,6 @@ function ajaxRequest2() {
 			post_req += Flunker.criterias.radio.input[i].name+"="+Flunker.criterias.radio.input[i].value+"&";
 		}
 	}
-	for (var i=0, n=Flunker.criterias.GHcheckboxs.input.length; i<n; i++) {
-		if( Flunker.criterias.GHcheckboxs.input[i].checked == true ) {
-			post_req += Flunker.criterias.GHcheckboxs.input[i].name+"[]="+Flunker.criterias.GHcheckboxs.input[i].value+"&";
-		}
-	}
 	
 	var quality = Flunker.criterias.quality.inputs;
 	for (var i=0, n=quality.length; i<n; i++) {
