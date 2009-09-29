@@ -7,10 +7,6 @@
 /* order filter */
 #order_boxes, #order_boxes_waited {
 	font-family: Arial, sans-serif;
-	/*
-	list-style-position: inside;
-	list-style-type: decimal;
-	*/
 	list-style-type: none;
 	margin: 0px;
 	padding: 0px;
@@ -41,14 +37,14 @@
 	filter : alpha(opacity=99);
 	border: 1px solid #FFF;
 }
-/* checkbox filter, radio filter , gh filter */
-.search_boxes, .search_boxes2, .search_boxes3 {
+/* checkbox and radio filter  */
+.checkboxes_search, .radios_search {
 	font-family: Arial, sans-serif;
 	list-style-type: none;
 	margin: 0px;
 	padding: 0px;
 }
-.search_boxes li, .search_boxes2 li, .search_boxes3 li {
+.checkboxes_search li, .radios_search li {
 	float: left;
 	margin: 0px 4px 0px 0px;
 	width: 47px;
@@ -58,7 +54,7 @@
 	float: left;
 	margin: 0px 0px 10px 0;
 }
-.search_boxes li.select_all_none {
+.checkboxes_search li.select_all_none {
 	width: 10px;
 }
 .button_checkbox	{ width: 47px; height: 47px; background-repeat: no-repeat; background-position: left top;}

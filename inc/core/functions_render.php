@@ -27,6 +27,7 @@ function init_css(&$get_skin,&$session_skin) {
 
 /**
  * Display a checkbox.
+ * @see _checkbox
  */
 function checkbox($img_path,$name,$checked,$value,$alt,$title,$class="") {
 	$str_checked = "";
@@ -42,11 +43,15 @@ function checkbox($img_path,$name,$checked,$value,$alt,$title,$class="") {
 
 /**
  * Display a checkbox for the guild hall choice.
+ * @see _checkbox
  */
 function gh_checkbox($name,$value,$url,$alt,$title) {
 	return _checkbox($name,"checked=\"checked\"","on",$value,$url,$alt,$title,"gh");
 }
-
+/**
+ * Display a checkbox with 2 div.
+ * The first has the img label as background. The seconde has the button boreder as background.
+ */
 function _checkbox($name,$str_checked,$str_on_off,$value,$url,$alt,$title,$class) {
 	return "
 			<input type=\"checkbox\" name=\"$name\" id=\"{$name}_{$value}\" value=\"$value\" {$str_checked} style=\"display: none;\" />
@@ -88,7 +93,6 @@ function language_flags_list($str_list_arg='') {
 			<a href="'.htmlentities("?language=fr".$str_list_arg).'"><img hspace="5" border="0" src="http://www.ryzom.com/data/fr_v6.jpg" alt="Français" title="Français" /></a>
 			<a href="'.htmlentities("?language=de".$str_list_arg).'"><img hspace="5" border="0" src="http://www.ryzom.com/data/de_v6.jpg" alt="Deutsch" title="Deutsch" /></a>';
 }
-
 
 function flunker_render_header() {
 	return '
