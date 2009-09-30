@@ -17,7 +17,7 @@
  */
 require_once('./inc/flunker_api.php');
 //ryzom_log_start('Flunker');
-if( !isset($_SESSION['list_guild']) ) {
+if( !isset($_SESSION['list_guild']) || empty($_SESSION['list_guild']) ) {
 	header('Content-type: text/plain; charset=utf-8');
 	echo '
 	<div class="error">

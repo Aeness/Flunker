@@ -18,7 +18,7 @@
 require_once('./inc/flunker_api.php');
 $_SESSION['comeFrom'] = null;
 //ryzom_log_start('Flunker');
-if( !isset($_SESSION['list_guild']) ) {
+if( !isset($_SESSION['list_guild']) || empty($_SESSION['list_guild']) ) {
 	$_SESSION['error'] =  html_err_lost_session();
 	session_write_close();
 	header('Location: index.php?');

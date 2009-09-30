@@ -16,7 +16,7 @@
  * along with Flunker.  If not, see <http://www.gnu.org/licenses/>.
  */
 require_once('./inc/flunker_api.php');
-if( !isset($_SESSION['list_guild']) ) {
+if( !isset($_SESSION['list_guild']) || empty($_SESSION['list_guild']) ) {
 	$_SESSION['error'] =  html_err_lost_session();
 	session_write_close();
 	header('Location: index.php?');
