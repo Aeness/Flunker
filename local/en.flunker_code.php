@@ -10,6 +10,7 @@ $GLOBALS['__lang']['ampli']='Amplifier Armory';
 $GLOBALS['__lang']['range']='Range Armory';
 $GLOBALS['__lang']['dressing']='Wardrobe';
 $GLOBALS['__lang']['jewel']="Jeweller's";
+$GLOBALS['__lang']['material']='Material Bazaar';
 $GLOBALS['__lang']['other']='Bazaar';
 
 $GLOBALS['__lang']['ms2']='Magic Amplifier';

@@ -55,6 +55,14 @@ $nb_items = $_SESSION[$room_type]['nb_items'];
 	</head>
 	
 	<body>
+		<div id="arian">
+			<a href="?room=<?php echo ROOM_ARMORY; ?>"><div><?php echo __(ROOM_ARMORY); ?></div></a>
+			<a href="?room=<?php echo ROOM_AMPLI; ?>"><div><?php echo __(ROOM_AMPLI); ?></div></a>
+			<a href="?room=<?php echo ROOM_RANGE; ?>"><div><?php echo __(ROOM_RANGE); ?></div></a>
+			<a href="?room=<?php echo ROOM_JEWEL; ?>"><div><?php echo __(ROOM_JEWEL); ?></div></a>
+			<a href="?room=<?php echo ROOM_MATERIAL; ?>"><div><?php echo __(ROOM_MATERIAL); ?></div></a>
+			<a href="?room=<?php echo ROOM_OTHER; ?>"><div><?php echo __(ROOM_OTHER); ?></div></a>
+		</div>
 		<div id="main">
 			<?php echo language_flags_list(); ?>
 			<?php echo skin_flags_list(); ?>
@@ -66,7 +74,7 @@ $nb_items = $_SESSION[$room_type]['nb_items'];
 						<a href="entrance.php">Home</a>&nbsp;&gt;&nbsp;
 					
 						<?php 
-						echo __($room_type)."&nbsp;&gt;&nbsp;<span id='nb_items'>0</span> / {$nb_items} ".__("items");
+						echo "<a id='label_room' href='#'>".__($room_type)."</a>&nbsp;&gt;&nbsp;<span id='nb_items'>0</span> / {$nb_items} ".__("items");
 						?>
 						</div>
 						<div style="text-align: right;">

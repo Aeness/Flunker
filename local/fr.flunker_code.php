@@ -10,6 +10,7 @@ $GLOBALS['__lang']['ampli']='Armurerie d\'Amplificateurs';
 $GLOBALS['__lang']['range']='Armurerie de Tir';
 $GLOBALS['__lang']['dressing']='Penderie';
 $GLOBALS['__lang']['jewel']='Bijouterie';
+$GLOBALS['__lang']['material']='Bazar des Matières Premières ';
 $GLOBALS['__lang']['other']='Bazar';
 
 $GLOBALS['__lang']['ms2']='Amplificateur Magique';

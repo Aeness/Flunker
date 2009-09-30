@@ -1,4 +1,9 @@
+Flunker.tooltip={
+	on:false
+};
+
 $(function(){
+	// item tooltip
 	var result = $("#icon_boxes>li>div.icon_div>img");
 	result.live("mouseover", function(e){
 		$(this).attr("title", ""); 
@@ -8,7 +13,7 @@ $(function(){
 		if($.browser.msie) var tipWidth = $("#flunkerTooltip").outerWidth(true)
 		else var tipWidth = $("#flunkerTooltip").width()
 		$("#flunkerTooltip").width(tipWidth);
-		$("#flunkerTooltip").css("left", tipX).css("top", tipY).fadeIn("medium");
+		$("#flunkerTooltip").css("left", tipX).css("top", tipY).fadeIn("def");
 	});
 			
 	result.live("mouseout", function(){
@@ -24,4 +29,29 @@ $(function(){
 		if($(window).height()+$(window).scrollTop() < tipY + tipHeight) tipY = e.pageY - tipHeight;
 		$("#flunkerTooltip").css("left", tipX).css("top", tipY);
 	});
+	// breadcrumb tooltip
+	var label = $("#label_room");
+	label.hover(function(e){
+		Flunker.tooltip.on=true;
+		$(this).attr("title", "");
+		var pos = label.offset();
+		$("#arian").css("left", pos.left).css("top", pos.top+label.height()).fadeIn("def");
+	}, function(){
+		Flunker.tooltip.on=false;
+		window.setTimeout(delete_breadcrumb_tooltip, 180);
+
+	});
+	$("#arian>a").hover(function(e){
+		Flunker.tooltip.on=true;
+	}, function(){
+		Flunker.tooltip.on=false;
+		window.setTimeout(delete_breadcrumb_tooltip, 180);
+	});
+	
 });
+
+function delete_breadcrumb_tooltip() {
+	if( Flunker.tooltip.on == false ) {
+		$("#arian").fadeOut("fast");
+	}
+}

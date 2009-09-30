@@ -10,6 +10,7 @@ $GLOBALS['__lang']['ampli']='Zauberverstärkerlager';
 $GLOBALS['__lang']['range']='Schusswaffenlager';
 $GLOBALS['__lang']['dressing']='Bekleidung';
 $GLOBALS['__lang']['jewel']='Juwelierladen';
+$GLOBALS['__lang']['material']='Lagerhalle';
 $GLOBALS['__lang']['other']='Basar';
 
 $GLOBALS['__lang']['ms2']='Zauberverstärker';

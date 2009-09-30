@@ -66,3 +66,7 @@ a.ryzom-ui-button:hover {
 .chest_info {
 	background-color:#436168;
 }
+/* *** arian tooltip *** */
+#arian div {
+	background-color: #436168;
+}
