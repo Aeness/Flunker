@@ -63,6 +63,7 @@ $GLOBALS['__lang']['Hit Rate']='Schläge/Minute';
 $GLOBALS['__lang']['Quality']='Qualität';
 $GLOBALS['__lang']['Sap load']='Sapladung';
 $GLOBALS['__lang']['Hit Points']='Lebenspunkte';
+$GLOBALS['__lang']['Duration']='Dauerhaftigkeit';
 $GLOBALS['__lang']['protection factor']='Schutz';
 $GLOBALS['__lang']['max protection']='Max vs';
 $GLOBALS['__lang']['slashing']='zerschneiden';

@@ -54,7 +54,7 @@ $GLOBALS['__lang']['Total Amount ']="Nb de mp ident.";
 $GLOBALS['__lang']['Total Amount']="Nb de mp identiques";
 $GLOBALS['__lang']['Stack Size']="Taille de la pile";
 $GLOBALS['__lang']['Nationality']="Nationalité";
-$GLOBALS['__lang']['Energy']="Energie";
+$GLOBALS['__lang']['Energy']="Énergie";
 $GLOBALS['__lang']['Color']="Couleur";
 
 $GLOBALS['__lang']['Guild']='Guilde';
@@ -63,6 +63,7 @@ $GLOBALS['__lang']['Hit Rate']='Coups/Min.';
 $GLOBALS['__lang']['Quality']='Qualité';
 $GLOBALS['__lang']['Sap load']='Charge en sève';
 $GLOBALS['__lang']['Hit Points']='Points de Vie';
+$GLOBALS['__lang']['Duration']='Durabilité';
 $GLOBALS['__lang']['protection factor']='Facteur de protection';
 $GLOBALS['__lang']['max protection']='Protection max';
 $GLOBALS['__lang']['slashing']='tranchant';
