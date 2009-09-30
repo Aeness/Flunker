@@ -92,6 +92,7 @@ header('Content-Type:text/html; charset=UTF-8');
 			width :214px ;
 			height: 128px;
 			margin: 0px;
+			text-align: center;
 		}
 		</style>
 	</head>
@@ -139,37 +140,37 @@ header('Content-Type:text/html; charset=UTF-8');
 						<p class="invisible_break">&nbsp;</p><br />
 
 						<div id='enter_armory' class='enter_div'>
-							<div class='sub_enter_div' style="background: url('img/Enseigne_melee.png') repeat-y top center;text-align: center;">
+							<div class='sub_enter_div' style="background: url('img/sign_melee.png') repeat-y top center;">
 								<?php echo __("Enter in the Armory"); ?>
 							</div>
 						</div>
 						<div id='enter_ampli' class='enter_div'>
-							<div class='sub_enter_div' style="background: url('img/Enseigne_melee.png') repeat-y top center;text-align: center;">
+							<div class='sub_enter_div' style="background: url('img/sign_melee.png') repeat-y top center;">
 								<?php echo __("Enter in the Magic Amplifier Armory"); ?>
 							</div>
 						</div>
 						<div id='enter_range' class='enter_div'>
-							<div class='sub_enter_div' style='background: url("img/Enseigne_range.png") repeat-y top center;text-align: center;'>
+							<div class='sub_enter_div' style='background: url("img/sign_range.png") repeat-y top center;'>
 								<?php echo __("Enter in the Range Amory"); ?>
 							</div>
 						</div>
 						<div id='enter_jewel' class='enter_div' style="margin-left: 107px;">
-							<div class='sub_enter_div' style="background: url('img/Enseigne_jewel.png') repeat-y top center;text-align: center;">
+							<div class='sub_enter_div' style="background: url('img/sign_jewel.png') repeat-y top center;">
 								<?php echo __("Enter in the Jeweller's"); ?>
 							</div>
 						</div>
 						<div id='enter_dressing' class='enter_div'>
-							<div class='sub_enter_div' style="background: url('img/Enseigne_dressing.png') repeat-y top center;text-align: center;">
+							<div class='sub_enter_div' style="background: url('img/sign_dressing.png') repeat-y top center;">
 								<?php echo __("Enter in the Wardrobe"); ?>
 							</div>
 						</div>
 						<div id='enter_material' class='enter_div' style="margin-left: 107px;">
-							<div class='sub_enter_div' style="background: url('img/Enseigne_material.png') repeat-y top center;text-align: center;">
+							<div class='sub_enter_div' style="background: url('img/sign_material.png') repeat-y top center;">
 								<?php echo __("Enter in the Material Bazaar"); ?>
 							</div>
 						</div>
 						<div id='enter_other' class='enter_div'>
-							<div class='sub_enter_div' style="background: url('img/Enseigne_other.png') repeat-y top center;text-align: center;">
+							<div class='sub_enter_div' style="background: url('img/sign_other.png') repeat-y top center;">
 								<?php echo __("Enter in the Bazaar"); ?>
 							</div>
 						</div>
