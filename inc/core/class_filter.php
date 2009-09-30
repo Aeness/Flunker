@@ -130,7 +130,7 @@ class intervalFormFilter extends formFilter
 	function getHtmlTag($class="") {
 		
 		$html = "
-						<div class=\"{$class}\">
+						<div id=\"{$this->id}\" class=\"{$class}\">
 							<span style=\"vertical-align: middle;\">".__($this->en_name)."
 							&nbsp;<input style=\"width: 2em; margin: 0px;\" type=\"text\" size=\"3\" maxlength=\"3\" name=\"min_{$this->id}\" id=\"min_{$this->id}\" value=\"{$this->min}\" />
 							&nbsp;&nbsp;&nbsp;&nbsp;<input style=\"width: 2em; margin: 0px\" type=\"text\" size=\"3\" maxlength=\"3\" name=\"max_{$this->id}\" id=\"max_{$this->id}\" value=\"{$this->max}\" /></span>
