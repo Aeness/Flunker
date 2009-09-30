@@ -55,7 +55,7 @@ function build_simple_sorter($room,&$item_obj) {
 			QUALITY		 => (string)$item_obj->q,
 			DURATION		 => (string)$item_obj->dur,
 			HP			 => (string)$item_obj->hp,
-			WEIGHT		 => (string)$item_obj->w,
+			WEIGHT		 => (string)($item_obj->w*100),
 			DODGE_MOD		 => (string)$item_obj->dm,
 			PARRY_MOD		 => (string)$item_obj->pm,
 			ADV_DODGE_MOD	 => (string)$item_obj->adm,
@@ -67,7 +67,7 @@ function build_simple_sorter($room,&$item_obj) {
 		$sorter_items[ROOM_ARMORY][QUALITY][$key]		 = (int)$item_obj->q;
 		$sorter_items[ROOM_ARMORY][DURATION][$key]		 = (int)$item_obj->dur;
 		$sorter_items[ROOM_ARMORY][HP][$key]		 	 = (int)$item_obj->hp;
-		$sorter_items[ROOM_ARMORY][WEIGHT][$key]		 = (int)$item_obj->w;
+		$sorter_items[ROOM_ARMORY][WEIGHT][$key]		 = (int)($item_obj->w*100);
 		$sorter_items[ROOM_ARMORY][DODGE_MOD][$key]		 = (int)$item_obj->dm;
 		$sorter_items[ROOM_ARMORY][PARRY_MOD][$key]		 = (int)$item_obj->pm;
 		$sorter_items[ROOM_ARMORY][ADV_DODGE_MOD][$key]	 = (int)$item_obj->adm;
