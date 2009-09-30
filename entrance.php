@@ -37,37 +37,37 @@ header('Content-Type:text/html; charset=UTF-8');
 		
 			$('#enter_armory').click(
 				function(){
-					window.location.href = "room.php?room=armory";
+					window.location.href = "room.php?room=<?php echo ROOM_ARMORY; ?>";
 				}
 			);
 		
 			$('#enter_ampli').click(
 				function(){
-					window.location.href = "room.php?room=ampli";
+					window.location.href = "room.php?room=<?php echo ROOM_AMPLI; ?>";
 				}
 			);
 		
 			$('#enter_range').click(
 				function(){
-					window.location.href = "room.php?room=range";
+					window.location.href = "room.php?room=<?php echo ROOM_RANGE; ?>";
 				}
 			);
 		
 			$('#enter_dressing').click(
 				function(){
-					window.location.href = "room.php?room=dressing";
+					window.location.href = "room.php?room=<?php echo ROOM_DRESSING; ?>";
 				}
 			);
 		
 			$('#enter_jewel').click(
 				function(){
-					window.location.href = "room.php?room=jewel";
+					window.location.href = "room.php?room=<?php echo ROOM_JEWEL; ?>";
 				}
 			);
 		
 			$('#enter_material').click(
 				function(){
-					window.location.href = "room.php?room=material";
+					window.location.href = "room.php?room=<?php echo ROOM_MATERIAL; ?>";
 				}
 			);
 		
