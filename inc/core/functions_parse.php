@@ -295,7 +295,7 @@ function creat9(&$item,$chest,$matches,&$item_obj)  {
 	
 	$item_obj = new material(
 				$chest,(string)$item['slot'],(string)$item,
-				(string)$item['q'],(string)$item['s'],
+				(string)$item['q'],(string)((!isset($item['s']) || $item['s']==null)?"1":$item['s']),
 				$nation,
 				'loot',(string)$item['c'],
 				$id_name,
@@ -311,7 +311,7 @@ function creat10(&$item,$chest,$matches,&$item_obj)  {
 
 	$item_obj = new material(
 				$chest,(string)$item['slot'],(string)$item,
-				(string)$item['q'],(string)$item['s'],
+				(string)$item['q'],(string)((!isset($item['s']) || $item['s']==null)?"1":$item['s']),
 				$nation,
 				'harvest',(string)$item['c'],
 				$id_name,
