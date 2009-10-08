@@ -393,7 +393,7 @@ header('Content-Type:text/html; charset=UTF-8');
 				<div class="ryzom-ui-l"><div class="ryzom-ui-r"><div id="search_content" class="ryzom-ui-m">
 					<div id="result_content" class="ryzom-ui-body">
 						<?php 
-						if( $GLOBALS['__error'] != "" ) {
+						if (isset($GLOBALS['__error']) && $GLOBALS['__error'] != "" ) {
 							echo '<div class="error">'.$GLOBALS['__error'].'</div>';
 							$GLOBALS['__error'] = "";
 						}
