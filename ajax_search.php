@@ -241,7 +241,9 @@ if( !isset($_SESSION['list_guild']) || empty($_SESSION['list_guild']) ) {
 		$guild_hall = $_POST['guild_hall'];
 	}
 	
-	#boost 
+	#boost
+	$boost_armilo = false;
+	$boost_rubbarn = false;
 	if ( !empty($_POST['boost']) && $_POST['boost']=='boost_armilo') {
 		$boost_armilo = true;
 	}
