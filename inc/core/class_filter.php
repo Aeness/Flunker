@@ -168,7 +168,6 @@ class ghFormFilter extends formFilter
 						<li class='li_checkbox'>
 								".gh_checkbox($this->id,$guild->id,$guild->getUrl(),__('Icon Guild'),$guild->name)."
 						</li>";
-			$i++;
 		}
 		$html .= "
 					</ul>";
