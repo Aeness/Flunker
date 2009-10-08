@@ -395,7 +395,7 @@ class cloth extends itemCraft
 	 * @return &lt;<b>string</b>&gt;  the HTML code
 	 */
 	protected function _getIcon() {
-		return flunker_item_icon_image($this->icon_name,($this->c!=nul)?$this->c[1]:"",$this->q,null,-1,$this->getTitle());
+		return flunker_item_icon_image($this->icon_name,($this->c!=null)?$this->c[1]:"",$this->q,null,-1,$this->getTitle());
 	}
 	
 	
@@ -888,7 +888,7 @@ class material extends item
 	 * @return &lt;<b>string</b>&gt;  the HTML code
 	 */
 	protected function _getIcon() {
-		return flunker_item_icon_image($this->icon_name,($this->c!=nul)?$this->c[1]:"",$this->q,$this->s,-1,$this->getTitle());
+		return flunker_item_icon_image($this->icon_name,($this->c!=null)?$this->c[1]:"",$this->q,$this->s,-1,$this->getTitle());
 	}
 
 	/**
