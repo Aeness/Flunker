@@ -141,7 +141,7 @@ function build_simple_sorter($room,&$item_obj) {
 	else if( $room == ROOM_MATERIAL ) {
 		$code = $item_obj->q.$item_obj->ryzom_code;
 		
-		if ($total_stack[$code] == null) $total_stack[$code]=0;
+		if (!isset($total_stack[$code]) || $total_stack[$code]==null) $total_stack[$code]=0;
 		$total_stack[$code]	 += (int)$item_obj->s;
 		$material_by_code[$code][] = $item_obj;
 	}
