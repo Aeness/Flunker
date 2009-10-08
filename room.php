@@ -60,6 +60,7 @@ $nb_items = $_SESSION[$room_type]['nb_items'];
 			<a href="?room=<?php echo ROOM_AMPLI; ?>"><div><?php echo __(ROOM_AMPLI); ?></div></a>
 			<a href="?room=<?php echo ROOM_RANGE; ?>"><div><?php echo __(ROOM_RANGE); ?></div></a>
 			<a href="?room=<?php echo ROOM_JEWEL; ?>"><div><?php echo __(ROOM_JEWEL); ?></div></a>
+			<a href="?room=<?php echo ROOM_DRESSING; ?>"><div><?php echo __(ROOM_DRESSING); ?></div></a>
 			<a href="?room=<?php echo ROOM_MATERIAL; ?>"><div><?php echo __(ROOM_MATERIAL); ?></div></a>
 			<a href="?room=<?php echo ROOM_OTHER; ?>"><div><?php echo __(ROOM_OTHER); ?></div></a>
 		</div>
