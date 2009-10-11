@@ -94,6 +94,10 @@ if ((isset($_GET['ckey']) && $_GET['ckey'] != '')
 		$error_msg.= '<br /><a class="ryzom-ui-button" href="?">'.__("Select your API Key again").'</a><hr/><br />';
 	}
 	if (count($list_guild)>0) {
+		## save the guild list
+		$_SESSION['list_guild'] = serialize($list_guild);
+		
+		## build_complexe_sorter
 		build_complexe_sorter();
 		
 		## form sorter : creat and choose
@@ -331,9 +335,6 @@ if ((isset($_GET['ckey']) && $_GET['ckey'] != '')
 		$_SESSION[ROOM_OTHER]['filter_form'][] = serialize(new choiceFormFilter('crystal','Crystal',$list_ordered_crystal));
 		$_SESSION[ROOM_OTHER]['filter_form'][] = serialize(new ghFormFilter($list_guild));
 		$_SESSION[ROOM_OTHER]['last_filter_line']["left"] = serialize(new textFormFilter());
-
-		## save the guild list
-		$_SESSION['list_guild'] = serialize($list_guild);
 		
 		session_write_close();
 		if ($display_link == false) {

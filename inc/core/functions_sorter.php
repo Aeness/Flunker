@@ -173,7 +173,7 @@ function build_complexe_sorter() {
 		foreach ($list_item as $material) {
 			$key = $material->flunkerId();
 			$material->total_stack = (string)$total_stack[$code];
-			$material->sub_total_stack = $sub_total_stack[$code];
+			$material->addSubTotalStack($sub_total_stack[$code]);
 			$items[ROOM_MATERIAL][$key] = array(
 				QUALITY		=> (string)$material->q,
 				UTILITY		=> (string)$material->id_utility,
