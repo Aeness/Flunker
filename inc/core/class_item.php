@@ -776,6 +776,7 @@ class material extends item
 	public $e;		//< energy of the item (b=basic f=fine c=choice e=excelent s=supreme)
 	
 	public $total_stack;
+	public $sub_total_stack;
 
 	public function __construct($guild,$slot,$icon_name,$q,$s,$id_place,$id_origin,$c,$id_name,$e)
 	{
@@ -904,7 +905,14 @@ class material extends item
 						<li class=\"attribut decohr\"><hr/></li>
 						
 						<li class=\"attribut left\">".__("Total Amount").__(":")."</li>
-						<li class=\"attribut right\"> ".(int)$this->total_stack."</li>
+						<li class=\"attribut right\"> ".(int)$this->total_stack."</li>";
+		$list_guild = unserialize($_SESSION['list_guild']);
+		foreach($list_guild as $chest) {
+			$res .= "
+						<li class=\"attribut left\" title=\"".$chest->name."\">".$chest->resumeName().__(":")."</li>
+						<li class=\"attribut right\"> ".(int)$this->sub_total_stack[$chest->name]."</li>";
+		}
+		$res .= "
 						
 						<li class=\"attribut decohr\"><hr/></li>
 						

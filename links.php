@@ -38,6 +38,7 @@ if ((isset($_GET['ckey']) && $_GET['ckey'] != '')
 	$items = array();
 	$sorter_items = array();
 	$total_stack	 = array();
+	$sub_total_stack	 = array();
 	$material_by_code = array();
 	
 	$list_ckey_treated = array();

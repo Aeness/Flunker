@@ -23,7 +23,7 @@
 
 /**
  * Buid sorter which needs item information and start to build sorter which needs global information.
- * Use global variables : items, sorter_items, total_stack, material_by_code.
+ * Use global variables : items, sorter_items, total_stack, sub_total_stack, material_by_code.
  * @param room 	&lt;<b>string</b>&gt;		the room where the item is put
  * @param item_obj 	&lt;<b>item</b>&gt;		the item added to sorter_items and item
  */
@@ -31,6 +31,7 @@ function build_simple_sorter($room,&$item_obj) {
 	global $items;				///< &lt;<b>array{item}</b>&gt;  Where items are stoked
 	global $sorter_items;		///< &lt;<b>array{item}</b>&gt;  Will use for sorting the array items
 	global $total_stack;		///< &lt;<b>array{int}</b>&gt;  Will use for writins the total amount of material, give the total for each material
+	global $sub_total_stack;		///< &lt;<b>array{int}</b>&gt;  Will use for writins the total amount of material, give the total for each material for each chest
 	global $material_by_code;	///< &lt;<b>array{int}</b>&gt;  Will use for writins the total amount of material, give the material object
 	
 	
@@ -142,7 +143,9 @@ function build_simple_sorter($room,&$item_obj) {
 		$code = $item_obj->q.$item_obj->ryzom_code;
 		
 		if (!isset($total_stack[$code]) || $total_stack[$code]==null) $total_stack[$code]=0;
-		$total_stack[$code]	 += (int)$item_obj->s;
+		$total_stack[$code] += (int)$item_obj->s;
+		if (!isset($sub_total_stack[$code][$item_obj->guild->name]) || $sub_total_stack[$code][$item_obj->guild->name]==null) $sub_total_stack[$code][$item_obj->guild->name]=0;
+		$sub_total_stack[$code][$item_obj->guild->name] += (int)$item_obj->s;
 		$material_by_code[$code][] = $item_obj;
 	}
 	else if( $room == ROOM_OTHER ) {
@@ -156,12 +159,13 @@ function build_simple_sorter($room,&$item_obj) {
 }
 /**
  * Buid sorter which needs global information.
- * Use global variables : items, sorter_items, total_stack, material_by_code.
+ * Use global variables : items, sorter_items, total_stack, sub_total_stack, material_by_code.
  */
 function build_complexe_sorter() {
 	global $items;				///< &lt;<b>array{item]</b>&gt;  Where items are stoked
 	global $sorter_items;		///< &lt;<b>array{item]</b>&gt;  Will use for sorting the array items
 	global $total_stack;		///< &lt;<b>array{int]</b>&gt;  Will use for writins the total amount of material, give the total for each material
+	global $sub_total_stack;		///< &lt;<b>array{int]</b>&gt;  Will use for writins the total amount of material, give the total for each material for each chest
 	global $material_by_code;	///< &lt;<b>array{int]</b>&gt;  Will use for writins the total amount of material, give the material object
 	
 	## calcul of total stack size with all the halls 
@@ -169,6 +173,7 @@ function build_complexe_sorter() {
 		foreach ($list_item as $material) {
 			$key = $material->flunkerId();
 			$material->total_stack = (string)$total_stack[$code];
+			$material->sub_total_stack = $sub_total_stack[$code];
 			$items[ROOM_MATERIAL][$key] = array(
 				QUALITY		=> (string)$material->q,
 				UTILITY		=> (string)$material->id_utility,
